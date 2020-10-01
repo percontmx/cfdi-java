@@ -7,6 +7,27 @@
         <schemaBindings>
             <package name="mx.gob.sat.cfd.catálogos" />
         </schemaBindings>
+
+        <bindings node="/xs:schema/xs:simpleType[@name='c_CodigoPostal']">
+            <typesafeEnumClass map="false" />
+        </bindings>
+
+        <bindings node="/xs:schema/xs:simpleType[@name='c_ClaveProdServ']">
+            <typesafeEnumClass map="false" />
+        </bindings>
+
+        <bindings node="/xs:schema/xs:simpleType[@name='c_ClaveUnidad']">
+            <typesafeEnumClass map="false" />
+        </bindings>
+
+        <bindings node="/xs:schema/xs:simpleType[@name='c_Colonia']">
+            <typesafeEnumClass map="false" />
+        </bindings>
+
+        <bindings node="/xs:schema/xs:simpleType[@name='c_Municipio']">
+            <typesafeEnumClass map="false" />
+        </bindings>
+
     </bindings>
 
 </bindings>
