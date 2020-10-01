@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" version="2.1"
+          xmlns:xs="http://www.w3.org/2001/XMLSchema"
+          xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+
+    <bindings schemaLocation="../xsd/catCFDI.xsd">
+        <schemaBindings>
+            <package name="mx.gob.sat.cfd.catálogos" />
+        </schemaBindings>
+
+        <bindings node="/xs:schema/xs:simpleType[@name='c_CodigoPostal']">
+            <typesafeEnumClass map="false" />
+        </bindings>
+
+        <bindings node="/xs:schema/xs:simpleType[@name='c_ClaveProdServ']">
+            <typesafeEnumClass map="false" />
+        </bindings>
+
+        <bindings node="/xs:schema/xs:simpleType[@name='c_ClaveUnidad']">
+            <typesafeEnumClass map="false" />
+        </bindings>
+
+        <bindings node="/xs:schema/xs:simpleType[@name='c_Colonia']">
+            <typesafeEnumClass map="false" />
+        </bindings>
+
+        <bindings node="/xs:schema/xs:simpleType[@name='c_Municipio']">
+            <typesafeEnumClass map="false" />
+        </bindings>
+
+    </bindings>
+
+</bindings>
