@@ -28,6 +28,19 @@
             <typesafeEnumClass map="false" />
         </bindings>
 
+        <bindings node="/xs:schema/xs:simpleType[@name='c_MetodoPago']">
+            <typesafeEnumClass name="MétodoDePago">
+                <javadoc>Catálogo de métodos de pago.</javadoc>
+                <typesafeEnumMember name="UNICO" value="PUE">
+                    <javadoc>Pago en una sola exhibición.</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="DIFERIDO" value="PPD">
+                    <javadoc>Pago en parcialidades o diferido.</javadoc>
+                </typesafeEnumMember>
+            </typesafeEnumClass>
+        </bindings>
+
+
     </bindings>
 
 </bindings>
