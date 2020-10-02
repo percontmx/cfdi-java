@@ -40,6 +40,16 @@
             </typesafeEnumClass>
         </bindings>
 
+        <bindings node="/xs:schema/xs:simpleType[@name='c_TipoDeComprobante']">
+            <typesafeEnumClass name="TipoDeComprobante">
+                <javadoc>Catálogo de tipos de comprobante.</javadoc>
+                <typesafeEnumMember name="INGRESO" value="I" />
+                <typesafeEnumMember name="EGRESO" value="E" />
+                <typesafeEnumMember name="TRASLADO" value="T" />
+                <typesafeEnumMember name="NÓMINA" value="N" />
+                <typesafeEnumMember name="PAGO" value="P" />
+            </typesafeEnumClass>
+        </bindings>
 
     </bindings>
 
