@@ -24,7 +24,7 @@
             <typesafeEnumClass map="false" />
         </bindings>
 
-        <bindings node="/xs:schema/xs:simpleType[@name='c_Municipio']">
+        <bindings node="/xs:schema/xs:simpleType[@name='c_Estado']">
             <typesafeEnumClass map="false" />
         </bindings>
 
@@ -38,6 +38,18 @@
                     <javadoc>Pago en parcialidades o diferido.</javadoc>
                 </typesafeEnumMember>
             </typesafeEnumClass>
+        </bindings>
+
+        <bindings node="/xs:schema/xs:simpleType[@name='c_Moneda']">
+            <typesafeEnumClass map="false" />
+        </bindings>
+
+        <bindings node="/xs:schema/xs:simpleType[@name='c_Municipio']">
+            <typesafeEnumClass map="false" />
+        </bindings>
+
+        <bindings node="/xs:schema/xs:simpleType[@name='c_Pais']">
+            <typesafeEnumClass map="false" />
         </bindings>
 
         <bindings node="/xs:schema/xs:simpleType[@name='c_TipoDeComprobante']">
