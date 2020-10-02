@@ -57,6 +57,78 @@
             </typesafeEnumClass>
         </bindings>
 
+        <bindings node="/xs:schema/xs:simpleType[@name='c_UsoCFDI']">
+            <typesafeEnumClass name="UsoDeCFDI">
+                <javadoc>Catálogo de uso de CFDI.</javadoc>
+                <typesafeEnumMember name="G01_MERCANCIAS" value="G01">
+                    <javadoc>Adquisición de mercancías.</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="G02_DEVOLUCIONES" value="G02">
+                    <javadoc>Devoluciones, descuentos o bonificaciones.</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="G03_GASTOS" value="G03">
+                    <javadoc>Gastos en general.</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="I01_CONSTRUCCIONES" value="I01">
+                    <javadoc>Construcciones.</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="I02_MOBILIARIO" value="I02">
+                    <javadoc>Mobiliario y equipo de oficina por inversiones.</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="I03_TRANSPORTE" value="I03">
+                    <javadoc>Equipo de transporte.</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="I04_CÓMPUTO" value="I04">
+                    <javadoc>Equipo de cómputo y accesorios.</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="I05_HERRAMIENTAS" value="I05">
+                    <javadoc>Dados, troqueles, moldes, matrices y herramientas.</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="I06_TELEFÓNICA" value="I06">
+                    <javadoc>Comunicaciones telefónicas.</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="I07_SATELITAL" value="I07">
+                    <javadoc>Comunicación satelital.</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="I08_OTROS" value="I08">
+                    <javadoc>Otra maquinaria y equipo.</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="D01_HONORARIOS" value="D01">
+                    <javadoc>Honorarios médicos, dentales y gastos hospitalarios.</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="D02_GASTOS_MÉDICOS" value="D02">
+                    <javadoc>Gastos médicos por incapacidad o discapacidad.</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="D03_FUNERALES" value="D03">
+                    <javadoc>Gastos funerales.</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="D04_DONATIVOS" value="D04">
+                    <javadoc>Donativos.</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="D05_INTERESES_HIPOTECARIOS" value="D05">
+                    <javadoc>Intereses reales efectivamente pagados por créditos hipotecarios (casa habitación).</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="D06_APORTACIONES" value="D06">
+                    <javadoc>Aportaciones voluntarias al SAR.</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="D07_SEGUROS_MÉDICOS" value="D07">
+                    <javadoc>Primas por seguros de gastos médicos.</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="D08_TRANSPORTACIÓN" value="D08">
+                    <javadoc>Gastos de transportación escolar obligatoria.</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="D09_PENSIÓN" value="D09">
+                    <javadoc>Depósitos en cuentas para el ahorro, primas que tengan como base planes de pensiones.</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="D10_COLEGIATURAS" value="D10">
+                    <javadoc>Pagos por servicios educativos (colegiaturas).</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="P01_POR_DEFINIR" value="P01">
+                    <javadoc>Por definir.</javadoc>
+                </typesafeEnumMember>
+            </typesafeEnumClass>
+        </bindings>
+
     </bindings>
 
 </bindings>
