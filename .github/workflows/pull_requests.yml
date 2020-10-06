@@ -19,4 +19,4 @@ jobs:
           java-version: 1.8
 
       - name: Correr pruebas unitarias y verificación.
-        run: mvn -B verify --file v3_3/pom.xml
+        run: mvn -B verify
