@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>mx.com.percont.cfdi</groupId>
+    <groupId>io.github.percontmx.cfdi</groupId>
     <artifactId>cfdi-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
@@ -24,5 +24,9 @@
             </plugin>
         </plugins>
     </build>
+
+    <modules>
+        <module>v3_3</module>
+    </modules>
 
 </project>
