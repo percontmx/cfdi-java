@@ -19,4 +19,4 @@ jobs:
           java-version: 1.8
 
       - name: Correr pruebas unitarias y verificación.
-        run: mvn -B verify
+        run: mvn -B verify -f cfdi-parent/pom.xml
