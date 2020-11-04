@@ -24,7 +24,7 @@
 
     <scm>
         <connection>scm:git:https://github.com/percontmx/cfdi.git</connection>
-      <tag>cfdi-parent-1.0</tag>
+      <tag>releases/cfdi-parent/v1.0.1-SNAPSHOT</tag>
   </scm>
 
     <build>
