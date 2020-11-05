@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>cfdi-v3_3</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
 
     <parent>
         <groupId>io.github.percontmx.cfdi</groupId>
@@ -91,4 +91,8 @@
         </plugins>
     </build>
 
+
+  <scm>
+    <tag>release/cfdi-v3_3/v1.0.1</tag>
+  </scm>
 </project>
