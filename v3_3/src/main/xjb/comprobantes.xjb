@@ -12,6 +12,31 @@
             <xjc:javaType name="java.util.UUID"
                           adapter="mx.gob.sat.cfd.v3_3.adapters.UUIDXMLAdapter" />
         </bindings>
+
+        <bindings node="//xs:element[@name='Concepto']//xs:element[@name='Impuestos']/xs:complexType">
+            <class name="ConceptoImpuestos" />
+        </bindings>
+
+        <bindings node="//xs:element[@name='Concepto']//xs:element[@name='Retencion']/xs:complexType">
+            <class name="ConceptoRetención" />
+        </bindings>
+
+        <bindings node="//xs:element[@name='Concepto']//xs:element[@name='Retenciones']/xs:complexType">
+            <class name="ConceptoRetenciones" />
+        </bindings>
+
+        <bindings node="//xs:element[@name='Concepto']//xs:element[@name='Traslados']/xs:complexType">
+            <class name="ConceptoTraslados" />
+        </bindings>
+
+        <bindings node="//xs:element[@name='Concepto']//xs:element[@name='Traslado']/xs:complexType">
+            <class name="ConceptoTraslado" />
+        </bindings>
+
+        <bindings node="//xs:element[@name='Parte']//xs:element[@name='InformacionAduanera']/xs:complexType">
+            <class name="InformaciónAduaneraParte" />
+        </bindings>
+
     </bindings>
 
 </bindings>
