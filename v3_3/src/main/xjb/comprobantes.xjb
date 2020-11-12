@@ -8,9 +8,47 @@
             <package name="mx.gob.sat.cfd.v3_3" />
         </schemaBindings>
 
-        <bindings node="//xs:attribute[@name='UUID']/xs:simpleType">
-            <xjc:javaType name="java.util.UUID"
-                          adapter="mx.gob.sat.cfd.v3_3.adapters.UUIDXMLAdapter" />
+        <bindings node="//xs:attribute[@name='Confirmacion']">
+            <property name="confirmación" />
+        </bindings>
+
+        <bindings node="//xs:attribute[@name='Fecha']">
+            <property name="fechaDeExpedición">
+                <javadoc>Fecha y hora locales en las que este comprobante fiscal fue expedido.</javadoc>
+            </property>
+        </bindings>
+
+        <bindings node="//xs:attribute[@name='FormaPago']">
+            <property name="formaDePago" />
+        </bindings>
+
+        <bindings node="//xs:attribute[@name='LugarExpedicion']">
+            <property name="lugarDeExpedición" />
+        </bindings>
+
+        <bindings node="//xs:attribute[@name='MetodoPago']">
+            <property name="métodoDePago" />
+        </bindings>
+
+        <bindings node="//xs:attribute[@name='NoCertificado']">
+            <property name="númeroDeCertificado" />
+        </bindings>
+
+        <bindings node="//xs:attribute[@name='TipoCambio']">
+            <property name="tipoDeCambio" />
+        </bindings>
+
+        <bindings node="//xs:attribute[@name='UUID']">
+            <property>
+                <baseType>
+                    <xjc:javaType name="java.util.UUID"
+                                  adapter="mx.gob.sat.cfd.v3_3.adapters.UUIDXMLAdapter" />
+                </baseType>
+            </property>
+        </bindings>
+
+        <bindings node="//xs:attribute[@name='Version']">
+            <property name="versión" />
         </bindings>
 
         <bindings node="//xs:element[@name='Concepto']//xs:element[@name='Impuestos']/xs:complexType">
