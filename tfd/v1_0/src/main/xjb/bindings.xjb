@@ -1,12 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<bindings xmlns="http://java.sun.com/xml/ns/jaxb" version="2.1">
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" version="2.1"
+          xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-    <globalBindings localScoping="toplevel" />
+    <globalBindings localScoping="toplevel"
+                    fixedAttributeAsConstantProperty="true"
+                    optionalProperty="isSet" />
 
     <bindings schemaLocation="../xsd/TimbreFiscalDigital.xsd">
         <schemaBindings>
             <package name="mx.gob.sat.tfd.v1_0" />
         </schemaBindings>
+
+        <bindings node="//xs:attribute[@name='noCertificadoSAT']">
+            <property name="númeroDeCertificado" />
+        </bindings>
+
+        <bindings node="//xs:attribute[@name='selloCFD']">
+            <property name="selloDelComprobante" />
+        </bindings>
+
+        <bindings node="//xs:attribute[@name='selloSAT']">
+            <property name="selloDelSAT" />
+        </bindings>
+
     </bindings>
 
 </bindings>
