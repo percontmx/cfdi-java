@@ -42,7 +42,7 @@
             <property>
                 <baseType>
                     <xjc:javaType name="java.util.UUID"
-                                  adapter="mx.gob.sat.cfd.v3_3.adapters.UUIDXMLAdapter" />
+                                  adapter="io.github.percontmx.cfdi.utils.jaxb.adapters.UUIDXMLAdapter" />
                 </baseType>
             </property>
         </bindings>
