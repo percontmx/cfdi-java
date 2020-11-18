@@ -1,4 +1,4 @@
-package mx.gob.sat.cfd.v3_3.adapters;
+package io.github.percontmx.cfdi.utils.jaxb.adapters;
 
 import org.junit.Test;
 
