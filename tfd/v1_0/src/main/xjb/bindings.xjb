@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <bindings xmlns="http://java.sun.com/xml/ns/jaxb" version="2.1"
-          xmlns:xs="http://www.w3.org/2001/XMLSchema">
+          xmlns:xs="http://www.w3.org/2001/XMLSchema"
+          xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
 
     <globalBindings localScoping="toplevel"
-                    fixedAttributeAsConstantProperty="true"
-                    optionalProperty="isSet" />
+                    fixedAttributeAsConstantProperty="true" />
 
     <bindings schemaLocation="../xsd/TimbreFiscalDigital.xsd">
         <schemaBindings>
             <package name="mx.gob.sat.tfd.v1_0" />
         </schemaBindings>
+
+        <bindings node="//xs:attribute[@name='FechaTimbrado']">
+            <property name="fechaDeTimbrado">
+                <baseType>
+                    <xjc:javaType name="java.time.LocalDateTime"
+                                  adapter="com.migesok.jaxb.adapter.javatime.LocalDateTimeXmlAdapter"/>
+                </baseType>
+            </property>
+        </bindings>
 
         <bindings node="//xs:attribute[@name='noCertificadoSAT']">
             <property name="númeroDeCertificado" />
@@ -23,6 +32,13 @@
             <property name="selloDelSAT" />
         </bindings>
 
+        <bindings node="//xs:attribute[@name='UUID']">
+            <property name="uuid">
+                <baseType>
+                    <xjc:javaType name="java.util.UUID"
+                                  adapter="io.github.percontmx.cfdi.utils.jaxb.adapters.UUIDXMLAdapter" />
+                </baseType>
+            </property>
+        </bindings>
     </bindings>
-
 </bindings>
