@@ -4,12 +4,13 @@
 
     <artifactId>cfdi-v3_3</artifactId>
     <version>1.1-SNAPSHOT</version>
+    <name>Percont CFDI - Comprobante fiscal digital v3.3</name>
 
     <parent>
         <groupId>io.github.percontmx.cfdi</groupId>
         <artifactId>cfdi-parent</artifactId>
-        <version>1.0.1</version>
-        <relativePath>../cfdi-parent/pom.xml</relativePath>
+        <version>1.1-SNAPSHOT</version>
+        <relativePath>../../cfdi-parent/pom.xml</relativePath>
     </parent>
 
     <dependencies>
