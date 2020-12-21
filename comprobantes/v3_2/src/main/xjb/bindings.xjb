@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" version="2.1"
+          xmlns:xs="http://www.w3.org/2001/XMLSchema"
+          xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+
+    <globalBindings fixedAttributeAsConstantProperty="true" localScoping="toplevel">
+        <xjc:javaType name="java.time.LocalDateTime" xmlType="xs:dateTime"
+                      adapter="com.migesok.jaxb.adapter.javatime.LocalDateTimeXmlAdapter"/>
+    </globalBindings>
+
+    <bindings schemaLocation="../xsd/cfdiv32.xsd">
+        <schemaBindings>
+            <package name="mx.gob.sat.cfd.v3_2" />
+        </schemaBindings>
+    </bindings>
+
+</bindings>
