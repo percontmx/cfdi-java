@@ -1,9 +1,9 @@
-name: JAXB Adapters - Publicar versión de desarrollo.
+name: CFDI v3.2 - Publicar versión de desarrollo.
 
 on:
   push:
     branches: [ development ]
-    paths: 'utils/jaxb-adapters/**'
+    paths: 'comprobantes/v3_2/**'
 
 jobs:
   release-snapshot:
@@ -22,6 +22,6 @@ jobs:
           settings-path: ${{ github.workspace }}
 
       - name: Publicar snapshot.
-        run: mvn -s $GITHUB_WORKSPACE/settings.xml -B deploy -f utils/jaxb-adapters/pom.xml
+        run: mvn -s $GITHUB_WORKSPACE/settings.xml -B deploy -f comprobantes/v3_2/pom.xml
         env:
           GITHUB_TOKEN: ${{ github.token }}
