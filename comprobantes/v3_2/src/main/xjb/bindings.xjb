@@ -12,6 +12,27 @@
         <schemaBindings>
             <package name="mx.gob.sat.cfd.v3_2" />
         </schemaBindings>
+
+        <bindings node="//xs:complexType[@name='t_InformacionAduanera']">
+            <class name="InformaciónAduanera" />
+        </bindings>
+
+        <bindings node="//xs:complexType[@name='t_Ubicacion']">
+            <class name="Ubicación" />
+        </bindings>
+
+        <bindings node="//xs:complexType[@name='t_UbicacionFiscal']">
+            <class name="UbicaciónFiscal" />
+        </bindings>
+
+        <bindings node="//xs:element[@name='RegimenFiscal']/xs:complexType">
+            <class name="RégimenFiscal" />
+        </bindings>
+
+        <bindings node="//xs:element[@name='Retencion']/xs:complexType">
+            <class name="Retención" />
+        </bindings>
+
     </bindings>
 
 </bindings>
