@@ -1,0 +1,35 @@
+name: CFDI v3.3 - Publicar versión de desarrollo.
+
+on:
+  push:
+    branches: [ development ]
+    paths:
+    - 'comprobantes/v3_3/**'
+
+jobs:
+  release-snapshot:
+    name: Publicar versión snapshot.
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar el código.
+        uses: actions/checkout@v2
+
+      - name: Instalar Java 8.
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+          server-id: github
+          settings-path: ${{ github.workspace }}
+
+      - name: Caché de paquetes de Maven.
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
+
+      - name: Publicar snapshot.
+        run: mvn -s $GITHUB_WORKSPACE/settings.xml -B deploy -f comprobantes/v3_3/pom.xml
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
