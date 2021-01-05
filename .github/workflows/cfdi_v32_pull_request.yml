@@ -1,8 +1,8 @@
-name: CFDI - Pull request.
+name: CFDI v3.2 - Pull request.
 
 on:
   pull_request:
-    branches: [ development ]
+    paths: 'comprobantes/v3_2/**'
 
 jobs:
   unit-test:
@@ -17,6 +17,10 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
+          server-id: github
+          settings-path: ${{ github.workspace }}
 
       - name: Correr pruebas unitarias y verificación.
-        run: mvn -B verify -f cfdi-parent/pom.xml
+        run: mvn -s $GITHUB_WORKSPACE/settings.xml -B verify -f comprobantes/v3_2/pom.xml
+        env:
+          GITHUB_TOKEN: ${{ github.token }}

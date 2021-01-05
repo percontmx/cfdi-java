@@ -22,6 +22,16 @@
         </repository>
     </distributionManagement>
 
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/percontmx/cfdi</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <scm>
         <connection>scm:git:https://github.com/percontmx/cfdi.git</connection>
       <tag>releases/cfdi-parent/v1.0.1-SNAPSHOT</tag>
