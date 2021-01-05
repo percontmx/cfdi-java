@@ -2,14 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cfdi-v3_3</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <artifactId>cfdi-v3_2</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>Percont CFDI - Comprobante fiscal digital v3.2</name>
 
     <parent>
         <groupId>io.github.percontmx.cfdi</groupId>
         <artifactId>cfdi-parent</artifactId>
-        <version>1.0.1</version>
-        <relativePath>../cfdi-parent/pom.xml</relativePath>
+        <version>1.1-SNAPSHOT</version>
+        <relativePath>../../cfdi-parent/pom.xml</relativePath>
     </parent>
 
     <dependencies>
@@ -17,6 +18,13 @@
             <groupId>io.github.percontmx.cfdi</groupId>
             <artifactId>jaxb-adapters</artifactId>
             <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
@@ -36,9 +44,19 @@
                 <artifactId>jaxb2-maven-plugin</artifactId>
                 <configuration>
                     <addGeneratedAnnotation>true</addGeneratedAnnotation>
+                    <arguments>
+                        <argument>-Xxew</argument>
+                    </arguments>
                     <locale>es</locale>
                     <target>2.1</target>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.github.jaxb-xew-plugin</groupId>
+                        <artifactId>jaxb-xew-plugin</artifactId>
+                        <version>1.10</version>
+                    </dependency>
+                </dependencies>
                 <executions>
                     <execution>
                         <goals>
@@ -77,9 +95,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <configuration>
-                    <tagNameFormat>release/cfdi-v3_3/@{version}</tagNameFormat>
-                </configuration>
             </plugin>
         </plugins>
     </build>
