@@ -1,4 +1,4 @@
-name: CFDI - Publicar versión de desarrollo.
+name: CFDI - Pull request
 
 on:
   pull_request:
@@ -28,7 +28,7 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
 
-      - name: Publicar snapshot.
+      - name: Verificación.
         run: mvn -s $GITHUB_WORKSPACE/settings.xml -B verify -f cfdi-parent/pom.xml
         env:
           GITHUB_TOKEN: ${{ github.token }}
