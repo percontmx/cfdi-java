@@ -2,7 +2,10 @@ name: CFDI - Publicar versión de desarrollo.
 
 on:
   push:
-    branches: [ development ]
+    branches:
+      - development
+    paths:
+      - 'cfdi-parent/**'
 
 jobs:
   release-snapshot:
@@ -19,6 +22,13 @@ jobs:
           java-version: 1.8
           server-id: github
           settings-path: ${{ github.workspace }}
+
+      - name: Caché de paquetes de Maven.
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2
+          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+          restore-keys: ${{ runner.os }}-m2
 
       - name: Publicar snapshot.
         run: mvn -s $GITHUB_WORKSPACE/settings.xml -B deploy -f cfdi-parent/pom.xml
