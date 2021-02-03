@@ -40,6 +40,18 @@
                 <artifactId>tfd-v1_1</artifactId>
                 <version>1.0-SNAPSHOT</version>
             </dependency>
+
+            <dependency>
+                <groupId>io.github.percontmx.cfdi</groupId>
+                <artifactId>nomina-v1_1</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.percontmx.cfdi</groupId>
+                <artifactId>nomina-v1_2</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -47,6 +59,8 @@
         <module>../utils/jaxb-adapters</module>
         <module>../comprobantes/v3_2</module>
         <module>../comprobantes/v3_3</module>
+        <module>../nomina/nomina11</module>
+        <module>../nomina/nomina12</module>
         <module>../tfd/v1_0</module>
         <module>../tfd/v1_1</module>
     </modules>
