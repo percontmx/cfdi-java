@@ -3,7 +3,7 @@ name: Nómina v1.1 - Pull request.
 on:
   pull_request:
     paths:
-    - 'nomina/v1_1/**'
+    - 'nomina/nomina11/**'
 
 jobs:
   unit-test:
@@ -29,6 +29,6 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
 
       - name: Correr pruebas unitarias y verificación.
-        run: mvn -s $GITHUB_WORKSPACE/settings.xml -B verify -f nomina/v1_1/pom.xml
+        run: mvn -s $GITHUB_WORKSPACE/settings.xml -B verify -f nomina/nomina11/pom.xml
         env:
           GITHUB_TOKEN: ${{ github.token }}
