@@ -39,6 +39,7 @@
             <artifactId>jaxb2-maven-plugin</artifactId>
             <configuration>
                 <addGeneratedAnnotation>true</addGeneratedAnnotation>
+                <catalog>${basedir}/src/main/catalog/catalog.xml</catalog>
                 <locale>es</locale>
                 <target>2.1</target>
             </configuration>
