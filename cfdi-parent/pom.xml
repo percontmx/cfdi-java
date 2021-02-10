@@ -9,6 +9,10 @@
 
     <name>Percont CFDI - Proyecto padre</name>
 
+    <modules>
+        <module>../bom</module>
+    </modules>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
