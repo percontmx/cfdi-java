@@ -31,6 +31,6 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
 
       - name: Publicar snapshot.
-        run: mvn -n -s $GITHUB_WORKSPACE/settings.xml -B deploy -f cfdi-parent/pom.xml
+        run: mvn -N -s $GITHUB_WORKSPACE/settings.xml -B deploy -f cfdi-parent/pom.xml
         env:
           GITHUB_TOKEN: ${{ github.token }}
