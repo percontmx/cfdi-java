@@ -29,6 +29,6 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
 
       - name: Verificación.
-        run: mvn -s $GITHUB_WORKSPACE/settings.xml -B verify -f cfdi-parent/pom.xml
+        run: mvn -n -s $GITHUB_WORKSPACE/settings.xml -B verify -f cfdi-parent/pom.xml
         env:
           GITHUB_TOKEN: ${{ github.token }}
