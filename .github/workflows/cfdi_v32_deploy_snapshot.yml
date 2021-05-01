@@ -2,8 +2,9 @@ name: CFDI v3.2 - Publicar versión de desarrollo.
 
 on:
   push:
-    branches: [ development ]
-    paths: 'comprobantes/v3_2/**'
+    branches: [ master ]
+    paths:
+      - 'comprobantes/v3_2/**'
 
 jobs:
   release-snapshot:

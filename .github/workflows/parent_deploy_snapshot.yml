@@ -3,7 +3,7 @@ name: CFDI - Publicar versión de desarrollo.
 on:
   push:
     branches:
-      - development
+      - master
     paths:
       - 'pom.xml'
 

@@ -2,8 +2,9 @@ name: JAXB Adapters - Publicar versión de desarrollo.
 
 on:
   push:
-    branches: [ development ]
-    paths: 'utils/jaxb-adapters/**'
+    branches: [ master ]
+    paths:
+      - 'utils/jaxb-adapters/**'
 
 jobs:
   release-snapshot:
