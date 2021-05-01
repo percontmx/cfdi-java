@@ -3,7 +3,7 @@ name: TFD v1.1 - Publicar versión de desarrollo.
 on:
   push:
     branches:
-    - development
+    - master
     paths:
     - 'tfd/v1_1/**'
 
