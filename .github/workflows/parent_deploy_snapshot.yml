@@ -5,7 +5,7 @@ on:
     branches:
       - development
     paths:
-      - 'cfdi-parent/**'
+      - 'pom.xml'
 
 jobs:
   release-snapshot:
@@ -31,6 +31,6 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
 
       - name: Publicar snapshot.
-        run: mvn -N -s $GITHUB_WORKSPACE/settings.xml -B deploy -f cfdi-parent/pom.xml
+        run: mvn -N -s $GITHUB_WORKSPACE/settings.xml -B deploy
         env:
           GITHUB_TOKEN: ${{ github.token }}
