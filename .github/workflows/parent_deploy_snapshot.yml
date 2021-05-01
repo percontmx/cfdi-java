@@ -5,7 +5,7 @@ on:
     branches:
       - development
     paths:
-      - 'cfdi-parent/**'
+      - 'pom.xml'
 
 jobs:
   release-snapshot:

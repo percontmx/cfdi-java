@@ -3,7 +3,7 @@ name: CFDI - Pull request
 on:
   pull_request:
     paths:
-      - 'cfdi-parent/**'
+      - 'pom.xml'
 
 jobs:
   verification:
