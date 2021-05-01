@@ -3,13 +3,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>jaxb-adapters</artifactId>
-    <version>1.1</version>
+    <version>1.2-SNAPSHOT</version>
     <name>Percont CFDI - Adaptadores de JAXB</name>
 
     <parent>
         <artifactId>cfdi-parent</artifactId>
         <groupId>io.github.percontmx.cfdi</groupId>
-        <version>1.1</version>
+        <version>1.2-SNAPSHOT</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
