@@ -39,6 +39,6 @@ jobs:
             git config user.name "GitHub Actions"
 
       - name: Preparar liberación
-        run: mvn -B -s $GITHUB_WORKSPACE/settings.xml -f cfdi-parent/pom.xml release:prepare release:perform -DdevelopmentVersion=${{ github.event.inputs.dev_version }} -DreleaseVersion=${{ github.event.inputs.release_version }}
+        run: mvn -B -s $GITHUB_WORKSPACE/settings.xml release:prepare release:perform -DdevelopmentVersion=${{ github.event.inputs.dev_version }} -DreleaseVersion=${{ github.event.inputs.release_version }}
         env:
           GITHUB_TOKEN: ${{ github.token }}
