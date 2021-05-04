@@ -1,0 +1,1 @@
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/percontmx/cfdi?color=green&label=Versi%C3%B3n)
