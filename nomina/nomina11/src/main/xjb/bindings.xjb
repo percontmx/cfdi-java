@@ -12,6 +12,28 @@
         <schemaBindings>
             <package name="mx.gob.sat.complementos.nómina.v1_1" />
         </schemaBindings>
+
+        <bindings node="//xs:element[@name='Nomina']/xs:complexType">
+            <class name="Nómina" />
+        </bindings>
+
+        <bindings node="//xs:attribute[@name='RiesgoPuesto']">
+            <property name="riesgoDelPuesto">
+                <baseType>
+                    <xjc:javaType name="mx.gob.sat.catálogos.nómina.RiesgoDelPuesto"
+                                  adapter="mx.gob.sat.complementos.nómina.v1_1.adapters.RiesgoDelPuestoAdapter" />
+                </baseType>
+            </property>
+        </bindings>
+
+        <bindings node="//xs:attribute[@name='TipoIncapacidad']">
+            <property name="tipoDeIncapacidad">
+                <baseType>
+                    <xjc:javaType name="mx.gob.sat.catálogos.nómina.TipoDeIncapacidad"
+                                  adapter="mx.gob.sat.complementos.nómina.v1_1.adapters.TipoDeIncapacidadAdapter" />
+                </baseType>
+            </property>
+        </bindings>
     </bindings>
 
 </bindings>
