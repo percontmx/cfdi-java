@@ -19,6 +19,12 @@
             <artifactId>jaxb-adapters</artifactId>
             <version>1.2-SNAPSHOT</version>
         </dependency>
+
+        <dependency>
+            <groupId>io.github.percontmx.cfdi.catalogos</groupId>
+            <artifactId>catalogos-nomina</artifactId>
+            <version>1.2-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -32,23 +38,26 @@
             </configuration>
         </plugin>
 
-        <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>jaxb2-maven-plugin</artifactId>
-            <configuration>
-                <addGeneratedAnnotation>true</addGeneratedAnnotation>
-                <catalog>${basedir}/src/main/catalog/catalog.xml</catalog>
-                <locale>es</locale>
-                <target>2.1</target>
-            </configuration>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>xjc</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
+            <plugin>
+                <groupId>org.jvnet.jaxb2.maven2</groupId>
+                <artifactId>maven-jaxb2-plugin</artifactId>
+                <version>0.14.0</version>
+                <configuration>
+                    <catalog>${basedir}/../../catálogos/catalog.xml</catalog>
+                    <bindingDirectory>${basedir}/src/main/xjb</bindingDirectory>
+                    <episode>true</episode>
+                    <schemaDirectory>${basedir}/src/main/xsd</schemaDirectory>
+                    <useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
+                    <strict>false</strict>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 
