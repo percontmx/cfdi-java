@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+
+    <parent>
+        <groupId>io.github.percontmx.cfdi</groupId>
+        <version>1.2-SNAPSHOT</version>
+        <artifactId>cfdi-parent</artifactId>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>catalogos</artifactId>
+    <version>1.2-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Percont CFDI - [Catálogos]</name>
+
+    <modules>
+        <module>nómina</module>
+    </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.jvnet.jaxb2.maven2</groupId>
+                    <artifactId>maven-jaxb2-plugin</artifactId>
+                    <version>0.14.0</version>
+                    <configuration>
+                        <bindingDirectory>${basedir}/src/main/xjb</bindingDirectory>
+                        <episode>true</episode>
+                        <schemaDirectory>${basedir}/src/main/xsd</schemaDirectory>
+                        <specVersion>2.2</specVersion>
+                        <useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>generate</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>

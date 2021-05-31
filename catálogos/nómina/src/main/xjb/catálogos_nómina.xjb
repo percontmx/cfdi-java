@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bindings version="2.1"
+        xmlns="http://java.sun.com/xml/ns/jaxb"
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:inheritance="http://jaxb2-commons.dev.java.net/basic/inheritance">
+
+    <bindings schemaLocation="../xsd/catNomina.xsd">
+        <schemaBindings>
+            <package name="mx.gob.sat.catálogos.nómina" />
+        </schemaBindings>
+
+        <bindings node="//xs:simpleType[@name='c_OrigenRecurso']">
+            <inheritance:implements>mx.gob.sat.catálogos.nómina.Catálogo</inheritance:implements>
+            <typesafeEnumClass name="OrigenDelRecurso">
+                <javadoc>Catálogo de origen del recurso.</javadoc>
+                <typesafeEnumMember name="PROPIOS" value="IP">
+                    <javadoc>Ingresos propios.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="FEDERALES" value="IF">
+                    <javadoc>Ingresos federales.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="MIXTOS" value="IM">
+                    <javadoc>Ingrsos mixtos.</javadoc>
+                </typesafeEnumMember>
+            </typesafeEnumClass>
+        </bindings>
+
+        <bindings node="//xs:simpleType[@name='c_PeriodicidadPago']">
+            <inheritance:implements>mx.gob.sat.catálogos.nómina.Catálogo</inheritance:implements>
+            <typesafeEnumClass name="PeriodicidadDePago">
+                <javadoc>Catálogo de periodicidad de pago.</javadoc>
+                <typesafeEnumMember name="DIARIO" value="01">
+                    <javadoc>Diario.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="SEMANAL" value="02">
+                    <javadoc>Semanal.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="CATORCENAL" value="03">
+                    <javadoc>Catorcenal.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="QUINCENAL" value="04">
+                    <javadoc>Quincenal.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="MENSUAL" value="05">
+                    <javadoc>Mensual.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="BIMESTRAL" value="06">
+                    <javadoc>Bimestral.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="UNIDAD_OBRA" value="07">
+                    <javadoc>Unidad obra.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="COMISIÓN" value="08">
+                    <javadoc>Por comisión.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="PRECIO_ALZADO" value="09">
+                    <javadoc>Precio alzado.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="DECENAL" value="10">
+                    <javadoc>Decenal.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="OTRO" value="99">
+                    <javadoc>Otro.</javadoc>
+                </typesafeEnumMember>
+            </typesafeEnumClass>
+        </bindings>
+
+        <bindings node="//xs:simpleType[@name='c_RiesgoPuesto']">
+            <inheritance:implements>mx.gob.sat.catálogos.nómina.Catálogo</inheritance:implements>
+            <typesafeEnumClass name="RiesgoDelPuesto">
+                <javadoc>Catálogo de riesgo del puesto.</javadoc>
+                <typesafeEnumMember name="CLASE_I" value="1">
+                    <javadoc>Clase I.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="CLASE_II" value="2">
+                    <javadoc>Clase II.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="CLASE_III" value="3">
+                    <javadoc>Clase III.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="CLASE_IV" value="4">
+                    <javadoc>Clase IV.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="CLASE_V" value="5">
+                    <javadoc>Clase V.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="NA" value="99">
+                    <javadoc>No aplica.</javadoc>
+                </typesafeEnumMember>
+            </typesafeEnumClass>
+        </bindings>
+
+        <bindings node="//xs:simpleType[@name='c_TipoContrato']">
+            <inheritance:implements>mx.gob.sat.catálogos.nómina.Catálogo</inheritance:implements>
+            <typesafeEnumClass name="TipoDeContrato">
+                <javadoc>Catálogo de tipo de contrato.</javadoc>
+                <typesafeEnumMember name="INDETERMINADO" value="01">
+                    <javadoc>Contrato de trabajo por tiempo indeterminado.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="OBRA" value="02">
+                    <javadoc>Contrato de trabajo para obra determinada.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="DETERMINADO" value="03">
+                    <javadoc>Contrato de trabajo por tiempo determinado.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="TEMPORADA" value="04">
+                    <javadoc>Contrato de trabajo por temporada.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="SUJETO_A_PRUEBA" value="05">
+                    <javadoc>Contrato de trabajo sujeto a prueba.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="CAPACITACIÓN" value="06">
+                    <javadoc>Contrato de trabajo con capacitación inicial.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="HORAS" value="07">
+                    <javadoc>Modalidad de de contratación por pago de hora laborada.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="COMISIÓN" value="08">
+                    <javadoc>Modalidad de trabajo por comisión laboral.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="SIN_RELACIÓN" value="09">
+                    <javadoc>Modalidades de contratación donde no existe relación de trabajo.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="JUBILACIÓN" value="10">
+                    <javadoc>Jubilación, pensión o retiro.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="OTRO" value="99">
+                    <javadoc>Otro contrato.</javadoc>
+                </typesafeEnumMember>
+            </typesafeEnumClass>
+        </bindings>
+
+        <bindings node="//xs:simpleType[@name='c_TipoHoras']">
+            <inheritance:implements>mx.gob.sat.catálogos.nómina.Catálogo</inheritance:implements>
+            <typesafeEnumClass name="TipoDeHorasExtra">
+                <javadoc>Catálogo de tipo de horas extra.</javadoc>
+                <typesafeEnumMember name="DOBLES" value="01">
+                    <javadoc>Horas dobles.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="TRIPLES" value="02">
+                    <javadoc>Horas triples.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="SIMPLES" value="03">
+                    <javadoc>Horas simples.</javadoc>
+                </typesafeEnumMember>
+            </typesafeEnumClass>
+        </bindings>
+
+        <bindings node="//xs:simpleType[@name='c_TipoOtroPago']">
+            <inheritance:implements>mx.gob.sat.catálogos.nómina.Catálogo</inheritance:implements>
+            <typesafeEnumClass name="OtroTipoDePago">
+                <javadoc>Catálogo de otro tipo de pago.</javadoc>
+                <typesafeEnumMember name="REINTEGRO_ISR" value="001">
+                    <javadoc>Reintegro de ISR pagado en exceso (siempre que no haya sido enterado al SAT).</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="SUBSIDIO_EMPLEO" value="002">
+                    <javadoc>Subsidio para el empleo (efectivamente entregado al trabajador).</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="VIÁTICOS" value="003">
+                    <javadoc>Viáticos (entregados al trabajador).</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="COMPENSACIÓN_ANUAL" value="004">
+                    <javadoc>Aplicación de saldo a favor por compensación anual.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="REINTEGRO_ISR_ANTERIOR" value="005">
+                    <javadoc>Reintegro de ISR retenido en exceso de ejercicio anterior (siempre que no haya sido
+                        enterado al SAT).</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="ALIMENTOS" value="006">
+                    <javadoc>Alimentos en bienes (Servicios de comedor y comida) Art 94 último párrafo LISR.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="AJUSTE_ISR" value="007">
+                    <javadoc>ISR ajustado por subsidio.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="SUBSIDIO" value="008">
+                    <javadoc>Subsidio efectivamente entregado que no correspondía (Aplica sólo cuando haya ajuste al
+                        cierre de mes en relación con el Apéndice 7 de la guía de llenado de nómina).</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="REEMBOLSO_VIVIENDA" value="009">
+                    <javadoc>Reembolso de descuentos efectuados para el crédito de vivienda.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="OTRO" value="999">
+                    <javadoc>Pagos distintos a los listados y que no deben considerarse como ingreso por sueldos,
+                        salarios o ingresos asimilados.</javadoc>
+                </typesafeEnumMember>
+            </typesafeEnumClass>
+        </bindings>
+
+        <bindings node="//xs:simpleType[@name='c_TipoJornada']">
+            <inheritance:implements>mx.gob.sat.catálogos.nómina.Catálogo</inheritance:implements>
+            <typesafeEnumClass name="TipoDeJornada">
+                <javadoc>Catálogo de tipo de jornada laboral.</javadoc>
+                <typesafeEnumMember name="DIURNA" value="01">
+                    <javadoc>Diurna.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="NOCTURNA" value="02">
+                    <javadoc>Nocturna.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="MIXTA" value="03">
+                    <javadoc>Mixta.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="POR_HORAS" value="04">
+                    <javadoc>Por horas.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="REDUCIDA" value="05">
+                    <javadoc>Reducida.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="CONTINUADA" value="06">
+                    <javadoc>Continuada.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="PARTIDA" value="07">
+                    <javadoc>Partida.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="TURNOS" value="08">
+                    <javadoc>Por turnos.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="OTRO" value="99">
+                    <javadoc>Otra jornada.</javadoc>
+                </typesafeEnumMember>
+            </typesafeEnumClass>
+        </bindings>
+
+        <bindings node="//xs:simpleType[@name='c_TipoIncapacidad']">
+            <inheritance:implements>mx.gob.sat.catálogos.nómina.Catálogo</inheritance:implements>
+            <typesafeEnumClass name="TipoDeIncapacidad">
+                <javadoc>Catálogo de tipos de incapacidad.</javadoc>
+                <typesafeEnumMember name="RIESGO_DE_TRABAJO" value="01">
+                    <javadoc>Riesgo de trabajo.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="ENFERMEDAD" value="02">
+                    <javadoc>Enfermedad general.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="MATERNIDAD" value="03">
+                    <javadoc>Maternidad.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="CUIDADOS" value="04">
+                    <javadoc>Licencia por cuidados médicos de hijos diagnosticados con cáncer.</javadoc>
+                </typesafeEnumMember>
+            </typesafeEnumClass>
+        </bindings>
+
+        <bindings node="//xs:simpleType[@name='c_TipoNomina']">
+            <inheritance:implements>mx.gob.sat.catálogos.nómina.Catálogo</inheritance:implements>
+            <typesafeEnumClass name="TipoDeNómina">
+                <javadoc>Catálogo de tipos de nómina.</javadoc>
+                <typesafeEnumMember name="ORDINARIA" value="O">
+                    <javadoc>Nómina ordinaria.</javadoc>
+                </typesafeEnumMember>
+
+                <typesafeEnumMember name="EXTRAORDINARIA" value="E">
+                    <javadoc>Nómina extraordinaria.</javadoc>
+                </typesafeEnumMember>
+            </typesafeEnumClass>
+        </bindings>
+    </bindings>
+
+</bindings>
