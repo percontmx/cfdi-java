@@ -85,5 +85,3 @@ Paquetes Java para dar soporte a Comprobante Fiscal Digital por Internet.
   </dependencies>
 </project>
 ```
-
->>>>>>> master
