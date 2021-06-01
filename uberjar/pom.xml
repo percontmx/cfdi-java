@@ -3,13 +3,13 @@
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>cfdi-java</artifactId>
-    <version>1.1</version>
+    <version>1.2-SNAPSHOT</version>
     <name>Percont CFDI - Uberjar</name>
 
     <parent>
         <artifactId>cfdi-parent</artifactId>
         <groupId>io.github.percontmx.cfdi</groupId>
-        <version>1.1</version>
+        <version>1.2-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
