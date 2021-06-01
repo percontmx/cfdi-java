@@ -3,7 +3,7 @@ name: Nómina v1.1 - Publicar versión de desarrollo.
 on:
   push:
     branches:
-    - development
+    - master
     paths:
     - 'nomina/nomina11/**'
 
