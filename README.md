@@ -1,5 +1,6 @@
 # CFDI - Java
 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/percontmx/cfdi?color=green&label=Versi%C3%B3n)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Donaciones](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/alexpercont)
 
@@ -84,4 +85,3 @@ Paquetes Java para dar soporte a Comprobante Fiscal Digital por Internet.
   </dependencies>
 </project>
 ```
-

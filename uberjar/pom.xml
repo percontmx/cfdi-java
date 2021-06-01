@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>cfdi-java</artifactId>
+    <version>1.2-SNAPSHOT</version>
+    <name>Percont CFDI - Uberjar</name>
+
+    <parent>
+        <artifactId>cfdi-parent</artifactId>
+        <groupId>io.github.percontmx.cfdi</groupId>
+        <version>1.2-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.github.percontmx.cfdi</groupId>
+                <artifactId>bom-all</artifactId>
+                <version>1.1</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <!-- Comprobante fiscal digital 3.2 -->
+            <groupId>io.github.percontmx.cfdi</groupId>
+            <artifactId>cfdi-v3_2</artifactId>
+        </dependency>
+
+        <dependency>
+            <!-- Comprobante fiscal digital 3.3 -->
+            <groupId>io.github.percontmx.cfdi</groupId>
+            <artifactId>cfdi-v3_3</artifactId>
+        </dependency>
+
+        <dependency>
+            <!-- Timbre fiscal digital 1.0 -->
+            <groupId>io.github.percontmx.cfdi</groupId>
+            <artifactId>tfd-v1_0</artifactId>
+        </dependency>
+
+        <dependency>
+            <!-- Timbre fiscal digital 1.1 -->
+            <groupId>io.github.percontmx.cfdi</groupId>
+            <artifactId>tfd-v1_1</artifactId>
+        </dependency>
+
+        <dependency>
+            <!-- Comprobante de nómina 1.1 -->
+            <groupId>io.github.percontmx.cfdi</groupId>
+            <artifactId>nomina-v1_1</artifactId>
+        </dependency>
+
+        <dependency>
+            <!-- Comprobante de nómina 1.2 -->
+            <groupId>io.github.percontmx.cfdi</groupId>
+            <artifactId>nomina-v1_2</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <createDependencyReducedPom>false</createDependencyReducedPom>
+                    <shadedArtifactAttached>false</shadedArtifactAttached>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
