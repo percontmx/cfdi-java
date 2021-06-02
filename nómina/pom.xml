@@ -16,8 +16,8 @@
     </parent>
 
     <modules>
-        <module>nomina11</module>
-        <module>nomina12</module>
+        <module>nómina11</module>
+        <module>nómina12</module>
     </modules>
 
     <dependencies>
@@ -73,6 +73,7 @@
                             </plugin>
                         </plugins>
                         <schemaDirectory>${basedir}/src/main/xsd</schemaDirectory>
+                        <specVersion>2.2</specVersion>
                         <strict>false</strict>
                         <useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
                     </configuration>
