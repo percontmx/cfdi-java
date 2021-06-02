@@ -59,11 +59,22 @@
                     <artifactId>maven-jaxb2-plugin</artifactId>
                     <version>0.14.0</version>
                     <configuration>
+                        <args>
+                            <arg>-Xxew</arg>
+                        </args>
                         <bindingDirectory>${basedir}/src/main/xjb</bindingDirectory>
                         <episode>true</episode>
+                        <extension>true</extension>
+                        <plugins>
+                            <plugin>
+                                <groupId>com.github.jaxb-xew-plugin</groupId>
+                                <artifactId>jaxb-xew-plugin</artifactId>
+                                <version>1.10</version>
+                            </plugin>
+                        </plugins>
                         <schemaDirectory>${basedir}/src/main/xsd</schemaDirectory>
-                        <useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
                         <strict>false</strict>
+                        <useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
                     </configuration>
                     <executions>
                         <execution>
