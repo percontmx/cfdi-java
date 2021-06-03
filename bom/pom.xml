@@ -56,11 +56,11 @@
     </dependencyManagement>
 
     <modules>
+        <module>../catálogos</module>
         <module>../utils/jaxb-adapters</module>
         <module>../comprobantes/v3_2</module>
         <module>../comprobantes/v3_3</module>
-        <module>../nomina/nomina11</module>
-        <module>../nomina/nomina12</module>
+        <module>../nómina</module>
         <module>../tfd/v1_0</module>
         <module>../tfd/v1_1</module>
     </modules>
