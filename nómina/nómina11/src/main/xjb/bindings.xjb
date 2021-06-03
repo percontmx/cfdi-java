@@ -15,6 +15,15 @@
 
         <bindings node="//xs:element[@name='Nomina']/xs:complexType">
             <class name="Nómina" />
+            <bindings node="//xs:attribute[@name='NumDiasPagados']">
+                <property name="díasPagados">
+                    <baseType>
+                        <xjc:javaType name="double"
+                                      adapter="io.github.percontmx.cfdi.utils.jaxb.adapters.DoubleXMLAdapter" />
+                    </baseType>
+                </property>
+            </bindings>
+
         </bindings>
 
         <bindings node="//xs:attribute[@name='RiesgoPuesto']">

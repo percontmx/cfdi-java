@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <bindings version="2.1"
           xmlns="http://java.sun.com/xml/ns/jaxb"
+          xmlns:xs="http://www.w3.org/2001/XMLSchema"
           xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
-    <globalBindings localScoping="toplevel">
+    <globalBindings fixedAttributeAsConstantProperty="true" localScoping="toplevel">
         <xjc:javaType name="java.time.LocalDate" xmlType="xs:date"
                       adapter="com.migesok.jaxb.adapter.javatime.LocalDateXmlAdapter" />
     </globalBindings>
@@ -11,6 +12,19 @@
         <schemaBindings>
             <package name="mx.gob.sat.complementos.nómina.v1_2" />
         </schemaBindings>
+
+        <bindings node="//xs:element[@name='Nomina']/xs:complexType">
+            <class name="Nómina" />
+
+            <bindings node="//xs:attribute[@name='NumDiasPagados']">
+                <property name="díasPagados">
+                    <baseType>
+                        <xjc:javaType name="double"
+                                  adapter="io.github.percontmx.cfdi.utils.jaxb.adapters.DoubleXMLAdapter" />
+                    </baseType>
+                </property>
+            </bindings>
+        </bindings>
 
     </bindings>
 
