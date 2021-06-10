@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bindings version="2.1"
+          xmlns="http://java.sun.com/xml/ns/jaxb"
+          xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+    <globalBindings localScoping="toplevel">
+        <xjc:javaType name="java.time.LocalDate" xmlType="xs:date"
+                      adapter="com.migesok.jaxb.adapter.javatime.LocalDateXmlAdapter" />
+    </globalBindings>
+
+    <bindings schemaLocation="../xsd/nomina12.xsd">
+        <schemaBindings>
+            <package name="mx.gob.sat.complementos.nómina.v1_2" />
+        </schemaBindings>
+
+    </bindings>
+
+</bindings>

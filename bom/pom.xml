@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>bom-all</artifactId>
+    <version>1.1</version>
+    <packaging>pom</packaging>
+
+    <parent>
+        <groupId>io.github.percontmx.cfdi</groupId>
+        <artifactId>cfdi-parent</artifactId>
+        <version>1.1</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <name>Percont CFDI - Lista de Materiales</name>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.github.percontmx.cfdi</groupId>
+                <artifactId>cfdi-v3_2</artifactId>
+                <version>1.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.percontmx.cfdi</groupId>
+                <artifactId>cfdi-v3_3</artifactId>
+                <version>1.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.percontmx.cfdi</groupId>
+                <artifactId>tfd-v1_0</artifactId>
+                <version>1.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.percontmx.cfdi</groupId>
+                <artifactId>tfd-v1_1</artifactId>
+                <version>1.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.percontmx.cfdi</groupId>
+                <artifactId>nomina-v1_1</artifactId>
+                <version>1.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.percontmx.cfdi</groupId>
+                <artifactId>nomina-v1_2</artifactId>
+                <version>1.1</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <modules>
+        <module>../utils/jaxb-adapters</module>
+        <module>../comprobantes/v3_2</module>
+        <module>../comprobantes/v3_3</module>
+        <module>../nomina/nomina11</module>
+        <module>../nomina/nomina12</module>
+        <module>../tfd/v1_0</module>
+        <module>../tfd/v1_1</module>
+    </modules>
+
+</project>
