@@ -149,6 +149,18 @@
                             </execution>
                         </executions>
                     </plugin>
+
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>1.6.8</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                            <nexusUrl>https://s01.oss.sonatype.org</nexusUrl>
+                            <serverId>ossrh</serverId>
+                        </configuration>
+                    </plugin>
                 </plugins>
             </build>
         </profile>
