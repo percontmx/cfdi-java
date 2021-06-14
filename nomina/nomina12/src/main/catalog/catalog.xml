@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <!-- Tipos de datos. -->
-    <system systemId="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI/tdCFDI.xsd"
-            uri="../../../../../comprobantes/v3_3/src/main/xsd/tdCFDI.xsd" />
-    <!-- Catálogos v3.3. -->
-    <system systemId="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/catCFDI.xsd"
-            uri="../../../../../comprobantes/v3_3/src/main/xsd/catCFDI.xsd" />
-</catalog>
