@@ -1,13 +1,13 @@
-name: CFDI - Pull request
+name: CFDI - Verificación.
 
 on:
   pull_request:
-    paths:
-      - 'pom.xml'
+    branches:
+      - master
 
 jobs:
   verification:
-    name: Verificación del proyecto padre.
+    name: Verificación del proyecto.
     runs-on: ubuntu-latest
 
     steps:
@@ -18,8 +18,6 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-          server-id: github
-          settings-path: ${{ github.workspace }}
 
       - name: Caché de paquetes de Maven.
         uses: actions/cache@v2
@@ -29,6 +27,4 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
 
       - name: Verificación.
-        run: mvn -N -s $GITHUB_WORKSPACE/settings.xml -B verify
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+        run: mvn -B verify
