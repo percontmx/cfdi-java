@@ -13,12 +13,17 @@ jobs:
       - name: Descargar el código.
         uses: actions/checkout@v2
 
+      - name: Importar llave GPG
+        id: import_gpg
+        uses: crazy-max/ghaction-import-gpg@v3
+        with:
+          gpg-private-key: ${{ secrets.GPG_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+
       - name: Instalar Java 8.
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
-          gpg-passphrase: GPG_PASSPHRASE
-          gpg-private-key: ${{ secrets.GPG_KEY }}
           server-id: ossrh
           server-username: OSSRH_USERNAME
           server-password: OSSRH_PASSWORD
@@ -33,6 +38,5 @@ jobs:
       - name: Publish package
         run: mvn install -P release
         env:
-          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
