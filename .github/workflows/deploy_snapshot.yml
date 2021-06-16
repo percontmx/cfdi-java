@@ -25,19 +25,18 @@ jobs:
         run: mvn -B install
 
       - name: Desplegar uberjar.
-        run: mvn -B -s -f uberjar/pom.xml $GITHUB_WORKSPACE/settings.xml deploy
+        run: mvn -B -f uberjar/pom.xml -s $GITHUB_WORKSPACE/settings.xml deploy
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
   deploy_to_ossrh:
     name: Desplegar a OSSRH
     runs-on: ubuntu-latest
-
     steps:
       - name: Descargar el código.
         uses: actions/checkout@v2
 
-      - name: Importar llave GPG
+      - name: Importar llave GPG.
         id: import_gpg
         uses: crazy-max/ghaction-import-gpg@v3
         with:
@@ -53,8 +52,8 @@ jobs:
           server-username: OSSRH_USERNAME
           server-password: OSSRH_PASSWORD
 
-      - name: Publish package
-        run: mvn install deploy -P release
+      - name: Desplegar a OSSRH.
+        run: mvn deploy -P release
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
