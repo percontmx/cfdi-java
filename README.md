@@ -10,21 +10,32 @@ Paquetes Java para dar soporte a Comprobante Fiscal Digital por Internet.
 
 ## Como utilizarlo
 
-### Como dependencias individuales de Maven
+### Como dependencias de Maven
 
-1. Agrega la siguiente dependencia en la sección `<dependencyManagement>` de tu archivo `pom.xml`:
+1. Agrega las siguientes líneas en la sección de `<servers>` de tu archivo de configuración de Maven 
+   (`$M2_HOME/conf/settings.xml` o `~/.m2/settings.xml`):
+   
+```
+<server>
+    <id>github</id>
+    <username>tuUsuarioDeGithub</username>
+    <password>tuToken</password>
+</server>
+```
+
+2. Agrega la siguiente dependencia en la sección `<dependencyManagement>` de tu archivo `pom.xml`:
 
 ```
 <dependency>
     <groupId>io.github.percontmx.cfdi</groupId>
     <artifactId>bom-all</artifactId>
-    <version>1.2</version>
+    <version>1.1</version>
     <type>pom</type>
     <scope>import</scope>
 </dependency>
 ```
 
-2. En tu sección de `<dependencies>` agrega los componentes que necesites. Para agregar, por ejemplo, el paquete de CFDI
+3. En tu sección de `<dependencies>` agrega los componentes que necesites. Para agregar, por ejemplo, el paquete de CFDI
    3.3, agrega lo siguiente:
    
 ```
@@ -49,7 +60,7 @@ Paquetes Java para dar soporte a Comprobante Fiscal Digital por Internet.
         <dependency>
             <groupId>io.github.percontmx.cfdi</groupId>
             <artifactId>bom-all</artifactId>
-            <version>1.2</version>
+            <version>1.1</version>
             <type>pom</type>
             <scope>import</scope>
         </dependency>
@@ -74,16 +85,3 @@ Paquetes Java para dar soporte a Comprobante Fiscal Digital por Internet.
   </dependencies>
 </project>
 ```
-
-### Como una sola dependencia
-
-Agrega en tu archivo `pom.xml` la siguiente dependencia:
-
-```
-<dependency>
-    <groupId>io.github.percontmx.cfdi</groupId>
-    <artifactId>cfdi-java</artifactId>
-    <version>1.2</version>
-</dependency>
-```
-
