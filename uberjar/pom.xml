@@ -83,4 +83,20 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>deploy_github_packages</id>
+            <distributionManagement>
+                <snapshotRepository>
+                    <id>github</id>
+                    <url>https://maven.pkg.github.com/percontmx/cfdi</url>
+                </snapshotRepository>
+                <repository>
+                    <id>github</id>
+                    <url>https://maven.pkg.github.com/percontmx/cfdi</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+    </profiles>
 </project>
