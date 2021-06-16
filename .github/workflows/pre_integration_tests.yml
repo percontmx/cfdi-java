@@ -1,13 +1,10 @@
-name: CFDI - Verificación.
+name: Pruebas previas a integración.
 
-on:
-  pull_request:
-    branches:
-      - master
+on: pull_request
 
 jobs:
-  verification:
-    name: Verificación del proyecto.
+  unit_tests:
+    name: Ejecución de pruebas unitarias.
     runs-on: ubuntu-latest
 
     steps:
