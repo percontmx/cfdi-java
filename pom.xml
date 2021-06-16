@@ -13,7 +13,6 @@
 
     <modules>
         <module>bom</module>
-        <!-- module>uberjar</module -->
     </modules>
 
     <developers>
