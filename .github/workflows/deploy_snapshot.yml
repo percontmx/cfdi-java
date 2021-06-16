@@ -25,7 +25,7 @@ jobs:
         run: mvn -B install
 
       - name: Desplegar uberjar.
-        run: mvn -B -f uberjar/pom.xml -s $GITHUB_WORKSPACE/settings.xml deploy
+        run: mvn -B -f uberjar/pom.xml -s $GITHUB_WORKSPACE/settings.xml -P deploy_github_packages deploy
         env:
           GITHUB_TOKEN: ${{ github.token }}
 
