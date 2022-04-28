@@ -12,5 +12,8 @@
     <!-- Catálogos de retenciones -->
     <system systemId="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos"
             uri="retenciones/src/main/xsd/catRetenciones.xsd" />
+    <!-- Catálogos de plataformas tecnológicas -->
+    <system systemId="http://www.sat.gob.mx/esquemas/retencionpago/1/PlataformasTecnologicas10/catalogos"
+            uri="plataformas/src/main/xsd/CatPlataformasTecnologicas.xsd" />
 
 </catalog>
