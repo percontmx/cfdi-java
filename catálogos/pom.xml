@@ -16,6 +16,7 @@
 
     <modules>
         <module>nómina</module>
+        <module>retenciones</module>
     </modules>
 
     <build>
