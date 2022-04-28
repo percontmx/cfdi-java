@@ -63,6 +63,7 @@
         <module>../nómina</module>
         <module>../tfd/v1_0</module>
         <module>../tfd/v1_1</module>
+        <module>../complementos/plataformas</module>
     </modules>
 
 </project>
