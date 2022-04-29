@@ -52,6 +52,12 @@
                 <artifactId>nomina-v1_2</artifactId>
                 <version>1.2-SNAPSHOT</version>
             </dependency>
+
+            <dependency>
+                <groupId>io.github.percontmx.cfdi</groupId>
+                <artifactId>retenciones-v1</artifactId>
+                <version>1.2-SNAPSHOT</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

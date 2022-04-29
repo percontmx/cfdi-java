@@ -61,6 +61,12 @@
             <groupId>io.github.percontmx.cfdi</groupId>
             <artifactId>nomina-v1_2</artifactId>
         </dependency>
+
+        <dependency>
+            <!-- Retenciones 1.0 -->
+            <groupId>io.github.percontmx.cfdi</groupId>
+            <artifactId>retenciones-v1</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
