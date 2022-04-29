@@ -16,6 +16,8 @@
 
     <modules>
         <module>nómina</module>
+        <module>plataformas</module>
+        <module>retenciones</module>
     </modules>
 
     <build>

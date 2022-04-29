@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bindings xmlns="http://java.sun.com/xml/ns/jaxb" version="2.1">
+
+    <bindings schemaLocation="../xsd/ServiciosPlataformasTecnologicas10.xsd">
+        <schemaBindings>
+            <package name="mx.gob.sat.complementos.plataformas" />
+        </schemaBindings>
+    </bindings>
+</bindings>

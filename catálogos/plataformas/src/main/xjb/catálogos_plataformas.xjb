@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bindings version="2.1"
+        xmlns="http://java.sun.com/xml/ns/jaxb">
+
+    <bindings schemaLocation="../xsd/CatPlataformasTecnologicas.xsd">
+        <schemaBindings>
+            <package name="mx.gob.sat.catálogos.plataformas" />
+        </schemaBindings>
+    </bindings>
+
+</bindings>
