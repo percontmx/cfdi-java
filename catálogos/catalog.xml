@@ -3,9 +3,9 @@
     <!-- Tipos de datos. -->
     <system systemId="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI/tdCFDI.xsd"
             uri="../comprobantes/v3_3/src/main/xsd/tdCFDI.xsd" />
-    <!-- Catálogos v3.3. -->
+    <!-- Catálogos CFDI v3.3. -->
     <system systemId="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/catCFDI.xsd"
-            uri="../comprobantes/v3_3/src/main/xsd/catCFDI.xsd" />
+            uri="../catálogos/cfdi/src/main/xsd/catCFDI.xsd" />
     <!-- Catálogos de nómina -->
     <system systemId="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/Nomina/catNomina.xsd"
             uri="nómina/src/main/xsd/catNomina.xsd" />
