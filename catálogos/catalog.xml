@@ -10,10 +10,10 @@
     <system systemId="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/Nomina/catNomina.xsd"
             uri="nómina/src/main/xsd/catNomina.xsd" />
     <!-- Catálogos de retenciones -->
-    <system systemId="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos"
+    <system systemId="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos/catRetenciones.xsd"
             uri="retenciones/src/main/xsd/catRetenciones.xsd" />
     <!-- Catálogos de plataformas tecnológicas -->
-    <system systemId="http://www.sat.gob.mx/esquemas/retencionpago/1/PlataformasTecnologicas10/catalogos"
+    <system systemId="http://www.sat.gob.mx/esquemas/retencionpago/1/PlataformasTecnologicas10/catalogos/CatPlataformasTecnologicas.xsd"
             uri="plataformas/src/main/xsd/CatPlataformasTecnologicas.xsd" />
 
 </catalog>
