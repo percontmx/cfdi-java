@@ -27,7 +27,11 @@
             <version>1.2-SNAPSHOT</version>
         </dependency>
 
-        <!-- TODO agregar los tipos de datos cuando estén terminados -->
+        <dependency>
+            <groupId>io.github.percontmx.cfdi.utils</groupId>
+            <artifactId>tipos-cfdi</artifactId>
+            <version>1.2-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
