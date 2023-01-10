@@ -51,9 +51,11 @@
                 <version>0.14.0</version>
                 <configuration>
                     <bindingDirectory>${basedir}/src/main/xjb</bindingDirectory>
+                    <catalog>${basedir}/../../catalog.xml</catalog>
                     <episode>true</episode>
                     <schemaDirectory>${basedir}/src/main/xsd</schemaDirectory>
                     <specVersion>2.2</specVersion>
+                    <strict>false</strict>
                     <useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
                 </configuration>
                 <executions>

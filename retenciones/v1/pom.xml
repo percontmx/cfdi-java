@@ -9,7 +9,6 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>io.github.percontmx.cfdi</groupId>
     <artifactId>retenciones-v1</artifactId>
     <version>1.2-SNAPSHOT</version>
     <name>Percont CFDI - [Retenciones] v1</name>
@@ -39,9 +38,11 @@
                 <version>0.14.0</version>
                 <configuration>
                     <bindingDirectory>${basedir}/src/main/xjb</bindingDirectory>
+                    <catalog>${basedir}/../../catalog.xml</catalog>
                     <episode>true</episode>
                     <schemaDirectory>${basedir}/src/main/xsd</schemaDirectory>
                     <specVersion>2.2</specVersion>
+                    <strict>false</strict>
                     <useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
                 </configuration>
                 <executions>
