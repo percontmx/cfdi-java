@@ -19,6 +19,12 @@
             <artifactId>jaxb-adapters</artifactId>
             <version>1.2-SNAPSHOT</version>
         </dependency>
+
+        <dependency>
+            <groupId>io.github.percontmx.cfdi.utils</groupId>
+            <artifactId>tipos-cfdi</artifactId>
+            <version>1.2-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
