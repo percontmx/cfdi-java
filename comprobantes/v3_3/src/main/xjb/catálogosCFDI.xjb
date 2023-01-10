@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bindings version="2.1"
+          xmlns="http://java.sun.com/xml/ns/jaxb"
+          xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+    <bindings xmlns:tns="http://www.sat.gob.mx/sitio_internet/cfd/catalogos"
+              scd="x-schema::tns">
+        <bindings scd="~tns:c_ClaveProdServ">
+            <typesafeEnumClass map="false"/>
+        </bindings>
+
+        <bindings scd="~tns:c_ClaveUnidad">
+            <typesafeEnumClass map="false"/>
+        </bindings>
+
+        <bindings scd="~tns:c_CodigoPostal">
+            <typesafeEnumClass map="false"/>
+        </bindings>
+
+        <bindings scd="~tns:c_Moneda">
+            <typesafeEnumClass map="false"/>
+        </bindings>
+
+        <bindings scd="~tns:c_Pais">
+            <typesafeEnumClass map="false"/>
+        </bindings>
+
+    </bindings>
+</bindings>

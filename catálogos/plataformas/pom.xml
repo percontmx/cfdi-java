@@ -5,7 +5,7 @@
     <groupId>io.github.percontmx.cfdi.catalogos</groupId>
     <artifactId>catalogos-plataformas</artifactId>
     <version>1.2-SNAPSHOT</version>
-    <name>Percont CFDI - [Catálogos] Retenciones</name>
+    <name>Percont CFDI - [Catálogos] Plataformas</name>
 
     <parent>
         <groupId>io.github.percontmx.cfdi</groupId>

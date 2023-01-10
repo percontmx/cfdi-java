@@ -3,17 +3,17 @@
     <!-- Tipos de datos. -->
     <system systemId="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI/tdCFDI.xsd"
             uri="../comprobantes/v3_3/src/main/xsd/tdCFDI.xsd" />
-    <!-- Catálogos v3.3. -->
+    <!-- Catálogos CFDI v3.3. -->
     <system systemId="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/catCFDI.xsd"
-            uri="../comprobantes/v3_3/src/main/xsd/catCFDI.xsd" />
+            uri="../catálogos/cfdi/src/main/xsd/catCFDI.xsd" />
     <!-- Catálogos de nómina -->
     <system systemId="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/Nomina/catNomina.xsd"
             uri="nómina/src/main/xsd/catNomina.xsd" />
     <!-- Catálogos de retenciones -->
-    <system systemId="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos"
+    <system systemId="http://www.sat.gob.mx/esquemas/retencionpago/1/catalogos/catRetenciones.xsd"
             uri="retenciones/src/main/xsd/catRetenciones.xsd" />
     <!-- Catálogos de plataformas tecnológicas -->
-    <system systemId="http://www.sat.gob.mx/esquemas/retencionpago/1/PlataformasTecnologicas10/catalogos"
+    <system systemId="http://www.sat.gob.mx/esquemas/retencionpago/1/PlataformasTecnologicas10/catalogos/CatPlataformasTecnologicas.xsd"
             uri="plataformas/src/main/xsd/CatPlataformasTecnologicas.xsd" />
 
 </catalog>

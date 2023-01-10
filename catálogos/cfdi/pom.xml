@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.github.percontmx.cfdi.catalogos</groupId>
+    <artifactId>catalogos-cfdi</artifactId>
+    <version>1.2-SNAPSHOT</version>
+    <name>Percont CFDI - [Catálogos] CFDI</name>
+
+    <parent>
+        <groupId>io.github.percontmx.cfdi</groupId>
+        <version>1.2-SNAPSHOT</version>
+        <artifactId>catalogos</artifactId>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jvnet.jaxb2.maven2</groupId>
+                <artifactId>maven-jaxb2-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
