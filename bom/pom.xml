@@ -63,7 +63,9 @@
 
     <modules>
         <module>../catálogos</module>
+        <!-- TODO crear proyecto de utils -->
         <module>../utils/jaxb-adapters</module>
+        <module>../utils/tipos</module>
         <module>../comprobantes/v3_2</module>
         <module>../comprobantes/v3_3</module>
         <module>../nómina</module>
