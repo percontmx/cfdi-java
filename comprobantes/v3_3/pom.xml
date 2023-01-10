@@ -54,7 +54,7 @@
                     <schemaDirectory>${basedir}/src/main/xsd</schemaDirectory>
                     <specVersion>2.2</specVersion>
                     <useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
-                    <catalog>${basedir}/../../catálogos/catalog.xml</catalog>
+                    <catalog>${basedir}/../../catalog.xml</catalog>
                     <strict>false</strict>
                 </configuration>
                 <executions>

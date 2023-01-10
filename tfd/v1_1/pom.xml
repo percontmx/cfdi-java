@@ -38,22 +38,19 @@
             </configuration>
         </plugin>
 
-        <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>jaxb2-maven-plugin</artifactId>
-            <configuration>
-                <addGeneratedAnnotation>true</addGeneratedAnnotation>
-                <locale>es</locale>
-                <target>2.1</target>
-            </configuration>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>xjc</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
+            <plugin>
+                <groupId>org.jvnet.jaxb2.maven2</groupId>
+                <artifactId>maven-jaxb2-plugin</artifactId>
+                <configuration>
+                    <bindingDirectory>${basedir}/src/main/xjb</bindingDirectory>
+                    <catalog>${basedir}/../../catalog.xml</catalog>
+                    <episode>true</episode>
+                    <schemaDirectory>${basedir}/src/main/xsd</schemaDirectory>
+                    <specVersion>2.2</specVersion>
+                    <strict>false</strict>
+                    <useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 

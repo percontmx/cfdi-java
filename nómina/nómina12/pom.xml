@@ -26,6 +26,12 @@
             <artifactId>tipos-cfdi</artifactId>
             <version>1.2-SNAPSHOT</version>
         </dependency>
+
+        <dependency>
+            <groupId>io.github.percontmx.cfdi.catalogos</groupId>
+            <artifactId>catalogos-nomina</artifactId>
+            <version>1.2-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -34,7 +40,7 @@
                 <groupId>org.jvnet.jaxb2.maven2</groupId>
                 <artifactId>maven-jaxb2-plugin</artifactId>
                 <configuration>
-                    <catalog>${basedir}/../../catálogos/catalog.xml</catalog>
+                    <catalog>${basedir}/../../catalog.xml</catalog>
                 </configuration>
             </plugin>
         </plugins>
