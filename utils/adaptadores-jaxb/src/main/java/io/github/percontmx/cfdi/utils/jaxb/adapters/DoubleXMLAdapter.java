@@ -1,12 +1,12 @@
 package io.github.percontmx.cfdi.utils.jaxb.adapters;
 
-import javax.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 
 public class DoubleXMLAdapter
         extends XmlAdapter<String, Double> {
 
     public Double unmarshal(String value) {
-        return new Double(value);
+        return Double.valueOf(value);
     }
 
     public String marshal(Double value) {
