@@ -1,6 +1,7 @@
 package io.github.percontmx.cfdi.utils.jaxb.adapters;
 
-import javax.xml.bind.annotation.adapters.XmlAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
+
 import java.util.UUID;
 
 public class UUIDXMLAdapter extends XmlAdapter<String, UUID> {
