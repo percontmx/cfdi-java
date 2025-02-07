@@ -6,6 +6,9 @@ public class DoubleXMLAdapter
         extends XmlAdapter<String, Double> {
 
     public Double unmarshal(String value) {
+        if (value == null) {
+            return null;
+        }
         return Double.valueOf(value);
     }
 

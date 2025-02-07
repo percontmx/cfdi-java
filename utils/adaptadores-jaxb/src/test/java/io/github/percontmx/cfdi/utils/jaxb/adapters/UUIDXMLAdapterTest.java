@@ -1,11 +1,11 @@
 package io.github.percontmx.cfdi.utils.jaxb.adapters;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.util.UUID;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.*;
+
 
 public class UUIDXMLAdapterTest {
 
@@ -29,9 +29,10 @@ public class UUIDXMLAdapterTest {
         assertEquals(randomUUID, testAdapter.unmarshal(randomUUID.toString()));
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void testUnmarshallingInvalidUUIDString() {
-        testAdapter.unmarshal("testStringSample");
+        assertThrows(IllegalArgumentException.class, () ->
+                testAdapter.unmarshal("testStringSample"));
     }
 
     @Test
