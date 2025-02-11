@@ -26,6 +26,11 @@
                 <groupId>io.github.percontmx.cfdi</groupId>
                 <artifactId>utils-tipos-cfdi</artifactId>
             </dependency>
+
+            <dependency>
+                <groupId>io.github.percontmx.cfdi</groupId>
+                <artifactId>cfdi-v32</artifactId>
+            </dependency>
             <!-- dependency>
                 <groupId>io.github.percontmx.cfdi</groupId>
                 <artifactId>cfdi-v3_2</artifactId>
