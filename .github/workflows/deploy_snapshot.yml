@@ -24,10 +24,10 @@ jobs:
       - name: Regenerar los paquetes.
         run: ./mvn -B install
 
-      - name: Desplegar uberjar.
-        run: ./mvn -B -s $GITHUB_WORKSPACE/settings.xml -P deploy_github_packages deploy
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+#      - name: Desplegar uberjar.
+#        run: ./mvn -B -s $GITHUB_WORKSPACE/settings.xml -P deploy_github_packages deploy
+#        env:
+#          GITHUB_TOKEN: ${{ github.token }}
 
   deploy_to_ossrh:
     name: Desplegar a OSSRH
