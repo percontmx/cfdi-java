@@ -21,14 +21,14 @@
         </dependency>
     </dependencies>
 
-    <!-- build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>jaxb2-maven-plugin</artifactId>
             </plugin>
         </plugins>
-    </build -->
+    </build>
 
     <!-- dependencies>
         <dependency>
