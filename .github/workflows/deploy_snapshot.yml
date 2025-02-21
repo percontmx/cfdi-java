@@ -22,14 +22,8 @@ jobs:
           distribution: 'jetbrains'
           java-version: 11
           server-id: ossrh
-          server-username: ${{ secrets.OSSRH_USERNAME }}
-          server-password: ${{ secrets.OSSRH_PASSWORD }}
-
-      - name: Archive code coverage results
-        uses: actions/upload-artifact@v4
-        with:
-          name: settings
-          path: /home/runner/.m2/settings.xml
+          server-username: MAVEN_CENTRAL_USER
+          server-password: MAVEN_CENTRAL_PASSWORD
 
       - name: Caché de paquetes de Maven.
         uses: actions/cache@v4
@@ -46,3 +40,6 @@ jobs:
 
       - name: Desplegar snapshot.
         run: ./mvnw -B deploy -P deploy
+        env:
+          MAVEN_CENTRAL_USER: ${{ secrets.MVN_USERNAME }}
+          MAVEN_CENTRAL_PASSWORD: ${{ secrets.MVN_TOKEN }}
