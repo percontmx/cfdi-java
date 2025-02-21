@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Instalar Java 11.
-        uses: actions/setup-java@4
+        uses: actions/setup-java@v4
         with:
           distribution: 'jetbrains'
           java-version: 11
@@ -32,15 +32,10 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
 
-#      - name: Importar llave GPG.
-#        id: import_gpg
-#        uses: crazy-max/ghaction-import-gpg@v3
-#        with:
-#          gpg-private-key: ${{ secrets.GPG_KEY }}
-#          passphrase: ${{ secrets.GPG_PASSPHRASE }}
-
       - name: Desplegar snapshot.
         run: mvn deploy -P deploy
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
           OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+          MAVEN_GPG_KEY: ${{ secrets.GPG_KEY }}
