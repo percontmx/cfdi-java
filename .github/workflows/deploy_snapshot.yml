@@ -22,8 +22,8 @@ jobs:
           distribution: 'jetbrains'
           java-version: 11
           server-id: ossrh
-          server-username: OSSRH_USERNAME
-          server-password: OSSRH_PASSWORD
+          server-username: ${{ secrets.OSSRH_USERNAME }}
+          server-password: ${{ secrets.OSSRH_PASSWORD }}
 
       - name: Archive code coverage results
         uses: actions/upload-artifact@v4
@@ -46,6 +46,3 @@ jobs:
 
       - name: Desplegar snapshot.
         run: ./mvnw -B deploy -P deploy
-        env:
-          OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-          OSSRH_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
