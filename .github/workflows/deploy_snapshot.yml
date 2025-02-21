@@ -25,6 +25,12 @@ jobs:
           server-username: OSSRH_USERNAME
           server-password: OSSRH_PASSWORD
 
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v4
+        with:
+          name: settings
+          path: .m2/settings.xml
+
       - name: Caché de paquetes de Maven.
         uses: actions/cache@v4
         with:
