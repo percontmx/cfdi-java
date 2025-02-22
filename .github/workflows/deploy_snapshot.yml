@@ -39,15 +39,8 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
 
-      - name: Debug credentials
-        run: |
-          echo "$MAVEN_CENTRAL_USER:$MAVEN_CENTRAL_PASSWORD"
-        env:
-          MAVEN_CENTRAL_USER: ${{ secrets.MVN_USERNAME }}
-          MAVEN_CENTRAL_PASSWORD: ${{ secrets.MVN_TOKEN }}
-
       - name: Desplegar snapshot.
-        run: mvn -B deploy -P ossrh
+        run: mvn -B deploy -P ossrh -s /home/runner/.m2/settings.xml
         env:
           MAVEN_CENTRAL_USER: ${{ secrets.MVN_USERNAME }}
           MAVEN_CENTRAL_PASSWORD: ${{ secrets.MVN_TOKEN }}
