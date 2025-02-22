@@ -24,7 +24,6 @@ jobs:
           server-id: ossrh
           server-username: MAVEN_CENTRAL_USER
           server-password: MAVEN_CENTRAL_PASSWORD
-          settings-path: ./.m2
 
       - name: Importar llave GPG
         uses: crazy-max/ghaction-import-gpg@v6
@@ -47,7 +46,7 @@ jobs:
           MAVEN_CENTRAL_PASSWORD: ${{ secrets.MVN_TOKEN }}
 
       - name: Desplegar snapshot.
-        run: mvnw -B deploy -P ossrh
+        run: mvn -B deploy -P ossrh
         env:
           MAVEN_CENTRAL_USER: ${{ secrets.MVN_USERNAME }}
           MAVEN_CENTRAL_PASSWORD: ${{ secrets.MVN_TOKEN }}
