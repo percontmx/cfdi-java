@@ -12,11 +12,6 @@ jobs:
   deploy_to_ossrh:
     name: Desplegar a OSSRH
     runs-on: ubuntu-latest
-
-    env:
-      MAVEN_CENTRAL_USER: ${{ secrets.MVN_USERNAME }}
-      MAVEN_CENTRAL_PASSWORD: ${{ secrets.MVN_TOKEN }}
-
     steps:
       - name: Descargar el código.
         uses: actions/checkout@v4
@@ -45,13 +40,13 @@ jobs:
 
       - name: Debug credentials
         run: |
-          echo "$MAVEN_CENTRAL_USER:$MAVEN_CENTRAL_PASSWORD" >> cred.txt
-
-      - name: artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: settings
-          path: cred.txt
+          echo "$MAVEN_CENTRA_USER:$MAVEN_CENTRAL_PASSWORD"
+        env:
+          MAVEN_CENTRAL_USER: ${{ secrets.MVN_USERNAME }}
+          MAVEN_CENTRAL_PASSWORD: ${{ secrets.MVN_TOKEN }}
 
       - name: Desplegar snapshot.
         run: ./mvnw -B deploy -P ossrh
+        env:
+          MAVEN_CENTRAL_USER: ${{ secrets.MVN_USERNAME }}
+          MAVEN_CENTRAL_PASSWORD: ${{ secrets.MVN_TOKEN }}
