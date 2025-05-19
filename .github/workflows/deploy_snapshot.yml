@@ -3,7 +3,10 @@ name: Desplegar versiones de desarrollo.
 on:
   push:
     branches:
-      - main
+      - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   deploy_to_ossrh:
@@ -19,7 +22,7 @@ jobs:
           distribution: zulu
           java-version: 11
           cache: maven
-          server-id: ossrh
+          server-id: central
           server-username: MAVEN_CENTRAL_USER
           server-password: MAVEN_CENTRAL_PASSWORD
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -31,7 +34,7 @@ jobs:
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
       - name: Desplegar snapshot.
-        run: ./mvn deploy -P ossrh
+        run: ./mvnw deploy
         env:
           MAVEN_CENTRAL_USER: ${{ secrets.MVN_USERNAME }}
           MAVEN_CENTRAL_PASSWORD: ${{ secrets.MVN_TOKEN }}
