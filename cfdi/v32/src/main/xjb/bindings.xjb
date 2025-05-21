@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<bindings xmlns="http://java.sun.com/xml/ns/jaxb" version="2.1"
+<bindings xmlns="https://jakarta.ee/xml/ns/jaxb" version="3.0"
           xmlns:xs="http://www.w3.org/2001/XMLSchema"
           xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
 
-    <globalBindings fixedAttributeAsConstantProperty="true" localScoping="toplevel">
+    <globalBindings fixedAttributeAsConstantProperty="true" localScoping="toplevel" generateIsSetMethod="true">
+        <xjc:javaType name="java.time.LocalDate" xmlType="xs:date"
+                      adapter="io.github.threetenjaxb.core.LocalDateXmlAdapter" />
         <xjc:javaType name="java.time.LocalDateTime" xmlType="xs:dateTime"
-                      adapter="com.migesok.jaxb.adapter.javatime.LocalDateTimeXmlAdapter"/>
+                      adapter="io.github.threetenjaxb.core.LocalDateTimeXmlAdapter" />
     </globalBindings>
 
     <bindings schemaLocation="../xsd/cfdiv32.xsd">
         <schemaBindings>
-            <package name="mx.gob.sat.cfd.v3_2" />
+            <package name="mx.gob.sat.cfdi.v32" />
         </schemaBindings>
 
         <bindings node="//xs:complexType[@name='t_InformacionAduanera']">
