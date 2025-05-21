@@ -4,13 +4,10 @@ on:
   push:
     branches:
       - master
-  pull_request:
-    branches:
-      - master
 
 jobs:
-  deploy_to_ossrh:
-    name: Desplegar a OSSRH
+  deploy_to_central:
+    name: Desplegar a Maven Central
     runs-on: ubuntu-latest
     steps:
       - name: Descargar el código.
