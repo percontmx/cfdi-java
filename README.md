@@ -1,5 +1,6 @@
 # CFDI - Java
 
+[![Pruebas previas a integración](https://github.com/percontmx/cfdi-java/actions/workflows/pre_integration_tests.yml/badge.svg)](https://github.com/percontmx/cfdi-java/actions/workflows/pre_integration_tests.yml)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/percontmx/cfdi?color=green&label=Versi%C3%B3n)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Donaciones](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/alexpercont)
