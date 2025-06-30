@@ -15,6 +15,7 @@
     <modules>
         <module>utils/adaptadores-jaxb</module>
         <module>utils/tipos-cfdi</module>
+        <module>catálogos</module>
         <module>cfdi/v32</module>
         <module>bom</module>
     </modules>
@@ -38,7 +39,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
 
     <distributionManagement>
         <snapshotRepository>
