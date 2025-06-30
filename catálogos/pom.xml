@@ -14,14 +14,14 @@
     <packaging>pom</packaging>
     <name>Percont CFDI [Catálogos]</name>
 
-    <!-- modules>
+    <modules>
         <module>cfdi</module>
-        <module>nómina</module>
+        <!-- module>nómina</module>
         <module>plataformas</module>
-        <module>retenciones</module>
+        <module>retenciones</module -->
     </modules>
 
-    <build>
+    <!-- build>
         <pluginManagement>
             <plugins>
                 <plugin>

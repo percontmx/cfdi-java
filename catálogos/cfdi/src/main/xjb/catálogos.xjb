@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<bindings xmlns="http://java.sun.com/xml/ns/jaxb" version="2.1"
-          xmlns:xs="http://www.w3.org/2001/XMLSchema"
-          xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+<bindings xmlns="https://jakarta.ee/xml/ns/jaxb"
+          version="3.0"
+          xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
     <bindings schemaLocation="../xsd/catCFDI.xsd">
         <schemaBindings>
-            <package name="mx.gob.sat.cfd.catálogos" />
+            <package name="mx.gob.sat.cfd.catálogos"/>
         </schemaBindings>
 
         <bindings node="/xs:schema/xs:simpleType[@name='c_CodigoPostal']">
-            <typesafeEnumClass map="false" />
+            <typesafeEnumClass map="false"/>
         </bindings>
 
         <bindings node="/xs:schema/xs:simpleType[@name='c_ClaveProdServ']">
-            <typesafeEnumClass map="false" />
+            <typesafeEnumClass map="false"/>
         </bindings>
 
         <bindings node="/xs:schema/xs:simpleType[@name='c_ClaveUnidad']">
-            <typesafeEnumClass map="false" />
+            <typesafeEnumClass map="false"/>
         </bindings>
 
         <bindings node="/xs:schema/xs:simpleType[@name='c_Colonia']">
-            <typesafeEnumClass map="false" />
+            <typesafeEnumClass map="false"/>
         </bindings>
 
         <bindings node="/xs:schema/xs:simpleType[@name='c_Estado']">
-            <typesafeEnumClass map="false" />
+            <typesafeEnumClass map="false"/>
         </bindings>
 
         <bindings node="/xs:schema/xs:simpleType[@name='c_MetodoPago']">
@@ -41,25 +41,25 @@
         </bindings>
 
         <bindings node="/xs:schema/xs:simpleType[@name='c_Moneda']">
-            <typesafeEnumClass map="false" />
+            <typesafeEnumClass map="false"/>
         </bindings>
 
         <bindings node="/xs:schema/xs:simpleType[@name='c_Municipio']">
-            <typesafeEnumClass map="false" />
+            <typesafeEnumClass map="false"/>
         </bindings>
 
         <bindings node="/xs:schema/xs:simpleType[@name='c_Pais']">
-            <typesafeEnumClass map="false" />
+            <typesafeEnumClass map="false"/>
         </bindings>
 
         <bindings node="/xs:schema/xs:simpleType[@name='c_TipoDeComprobante']">
             <typesafeEnumClass name="TipoDeComprobante">
                 <javadoc>Catálogo de tipos de comprobante.</javadoc>
-                <typesafeEnumMember name="INGRESO" value="I" />
-                <typesafeEnumMember name="EGRESO" value="E" />
-                <typesafeEnumMember name="TRASLADO" value="T" />
-                <typesafeEnumMember name="NÓMINA" value="N" />
-                <typesafeEnumMember name="PAGO" value="P" />
+                <typesafeEnumMember name="INGRESO" value="I"/>
+                <typesafeEnumMember name="EGRESO" value="E"/>
+                <typesafeEnumMember name="TRASLADO" value="T"/>
+                <typesafeEnumMember name="NÓMINA" value="N"/>
+                <typesafeEnumMember name="PAGO" value="P"/>
             </typesafeEnumClass>
         </bindings>
 
@@ -118,7 +118,8 @@
                     <javadoc>Donativos.</javadoc>
                 </typesafeEnumMember>
                 <typesafeEnumMember name="D05_INTERESES_HIPOTECARIOS" value="D05">
-                    <javadoc>Intereses reales efectivamente pagados por créditos hipotecarios (casa habitación).</javadoc>
+                    <javadoc>Intereses reales efectivamente pagados por créditos hipotecarios (casa habitación).
+                    </javadoc>
                 </typesafeEnumMember>
                 <typesafeEnumMember name="D06_APORTACIONES" value="D06">
                     <javadoc>Aportaciones voluntarias al SAR.</javadoc>
@@ -130,7 +131,8 @@
                     <javadoc>Gastos de transportación escolar obligatoria.</javadoc>
                 </typesafeEnumMember>
                 <typesafeEnumMember name="D09_PENSIÓN" value="D09">
-                    <javadoc>Depósitos en cuentas para el ahorro, primas que tengan como base planes de pensiones.</javadoc>
+                    <javadoc>Depósitos en cuentas para el ahorro, primas que tengan como base planes de pensiones.
+                    </javadoc>
                 </typesafeEnumMember>
                 <typesafeEnumMember name="D10_COLEGIATURAS" value="D10">
                     <javadoc>Pagos por servicios educativos (colegiaturas).</javadoc>
