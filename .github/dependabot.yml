@@ -5,5 +5,7 @@ updates:
     schedule:
       interval: daily
     labels:
+      - "configuración"
       - "dependabot"
     target-branch: "master"
+    open-pull-requests-limit: 5
