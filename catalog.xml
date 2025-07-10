@@ -2,10 +2,10 @@
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <!-- Tipos de datos. -->
     <system systemId="http://www.sat.gob.mx/sitio_internet/cfd/tipoDatos/tdCFDI/tdCFDI.xsd"
-            uri="utils/tipos/src/main/xsd/tdCFDI.xsd" />
+            uri="utils/tipos-cfdi/src/main/xsd/tdCFDI.xsd" />
     <!-- Catálogos CFDI v3.3. -->
     <system systemId="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/catCFDI.xsd"
-            uri="catálogos/cfdi/src/main/xsd/catCFDI.xsd" />
+            uri="catalogos/catalogos-cfdi/src/main/xsd/catCFDI.xsd" />
     <!-- Catálogos de nómina -->
     <system systemId="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/Nomina/catNomina.xsd"
             uri="catálogos/nómina/src/main/xsd/catNomina.xsd" />

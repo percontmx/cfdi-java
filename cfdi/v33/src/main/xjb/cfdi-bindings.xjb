@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bindings version="3.0"
+          xmlns="https://jakarta.ee/xml/ns/jaxb">
+
+    <bindings schemaLocation="../xsd/cfdi33.xsd">
+        <schemaBindings>
+            <package name="mx.gob.sat.cfd.v3_3" />
+        </schemaBindings>
+    </bindings>
+
+</bindings>

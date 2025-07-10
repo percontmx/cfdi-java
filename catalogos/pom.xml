@@ -15,7 +15,7 @@
     <name>Percont CFDI [Catálogos]</name>
 
     <modules>
-        <module>cfdi</module>
+        <!-- module>catalogos-cfdi</module -->
         <!-- module>nómina</module>
         <module>plataformas</module>
         <module>retenciones</module -->
