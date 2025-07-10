@@ -1,11 +1,83 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <bindings version="3.0"
-          xmlns="https://jakarta.ee/xml/ns/jaxb">
+          xmlns="https://jakarta.ee/xml/ns/jaxb"
+          xmlns:xs="http://www.w3.org/2001/XMLSchema"
+          xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+
+    <globalBindings fixedAttributeAsConstantProperty="true" localScoping="toplevel">
+        <xjc:javaType name="java.time.LocalDate" xmlType="xs:date"
+                      adapter="io.github.threetenjaxb.core.LocalDateXmlAdapter" />
+        <xjc:javaType name="java.time.LocalDateTime" xmlType="xs:dateTime"
+                      adapter="io.github.threetenjaxb.core.LocalDateTimeXmlAdapter" />
+    </globalBindings>
 
     <bindings schemaLocation="../xsd/cfdi33.xsd">
         <schemaBindings>
-            <package name="mx.gob.sat.cfd.v3_3" />
+            <package name="mx.gob.sat.cfdi.v33" />
         </schemaBindings>
+
+        <bindings node="//xs:attribute[@name='Fecha']">
+            <property name="fechaDeExpedicion">
+                <javadoc>Fecha y hora locales en las que este comprobante fiscal fue expedido.</javadoc>
+            </property>
+        </bindings>
+
+        <bindings node="//xs:attribute[@name='FormaPago']">
+            <property name="formaDePago" />
+        </bindings>
+
+        <bindings node="//xs:attribute[@name='LugarExpedicion']">
+            <property name="lugarDeExpedicion" />
+        </bindings>
+
+        <bindings node="//xs:attribute[@name='MetodoPago']">
+            <property name="metodoDePago" />
+        </bindings>
+
+        <bindings node="//xs:attribute[@name='NoCertificado']">
+            <property name="numeroDeCertificado" />
+        </bindings>
+
+        <bindings node="//xs:attribute[@name='TipoCambio']">
+            <property name="tipoDeCambio" />
+        </bindings>
+
+        <bindings node="//xs:attribute[@name='UUID']">
+            <property>
+                <baseType>
+                    <xjc:javaType name="java.util.UUID"
+                                  adapter="io.github.percontmx.cfdi.utils.jaxb.adapters.UUIDXMLAdapter" />
+                </baseType>
+            </property>
+        </bindings>
+
+        <bindings node="//xs:attribute[@name='Version']">
+            <property name="version" />
+        </bindings>
+
+        <bindings node="//xs:element[@name='Concepto']//xs:element[@name='Impuestos']/xs:complexType">
+            <class name="ConceptoImpuestos" />
+        </bindings>
+
+        <bindings node="//xs:element[@name='Concepto']//xs:element[@name='Retencion']/xs:complexType">
+            <class name="ConceptoRetencion" />
+        </bindings>
+
+        <bindings node="//xs:element[@name='Concepto']//xs:element[@name='Retenciones']/xs:complexType">
+            <class name="ConceptoRetenciones" />
+        </bindings>
+
+        <bindings node="//xs:element[@name='Concepto']//xs:element[@name='Traslados']/xs:complexType">
+            <class name="ConceptoTraslados" />
+        </bindings>
+
+        <bindings node="//xs:element[@name='Concepto']//xs:element[@name='Traslado']/xs:complexType">
+            <class name="ConceptoTraslado" />
+        </bindings>
+
+        <bindings node="//xs:element[@name='Parte']//xs:element[@name='InformacionAduanera']/xs:complexType">
+            <class name="InformacionAduaneraParte" />
+        </bindings>
     </bindings>
 
 </bindings>

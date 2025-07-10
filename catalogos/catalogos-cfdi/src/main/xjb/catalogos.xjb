@@ -5,32 +5,32 @@
 
     <bindings schemaLocation="../xsd/catCFDI.xsd">
         <schemaBindings>
-            <package name="mx.gob.sat.cfd.catalogos"/>
+            <package name="mx.gob.sat.cfdi.catalogos"/>
         </schemaBindings>
 
         <bindings node="//xs:simpleType[@name='c_ClaveProdServ']">
-            <typesafeEnumClass map="false" />
+            <typesafeEnumClass map="false"/>
         </bindings>
 
         <bindings node="//xs:simpleType[@name='c_ClaveUnidad']">
-            <typesafeEnumClass map="false" />
+            <typesafeEnumClass map="false"/>
         </bindings>
 
         <bindings node="//xs:simpleType[@name='c_CodigoPostal']">
-            <typesafeEnumClass map="false" />
+            <typesafeEnumClass map="false"/>
         </bindings>
 
         <bindings node="//xs:simpleType[@name='c_Colonia']">
-            <typesafeEnumClass map="false" />
+            <typesafeEnumClass map="false"/>
         </bindings>
 
         <bindings node="//xs:simpleType[@name='c_FormaPago']">
             <!-- TODO generar enum para Forma de pago -->
-            <typesafeEnumClass map="false" />
+            <typesafeEnumClass map="false"/>
         </bindings>
 
         <bindings node="//xs:simpleType[@name='c_Estado']">
-            <typesafeEnumClass map="false" />
+            <typesafeEnumClass map="false"/>
         </bindings>
 
         <bindings node="//xs:simpleType[@name='c_MetodoPago']">
@@ -46,7 +46,7 @@
         </bindings>
 
         <bindings node="//xs:simpleType[@name='c_Moneda']">
-            <typesafeEnumClass map="false"/>
+            <typesafeEnumClass name="Moneda"/>
         </bindings>
 
         <bindings node="//xs:simpleType[@name='c_Municipio']">
@@ -54,7 +54,7 @@
         </bindings>
 
         <bindings node="//xs:simpleType[@name='c_Pais']">
-            <typesafeEnumClass map="false"/>
+            <typesafeEnumClass name="Pais"/>
         </bindings>
 
         <bindings node="//xs:simpleType[@name='c_TipoDeComprobante']">

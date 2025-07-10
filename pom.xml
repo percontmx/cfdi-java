@@ -113,6 +113,25 @@
                 </plugin>
 
                 <plugin>
+                    <groupId>org.jvnet.jaxb</groupId>
+                    <artifactId>jaxb-maven-plugin</artifactId>
+                    <version>4.0.8</version>
+                    <configuration>
+                        <schemaDirectory>src/main/xsd</schemaDirectory>
+                        <bindingDirectory>src/main/xjb</bindingDirectory>
+                        <useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>generate</goal>
+                            </goals>
+                            <phase>generate-sources</phase>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-source-plugin</artifactId>
                     <version>3.3.1</version>
