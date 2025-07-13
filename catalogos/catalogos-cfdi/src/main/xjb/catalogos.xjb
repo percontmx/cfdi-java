@@ -5,31 +5,36 @@
 
     <bindings schemaLocation="../xsd/catCFDI.xsd">
         <schemaBindings>
-            <package name="mx.gob.sat.cfd.catálogos"/>
+            <package name="mx.gob.sat.cfdi.catalogos"/>
         </schemaBindings>
 
-        <bindings node="/xs:schema/xs:simpleType[@name='c_CodigoPostal']">
+        <bindings node="//xs:simpleType[@name='c_ClaveProdServ']">
             <typesafeEnumClass map="false"/>
         </bindings>
 
-        <bindings node="/xs:schema/xs:simpleType[@name='c_ClaveProdServ']">
+        <bindings node="//xs:simpleType[@name='c_ClaveUnidad']">
             <typesafeEnumClass map="false"/>
         </bindings>
 
-        <bindings node="/xs:schema/xs:simpleType[@name='c_ClaveUnidad']">
+        <bindings node="//xs:simpleType[@name='c_CodigoPostal']">
             <typesafeEnumClass map="false"/>
         </bindings>
 
-        <bindings node="/xs:schema/xs:simpleType[@name='c_Colonia']">
+        <bindings node="//xs:simpleType[@name='c_Colonia']">
             <typesafeEnumClass map="false"/>
         </bindings>
 
-        <bindings node="/xs:schema/xs:simpleType[@name='c_Estado']">
+        <bindings node="//xs:simpleType[@name='c_FormaPago']">
+            <!-- TODO generar enum para Forma de pago -->
             <typesafeEnumClass map="false"/>
         </bindings>
 
-        <bindings node="/xs:schema/xs:simpleType[@name='c_MetodoPago']">
-            <typesafeEnumClass name="MétodoDePago">
+        <bindings node="//xs:simpleType[@name='c_Estado']">
+            <typesafeEnumClass map="false"/>
+        </bindings>
+
+        <bindings node="//xs:simpleType[@name='c_MetodoPago']">
+            <typesafeEnumClass name="MetodoDePago">
                 <javadoc>Catálogo de métodos de pago.</javadoc>
                 <typesafeEnumMember name="UNICO" value="PUE">
                     <javadoc>Pago en una sola exhibición.</javadoc>
@@ -40,19 +45,19 @@
             </typesafeEnumClass>
         </bindings>
 
-        <bindings node="/xs:schema/xs:simpleType[@name='c_Moneda']">
+        <bindings node="//xs:simpleType[@name='c_Moneda']">
+            <typesafeEnumClass name="Moneda"/>
+        </bindings>
+
+        <bindings node="//xs:simpleType[@name='c_Municipio']">
             <typesafeEnumClass map="false"/>
         </bindings>
 
-        <bindings node="/xs:schema/xs:simpleType[@name='c_Municipio']">
-            <typesafeEnumClass map="false"/>
+        <bindings node="//xs:simpleType[@name='c_Pais']">
+            <typesafeEnumClass name="Pais"/>
         </bindings>
 
-        <bindings node="/xs:schema/xs:simpleType[@name='c_Pais']">
-            <typesafeEnumClass map="false"/>
-        </bindings>
-
-        <bindings node="/xs:schema/xs:simpleType[@name='c_TipoDeComprobante']">
+        <bindings node="//xs:simpleType[@name='c_TipoDeComprobante']">
             <typesafeEnumClass name="TipoDeComprobante">
                 <javadoc>Catálogo de tipos de comprobante.</javadoc>
                 <typesafeEnumMember name="INGRESO" value="I"/>
@@ -63,13 +68,13 @@
             </typesafeEnumClass>
         </bindings>
 
-        <bindings node="/xs:schema/xs:simpleType[@name='c_TipoFactor']">
+        <bindings node="//xs:simpleType[@name='c_TipoFactor']">
             <typesafeEnumClass name="TipoDeFactor">
                 <javadoc>Catálogo de tipos de factor.</javadoc>
             </typesafeEnumClass>
         </bindings>
 
-        <bindings node="/xs:schema/xs:simpleType[@name='c_UsoCFDI']">
+        <bindings node="//xs:simpleType[@name='c_UsoCFDI']">
             <typesafeEnumClass name="UsoDeCFDI">
                 <javadoc>Catálogo de uso de CFDI.</javadoc>
                 <typesafeEnumMember name="G01_MERCANCIAS" value="G01">
@@ -142,7 +147,5 @@
                 </typesafeEnumMember>
             </typesafeEnumClass>
         </bindings>
-
     </bindings>
-
 </bindings>

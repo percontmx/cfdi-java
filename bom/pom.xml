@@ -31,12 +31,12 @@
                 <groupId>io.github.percontmx.cfdi</groupId>
                 <artifactId>cfdi-v32</artifactId>
             </dependency>
-            <!-- dependency>
-                <groupId>io.github.percontmx.cfdi</groupId>
-                <artifactId>cfdi-v3_2</artifactId>
-                <version>1.2-SNAPSHOT</version>
-            </dependency>
 
+            <dependency>
+                <groupId>io.github.percontmx.cfdi</groupId>
+                <artifactId>cfdi-v33</artifactId>
+            </dependency>
+            <!--
             <dependency>
                 <groupId>io.github.percontmx.cfdi</groupId>
                 <artifactId>cfdi-v3_3</artifactId>

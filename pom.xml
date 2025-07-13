@@ -15,8 +15,9 @@
     <modules>
         <module>utils/adaptadores-jaxb</module>
         <module>utils/tipos-cfdi</module>
-        <module>catálogos</module>
+        <module>catalogos/catalogos-cfdi</module>
         <module>cfdi/v32</module>
+        <module>cfdi/v33</module>
         <module>bom</module>
     </modules>
 
@@ -112,39 +113,20 @@
                 </plugin>
 
                 <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>jaxb2-maven-plugin</artifactId>
-                    <version>3.2.0</version>
+                    <groupId>org.jvnet.jaxb</groupId>
+                    <artifactId>jaxb-maven-plugin</artifactId>
+                    <version>4.0.8</version>
                     <configuration>
-                        <arguments>
-                            <argument>-Xxew</argument>
-                        </arguments>
-                        <extension>true</extension>
+                        <schemaDirectory>src/main/xsd</schemaDirectory>
+                        <bindingDirectory>src/main/xjb</bindingDirectory>
+                        <useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
                     </configuration>
-                    <dependencies>
-                        <dependency>
-                            <groupId>com.github.jaxb-xew-plugin</groupId>
-                            <artifactId>jaxb-xew-plugin</artifactId>
-                            <version>2.1</version>
-                        </dependency>
-                    </dependencies>
                     <executions>
                         <execution>
-                            <id>xjc</id>
                             <goals>
-                                <goal>xjc</goal>
+                                <goal>generate</goal>
                             </goals>
                             <phase>generate-sources</phase>
-                        </execution>
-                        <execution>
-                            <id>test-xjc</id>
-                            <goals>
-                                <goal>testXjc</goal>
-                            </goals>
-                            <phase>generate-test-sources</phase>
-                            <configuration>
-                                <failOnNoSchemas>false</failOnNoSchemas>
-                            </configuration>
                         </execution>
                     </executions>
                 </plugin>

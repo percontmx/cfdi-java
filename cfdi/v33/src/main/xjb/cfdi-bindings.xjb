@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<bindings xmlns="http://java.sun.com/xml/ns/jaxb" version="2.1"
+<bindings version="3.0"
+          xmlns="https://jakarta.ee/xml/ns/jaxb"
           xmlns:xs="http://www.w3.org/2001/XMLSchema"
           xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
 
+    <globalBindings fixedAttributeAsConstantProperty="true" localScoping="toplevel">
+        <xjc:javaType name="java.time.LocalDate" xmlType="xs:date"
+                      adapter="io.github.threetenjaxb.core.LocalDateXmlAdapter" />
+        <xjc:javaType name="java.time.LocalDateTime" xmlType="xs:dateTime"
+                      adapter="io.github.threetenjaxb.core.LocalDateTimeXmlAdapter" />
+    </globalBindings>
+
     <bindings schemaLocation="../xsd/cfdi33.xsd">
         <schemaBindings>
-            <package name="mx.gob.sat.cfd.v3_3" />
+            <package name="mx.gob.sat.cfdi.v33" />
         </schemaBindings>
 
-        <bindings node="//xs:attribute[@name='Confirmacion']">
-            <property name="confirmación" />
-        </bindings>
-
         <bindings node="//xs:attribute[@name='Fecha']">
-            <property name="fechaDeExpedición">
+            <property name="fechaDeExpedicion">
                 <javadoc>Fecha y hora locales en las que este comprobante fiscal fue expedido.</javadoc>
             </property>
         </bindings>
@@ -23,15 +27,15 @@
         </bindings>
 
         <bindings node="//xs:attribute[@name='LugarExpedicion']">
-            <property name="lugarDeExpedición" />
+            <property name="lugarDeExpedicion" />
         </bindings>
 
         <bindings node="//xs:attribute[@name='MetodoPago']">
-            <property name="métodoDePago" />
+            <property name="metodoDePago" />
         </bindings>
 
         <bindings node="//xs:attribute[@name='NoCertificado']">
-            <property name="númeroDeCertificado" />
+            <property name="numeroDeCertificado" />
         </bindings>
 
         <bindings node="//xs:attribute[@name='TipoCambio']">
@@ -48,7 +52,7 @@
         </bindings>
 
         <bindings node="//xs:attribute[@name='Version']">
-            <property name="versión" />
+            <property name="version" />
         </bindings>
 
         <bindings node="//xs:element[@name='Concepto']//xs:element[@name='Impuestos']/xs:complexType">
@@ -56,7 +60,7 @@
         </bindings>
 
         <bindings node="//xs:element[@name='Concepto']//xs:element[@name='Retencion']/xs:complexType">
-            <class name="ConceptoRetención" />
+            <class name="ConceptoRetencion" />
         </bindings>
 
         <bindings node="//xs:element[@name='Concepto']//xs:element[@name='Retenciones']/xs:complexType">
@@ -72,9 +76,8 @@
         </bindings>
 
         <bindings node="//xs:element[@name='Parte']//xs:element[@name='InformacionAduanera']/xs:complexType">
-            <class name="InformaciónAduaneraParte" />
+            <class name="InformacionAduaneraParte" />
         </bindings>
-
     </bindings>
 
 </bindings>
