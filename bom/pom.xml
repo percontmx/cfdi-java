@@ -41,6 +41,11 @@
                 <groupId>io.github.percontmx.cfdi</groupId>
                 <artifactId>complementos-nomina-v11</artifactId>
             </dependency>
+
+            <dependency>
+                <groupId>io.github.percontmx.cfdi</groupId>
+                <artifactId>complementos-nomina-v12</artifactId>
+            </dependency>
             <!--
             <dependency>
                 <groupId>io.github.percontmx.cfdi</groupId>
