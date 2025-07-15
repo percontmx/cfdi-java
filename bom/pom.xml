@@ -36,6 +36,11 @@
                 <groupId>io.github.percontmx.cfdi</groupId>
                 <artifactId>cfdi-v33</artifactId>
             </dependency>
+
+            <dependency>
+                <groupId>io.github.percontmx.cfdi</groupId>
+                <artifactId>complementos-nomina-v11</artifactId>
+            </dependency>
             <!--
             <dependency>
                 <groupId>io.github.percontmx.cfdi</groupId>
@@ -57,12 +62,6 @@
 
             <dependency>
                 <groupId>io.github.percontmx.cfdi</groupId>
-                <artifactId>nomina-v1_1</artifactId>
-                <version>1.2-SNAPSHOT</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.github.percontmx.cfdi</groupId>
                 <artifactId>nomina-v1_2</artifactId>
                 <version>1.2-SNAPSHOT</version>
             </dependency>
@@ -75,14 +74,4 @@
         </dependencies>
     </dependencyManagement>
 
-    <!-- modules>
-        <module>../catálogos</module>
-        <module>../comprobantes/v3_2</module>
-        <module>../comprobantes/v3_3</module>
-        <module>../nómina</module>
-        <module>../tfd/v1_0</module>
-        <module>../tfd/v1_1</module>
-        <module>../complementos/plataformas</module>
-        <module>../retenciones/v1</module>
-    </modules -->
 </project>

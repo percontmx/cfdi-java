@@ -16,6 +16,7 @@
         <module>utils/adaptadores-jaxb</module>
         <module>utils/tipos-cfdi</module>
         <module>catalogos/catalogos-cfdi</module>
+        <module>complementos/nomina-v11</module>
         <module>cfdi/v32</module>
         <module>cfdi/v33</module>
         <module>bom</module>
