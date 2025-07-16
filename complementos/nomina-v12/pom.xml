@@ -13,35 +13,27 @@
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <!-- dependencies>
+    <dependencies>
         <dependency>
-            <groupId>io.github.percontmx.cfdi.catalogos</groupId>
+            <groupId>io.github.percontmx.cfdi</groupId>
             <artifactId>catalogos-cfdi</artifactId>
-            <version>1.2-SNAPSHOT</version>
+            <version>2.0.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>
-            <groupId>io.github.percontmx.cfdi.utils</groupId>
-            <artifactId>tipos-cfdi</artifactId>
-            <version>1.2-SNAPSHOT</version>
+            <groupId>io.github.percontmx.cfdi</groupId>
+            <artifactId>utils-tipos-cfdi</artifactId>
+            <version>2.0.0-SNAPSHOT</version>
         </dependency>
 
-        <dependency>
-            <groupId>io.github.percontmx.cfdi.catalogos</groupId>
-            <artifactId>catalogos-nomina</artifactId>
-            <version>1.2-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 
     <build>
         <plugins>
             <plugin>
-                <groupId>org.jvnet.jaxb2.maven2</groupId>
-                <artifactId>maven-jaxb2-plugin</artifactId>
-                <configuration>
-                    <catalog>${basedir}/../../catalog.xml</catalog>
-                </configuration>
+                <groupId>org.jvnet.jaxb</groupId>
+                <artifactId>jaxb-maven-plugin</artifactId>
             </plugin>
         </plugins>
-    </build -->
+    </build>
 </project>
