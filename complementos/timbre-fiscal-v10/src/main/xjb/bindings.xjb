@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bindings xmlns="https://jakarta.ee/xml/ns/jaxb" version="3.0"
+          xmlns:xs="http://www.w3.org/2001/XMLSchema"
+          xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+
+    <globalBindings localScoping="toplevel"
+                    fixedAttributeAsConstantProperty="true">
+        <xjc:javaType name="java.time.LocalDateTime"
+                      xmlType="xs:dateTime"
+                      adapter="io.github.threetenjaxb.core.LocalDateXmlAdapter" />
+    </globalBindings>
+
+    <bindings schemaLocation="../xsd/TimbreFiscalDigital.xsd">
+        <schemaBindings>
+            <package name="mx.gob.sat.cfdi.complementos.tfd.v10" />
+        </schemaBindings>
+
+        <bindings node="//xs:attribute[@name='UUID']">
+            <property name="uuid">
+                <baseType>
+                    <xjc:javaType name="java.util.UUID"
+                                  adapter="io.github.percontmx.cfdi.utils.jaxb.adapters.UUIDXMLAdapter" />
+                </baseType>
+            </property>
+        </bindings>
+    </bindings>
+</bindings>
