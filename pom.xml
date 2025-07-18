@@ -19,6 +19,8 @@
         <module>catalogos/catalogos-nomina</module>
         <module>complementos/nomina-v11</module>
         <module>complementos/nomina-v12</module>
+        <module>complementos/timbre-fiscal-v10</module>
+        <module>complementos/timbre-fiscal-v11</module>
         <module>cfdi/v32</module>
         <module>cfdi/v33</module>
         <module>bom</module>
