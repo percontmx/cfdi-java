@@ -51,22 +51,12 @@
                 <groupId>io.github.percontmx.cfdi</groupId>
                 <artifactId>tfd-v1_0</artifactId>
             </dependency>
-            <!--
-            <dependency>
-                <groupId>io.github.percontmx.cfdi</groupId>
-                <artifactId>tfd-v1_0</artifactId>
-                <version>1.2-SNAPSHOT</version>
-            <dependency>
-                <groupId>io.github.percontmx.cfdi</groupId>
-                <artifactId>tfd-v1_1</artifactId>
-                <version>1.2-SNAPSHOT</version>
-            </dependency>
 
             <dependency>
                 <groupId>io.github.percontmx.cfdi</groupId>
-                <artifactId>nomina-v1_2</artifactId>
-                <version>1.2-SNAPSHOT</version>
+                <artifactId>tfd-v1_1</artifactId>
             </dependency>
+            <!--
 
             <dependency>
                 <groupId>io.github.percontmx.cfdi</groupId>
