@@ -1,46 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project xmlns="http://maven.apache.org/POM/4.0.0">
-
     <modelVersion>4.0.0</modelVersion>
-    <groupId>io.github.percontmx.cfdi.catalogos</groupId>
     <artifactId>catalogos-retenciones</artifactId>
-    <version>1.2-SNAPSHOT</version>
-    <name>Percont CFDI - [Catálogos] Retenciones</name>
+    <name>Percont CFDI [Catálogos] - Catálogos de Retenciones</name>
+    <description>Clases Java para los catálogos de retenciones.</description>
 
     <parent>
         <groupId>io.github.percontmx.cfdi</groupId>
-        <version>1.2-SNAPSHOT</version>
-        <artifactId>catalogos</artifactId>
-        <relativePath>../pom.xml</relativePath>
+        <version>2.0.0-SNAPSHOT</version>
+        <artifactId>cfdi-java</artifactId>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
+
+    <dependencies>
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.jvnet.jaxb2.maven2</groupId>
-                <artifactId>maven-jaxb2-plugin</artifactId>
-                <configuration>
-                    <extension>true</extension>
-                    <args>
-                        <arg>-Xinheritance</arg>
-                    </args>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.jvnet.jaxb2_commons</groupId>
-                        <artifactId>jaxb2-basics</artifactId>
-                        <version>0.12.0</version>
-                    </dependency>
-                </dependencies>
+                <groupId>org.jvnet.jaxb</groupId>
+                <artifactId>jaxb-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
