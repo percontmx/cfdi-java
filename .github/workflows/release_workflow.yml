@@ -1,44 +1,42 @@
-name: CFDI - Liberación
+name: Release
 
 on:
   workflow_dispatch:
     inputs:
       release_version:
-        description: Esta versión
+        description: 'Esta versión'
         required: true
       dev_version:
-        description: Siguiente versión
+        description: 'Siguiente versión'
         required: true
 
 jobs:
-  release_to_packages:
-    name: Liberar a Github Packages.
+  release:
+    name: Liberar a Maven Central
     runs-on: ubuntu-latest
-
     steps:
       - name: Descargar el código.
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
-      - name: Instalar Java 8.
-        uses: actions/setup-java@v1
+      - name: Instalar Java 11.
+        uses: actions/setup-java@v4
         with:
-          java-version: 1.8
-          server-id: github
-          settings-path: ${{ github.workspace }}
+          distribution: zulu
+          java-version: 11
+          cache: maven
+          server-id: central
+          server-username: MAVEN_CENTRAL_USER
+          server-password: MAVEN_CENTRAL_PASSWORD
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Caché de paquetes de Maven.
-        uses: actions/cache@v2
+      - name: Importar llave GPG
+        uses: crazy-max/ghaction-import-gpg@v6
         with:
-          path: ~/.m2
-          key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ runner.os }}-m2
+          gpg_private_key: ${{ secrets.GPG_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
-      - name: Configurar usuario de Git
-        run: |
-            git config user.email "actions@github.com"
-            git config user.name "GitHub Actions"
-
-      - name: Preparar liberación
-        run: mvn -B -s $GITHUB_WORKSPACE/settings.xml release:prepare release:perform -DdevelopmentVersion=${{ github.event.inputs.dev_version }} -DreleaseVersion=${{ github.event.inputs.release_version }}
+      - name: Liberar.
+        run: ./mvnw -B release:prepare release:perform -DdevelopmentVersion=${{ github.event.inputs.dev_version }} -DreleaseVersion=${{ github.event.inputs.release_version }}
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          MAVEN_CENTRAL_USER: ${{ secrets.MVN_USERNAME }}
+          MAVEN_CENTRAL_PASSWORD: ${{ secrets.MVN_TOKEN }}

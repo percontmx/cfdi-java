@@ -31,7 +31,7 @@ jobs:
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
       - name: Desplegar snapshot.
-        run: ./mvnw deploy
+        run: ./mvnw -B deploy
         env:
           MAVEN_CENTRAL_USER: ${{ secrets.MVN_USERNAME }}
           MAVEN_CENTRAL_PASSWORD: ${{ secrets.MVN_TOKEN }}

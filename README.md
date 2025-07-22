@@ -1,88 +1,73 @@
 # CFDI - Java
 
-[![Pruebas previas a integración](https://github.com/percontmx/cfdi-java/actions/workflows/pre_integration_tests.yml/badge.svg)](https://github.com/percontmx/cfdi-java/actions/workflows/pre_integration_tests.yml)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/percontmx/cfdi?color=green&label=Versi%C3%B3n)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Donaciones](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://paypal.me/alexpercont)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/percontmx/cfdi-java/.github%2Fworkflows%2Fdeploy_snapshot.yml)
+![GitHub Latest Release](https://img.shields.io/github/v/release/percontmx/cfdi-java)
+![Maven Central](https://img.shields.io/maven-central/v/io.github.percontmx.cfdi/cfdi-java.svg)
+![GitHub License](https://img.shields.io/github/license/percontmx/cfdi-java)
 
-## Descripción
-
-Paquetes Java para dar soporte a Comprobante Fiscal Digital por Internet.
+Clases Java para dar soporte a Comprobante Fiscal Digital por Interne (CFDI)
+de acuerdo a las especificaciones del Servicio de Administración Tributaria
+(SAT) de México.
 
 ## Como utilizarlo
 
-### Como dependencias de Maven
+1. Importa el paquete `bom` en la sección de `dependencyManagement` de tu
+   `pom.xml`.
 
-1. Agrega las siguientes líneas en la sección de `<servers>` de tu archivo de configuración de Maven 
-   (`$M2_HOME/conf/settings.xml` o `~/.m2/settings.xml`):
-   
-```
-<server>
-    <id>github</id>
-    <username>tuUsuarioDeGithub</username>
-    <password>tuToken</password>
-</server>
-```
-
-2. Agrega la siguiente dependencia en la sección `<dependencyManagement>` de tu archivo `pom.xml`:
-
-```
-<dependency>
-    <groupId>io.github.percontmx.cfdi</groupId>
-    <artifactId>bom-all</artifactId>
-    <version>1.1</version>
-    <type>pom</type>
-    <scope>import</scope>
-</dependency>
+```xml
+<dependencyManagement>
+   <dependencies>
+      <dependency>
+          <groupId>io.github.percontmx.cfdi</groupId>
+          <artifactId>bom</artifactId>
+          <version>2.0.0</version>
+          <type>pom</type>
+          <scope>import</scope>
+      </dependency>
+</dependencyManagement> 
 ```
 
-3. En tu sección de `<dependencies>` agrega los componentes que necesites. Para agregar, por ejemplo, el paquete de CFDI
-   3.3, agrega lo siguiente:
-   
+2. Agrega las dependencias que necesites en la sección de `dependencies`.
+
+```xml
+<dependencies>
+   <dependency>
+      <groupId>io.github.percontmx.cfdi</groupId>
+      <artifactId>cfdi-v32</artifactId>
+   </dependency>
+
+   <dependency>
+      <groupId>io.github.percontmx.cfdi</groupId>
+      <artifactId>cfdi-v33</artifactId>
+   </dependency>
+
+   <dependency>
+      <groupId>io.github.percontmx.cfdi</groupId>
+      <artifactId>complementos-nomina-v11</artifactId>
+   </dependency>
+
+   <dependency>
+      <groupId>io.github.percontmx.cfdi</groupId>
+      <artifactId>complementos-nomina-v12</artifactId>
+   </dependency>
+
+   <dependency>
+      <groupId>io.github.percontmx.cfdi</groupId>
+      <artifactId>tfd-v1_0</artifactId>
+   </dependency>
+
+   <dependency>
+      <groupId>io.github.percontmx.cfdi</groupId>
+      <artifactId>tfd-v1_1</artifactId>
+   </dependency>
+</dependencies>
 ```
-<dependency>
-    <groupId>io.github.percontmx.cfdi</groupId>
-    <artifactId>cfdi-v3_3</artifactId>
-</dependency>
-```
 
-#### Ejemplo
+## Paquetes disponibles.
 
-```
-<?xml version="1.0" encoding="UTF-8" ?>
-<project xmlns="http://maven.apache.org/POM/4.0.0">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>io.mycompany</groupId>
-  <artifactId>cfdi-ejemplo</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
-
-  <dependencyManagement>
-     <dependencies>
-        <dependency>
-            <groupId>io.github.percontmx.cfdi</groupId>
-            <artifactId>bom-all</artifactId>
-            <version>1.1</version>
-            <type>pom</type>
-            <scope>import</scope>
-        </dependency>
-    </dependencies>
-  </dependencyManagement>
-
-  <dependencies>
-    <dependency>
-        <groupId>io.github.percontmx.cfdi</groupId>
-        <artifactId>cfdi-v3_3</artifactId>
-    </dependency>
-
-    <dependency>
-        <groupId>io.github.percontmx.cfdi</groupId>
-        <artifactId>nomina-v1_2</artifactId>
-    </dependency>
-
-    <dependency>
-        <groupId>io.github.percontmx.cfdi</groupId>
-        <artifactId>tfd-v1_1</artifactId>
-    </dependency>
-  </dependencies>
-</project>
-```
+* [CFDI v3.2](cfdi/v32)
+* [CFDI v3.3](cfdi/v33)
+* [Complemento de nómina v1.1](complementos/nomina-v11)
+* [Complemento de nómina v1.2](complementos/nomina-v12)
+* [Timbre fiscal digital v1.0](complementos/timbre-fiscal-v10)
+* [Timbre fiscal digital v1.1](complementos/timbre-fiscal-v11)
