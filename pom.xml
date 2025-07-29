@@ -17,12 +17,14 @@
         <module>utils/tipos-cfdi</module>
         <module>catalogos/catalogos-cfdi</module>
         <module>catalogos/catalogos-nomina</module>
+        <module>catalogos/retenciones</module>
         <module>complementos/nomina-v11</module>
         <module>complementos/nomina-v12</module>
         <module>complementos/timbre-fiscal-v10</module>
         <module>complementos/timbre-fiscal-v11</module>
         <module>cfdi/v32</module>
         <module>cfdi/v33</module>
+        <module>retenciones/v1</module>
         <module>bom</module>
     </modules>
 
