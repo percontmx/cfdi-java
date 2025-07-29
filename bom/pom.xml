@@ -14,6 +14,7 @@
     </parent>
 
     <name>Percont CFDI [BOM] - Lista de Materiales</name>
+    <description>Lista de materiales de Clases Java para CFDI.</description>
 
     <dependencyManagement>
         <dependencies>
@@ -56,13 +57,11 @@
                 <groupId>io.github.percontmx.cfdi</groupId>
                 <artifactId>tfd-v1_1</artifactId>
             </dependency>
-            <!--
 
             <dependency>
                 <groupId>io.github.percontmx.cfdi</groupId>
                 <artifactId>retenciones-v1</artifactId>
-                <version>1.2-SNAPSHOT</version>
-            </dependency -->
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<bindings xmlns="http://java.sun.com/xml/ns/jaxb" version="2.1">
+<bindings xmlns="https://jakarta.ee/xml/ns/jaxb" version="3.0">
 
     <bindings schemaLocation="../xsd/retencionpagov1.xsd">
         <schemaBindings>
-            <package name="mx.gob.sat.retenciones.v1" />
+            <package name="mx.gob.sat.cfdi.retenciones.v1" />
         </schemaBindings>
     </bindings>
 
