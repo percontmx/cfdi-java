@@ -33,8 +33,12 @@ jobs:
           server-username: MAVEN_CENTRAL_USER
           server-password: MAVEN_CENTRAL_PASSWORD
           token: ${{ secrets.GITHUB_TOKEN }}
-          gpg-private-key: ${{ secrets.GPG_KEY }}
-          gpg-passphrase: ${{ secrets.GPG_PASSPHRASE }}
+
+      - name: Importar llave GPG
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
       - name: Liberar.
         run: ./mvnw -B release:prepare release:perform -DdevelopmentVersion=${{ github.event.inputs.dev_version }}-SNAPSHOT -DreleaseVersion=${{ github.event.inputs.release_version }}
