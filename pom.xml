@@ -114,6 +114,9 @@
                 <configuration>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                     <releaseProfiles>release</releaseProfiles>
+                    <!-- scmDevelopmentCommitComment>@{prefix} Configuración siguiente versión de desarrollo.</scmDevelopmentCommitComment>
+                    <scmReleaseCommitComment>@{prefix} Prepar versión @{releaseLabel} para liberación.</scmReleaseCommitComment -->
+                    <tagNameFormat>@{project.version}</tagNameFormat>
                 </configuration>
             </plugin>
         </plugins>
@@ -167,6 +170,7 @@
                         <executions>
                             <execution>
                                 <id>attach-javadocs</id>
+                                <phase>package</phase>
                                 <goals>
                                     <goal>jar</goal>
                                 </goals>
@@ -181,6 +185,7 @@
                         <executions>
                             <execution>
                                 <id>attach-sources</id>
+                                <phase>package</phase>
                                 <goals>
                                     <goal>jar</goal>
                                 </goals>
