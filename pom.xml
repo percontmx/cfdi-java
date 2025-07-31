@@ -114,8 +114,8 @@
                 <configuration>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                     <releaseProfiles>release</releaseProfiles>
-                    <!-- scmDevelopmentCommitComment>@{prefix} Configuración siguiente versión de desarrollo.</scmDevelopmentCommitComment>
-                    <scmReleaseCommitComment>@{prefix} Prepar versión @{releaseLabel} para liberación.</scmReleaseCommitComment -->
+                    <scmDevelopmentCommitComment>Configuración siguiente versión de desarrollo.</scmDevelopmentCommitComment>
+                    <scmReleaseCommitComment>Prepar versión @{releaseLabel} para liberación.</scmReleaseCommitComment>
                     <tagNameFormat>@{project.version}</tagNameFormat>
                 </configuration>
             </plugin>
