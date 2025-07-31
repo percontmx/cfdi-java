@@ -2,13 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <artifactId>cfdi-v33</artifactId>
-    <version>2.0.1-SNAPSHOT</version>
+    <version>2.0.0</version>
     <name>Percont CFDI [CFDI] - Comprobante fiscal digital v3.3</name>
 
     <parent>
         <groupId>io.github.percontmx.cfdi</groupId>
         <artifactId>cfdi-java</artifactId>
-        <version>2.0.1-SNAPSHOT</version>
+        <version>2.0.0</version>
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
@@ -16,17 +16,17 @@
         <dependency>
             <groupId>io.github.percontmx.cfdi</groupId>
             <artifactId>utils-adaptadores-jaxb</artifactId>
-            <version>2.0.1-SNAPSHOT</version>
+            <version>2.0.0</version>
         </dependency>
         <dependency>
             <groupId>io.github.percontmx.cfdi</groupId>
             <artifactId>utils-tipos-cfdi</artifactId>
-            <version>2.0.1-SNAPSHOT</version>
+            <version>2.0.0</version>
         </dependency>
         <dependency>
             <groupId>io.github.percontmx.cfdi</groupId>
             <artifactId>catalogos-cfdi</artifactId>
-            <version>2.0.1-SNAPSHOT</version>
+            <version>2.0.0</version>
         </dependency>
     </dependencies>
 
