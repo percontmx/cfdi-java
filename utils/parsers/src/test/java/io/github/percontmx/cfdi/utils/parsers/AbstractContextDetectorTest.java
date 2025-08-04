@@ -1,0 +1,32 @@
+package io.github.percontmx.cfdi.utils.parsers;
+
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
+import java.io.InputStream;
+
+public abstract class AbstractContextDetectorTest {
+
+    private final DocumentBuilder documentBuilder;
+
+    public AbstractContextDetectorTest() {
+        DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
+        builderFactory.setNamespaceAware(true);
+        builderFactory.setIgnoringComments(true);
+        try {
+            documentBuilder = builderFactory.newDocumentBuilder();
+        } catch (ParserConfigurationException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public Document loadDocument(String name) throws
+            IOException, SAXException {
+        InputStream istream = getClass().getResourceAsStream(name);
+        return this.documentBuilder.parse(istream);
+    }
+}
