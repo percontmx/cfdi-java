@@ -24,9 +24,11 @@ public abstract class AbstractContextDetectorTest {
         }
     }
 
-    public Document loadDocument(String name) throws
-            IOException, SAXException {
-        InputStream istream = getClass().getResourceAsStream(name);
-        return this.documentBuilder.parse(istream);
+    public Document loadDocument(String name) {
+        try (InputStream istream = getClass().getResourceAsStream(name)) {
+            return this.documentBuilder.parse(istream);
+        } catch (IOException | SAXException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
