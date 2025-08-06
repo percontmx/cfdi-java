@@ -26,3 +26,4 @@ public interface ContextDetector {
     String getContextPath();
 
 }
+

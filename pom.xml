@@ -122,8 +122,7 @@
                 <configuration>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                     <releaseProfiles>release</releaseProfiles>
-                    <scmDevelopmentCommitComment>Configuración siguiente versión de desarrollo.
-                    </scmDevelopmentCommitComment>
+                    <scmDevelopmentCommitComment>Configuración siguiente versión de desarrollo.</scmDevelopmentCommitComment>
                     <scmReleaseCommitComment>Prepar versión @{releaseLabel} para liberación.</scmReleaseCommitComment>
                     <tagNameFormat>@{project.version}</tagNameFormat>
                 </configuration>
