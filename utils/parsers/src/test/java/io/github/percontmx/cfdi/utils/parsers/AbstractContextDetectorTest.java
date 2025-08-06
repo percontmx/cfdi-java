@@ -9,11 +9,11 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.io.InputStream;
 
-public abstract class AbstractContextDetectorTest {
+abstract class AbstractContextDetectorTest {
 
     private final DocumentBuilder documentBuilder;
 
-    public AbstractContextDetectorTest() {
+    protected AbstractContextDetectorTest() {
         DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
         builderFactory.setNamespaceAware(true);
         builderFactory.setIgnoringComments(true);
@@ -24,7 +24,7 @@ public abstract class AbstractContextDetectorTest {
         }
     }
 
-    public Document loadDocument(String name) {
+    protected Document loadDocument(String name) {
         try (InputStream istream = getClass().getResourceAsStream(name)) {
             return this.documentBuilder.parse(istream);
         } catch (IOException | SAXException e) {
