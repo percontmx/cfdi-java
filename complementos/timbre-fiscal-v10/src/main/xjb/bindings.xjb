@@ -7,7 +7,7 @@
                     fixedAttributeAsConstantProperty="true">
         <xjc:javaType name="java.time.LocalDateTime"
                       xmlType="xs:dateTime"
-                      adapter="io.github.threetenjaxb.core.LocalDateXmlAdapter" />
+                      adapter="io.github.threetenjaxb.core.LocalDateTimeXmlAdapter" />
     </globalBindings>
 
     <bindings schemaLocation="../xsd/TimbreFiscalDigital.xsd">
