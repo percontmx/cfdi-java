@@ -2,7 +2,9 @@ package io.github.percontmx.cfdi.utils.parsers.cfdiv32;
 
 import io.github.percontmx.cfdi.utils.parsers.CfdiUtils;
 import jakarta.xml.bind.JAXBException;
+import mx.gob.sat.cfdi.complementos.nomina.v11.Nomina;
 import mx.gob.sat.cfdi.complementos.tfd.v10.TimbreFiscalDigital;
+import mx.gob.sat.cfdi.v32.Complemento;
 import mx.gob.sat.cfdi.v32.Comprobante;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -32,6 +34,15 @@ public class CfdiUtilsCfdiv32Test {
 
     private static final String CFDI_V32_MUESTRA = "cfdi_v32_muestra.xml";
     private static final String CFDI_V32_TIMBRADO_MUESTRA = "cfdi_v32_timbrado_muestra.xml";
+    private static final String CFDI_V32_NOMINA_MUESTRA = "cfdi_v32_nomina_muestra.xml";
+
+    private void verificarComplemento(Complemento complemento, Class<?> tipoComplemento){
+        Assertions.assertNotNull(complemento);
+        List<Object> complementos = complemento.getAny();
+        Assertions.assertFalse(complementos.isEmpty());
+        Assertions.assertTrue(
+                () -> complementos.stream().anyMatch(tipoComplemento::isInstance));
+    }
 
     @Test
     void convertirCfdiv32Test() throws ParserConfigurationException, IOException, SAXException, JAXBException {
@@ -47,11 +58,15 @@ public class CfdiUtilsCfdiv32Test {
         Document document = getDocumentBuilder().parse(istream);
         Comprobante comprobante = CfdiUtils.extract(document);
         Assertions.assertNotNull(comprobante);
-        Assertions.assertNotNull(comprobante.getComplemento());
-        List<Object> complementos = comprobante.getComplemento().getAny();
-        Assertions.assertNotNull(complementos);
-        Assertions.assertTrue(
-                () -> complementos.stream().anyMatch(c -> c instanceof TimbreFiscalDigital));
-        
+        verificarComplemento(comprobante.getComplemento(), TimbreFiscalDigital.class);
+    }
+
+    @Test
+    void convertirCfdiv32NominaTest() throws ParserConfigurationException, IOException, SAXException, JAXBException {
+        InputStream istream = getClass().getResourceAsStream(CFDI_V32_NOMINA_MUESTRA);
+        Document document = getDocumentBuilder().parse(istream);
+        Comprobante comprobante = CfdiUtils.extract(document);
+        Assertions.assertNotNull(comprobante);
+        verificarComplemento(comprobante.getComplemento(), Nomina.class);
     }
 }

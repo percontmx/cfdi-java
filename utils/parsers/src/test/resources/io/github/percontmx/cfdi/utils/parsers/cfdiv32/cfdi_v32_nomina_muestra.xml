@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv32.xsd http://www.sat.gob.mx/nomina http://www.sat.gob.mx/sitio_internet/cfd/nomina/nomina11.xsd"
+                  version="3.2" serie="NOM" folio="109394" fecha="2015-01-29T09:56:18"
+                  sello="Hjgj3E5j9nlsM4ND2xiKbisOdaLQFIxy53MV+HCttPO8CK6HJv0bCjd+bacYn9I0o92frT11iG53wwLaSYGFwXgtprwKg1rXwH8I7DDqjakI3rtXuwcFDwz0f6ID2a7UQNmlax0fRNdCZfLg9giMrvwokTRM7v5HmlNXcrXgux8="
+                  formaDePago="PAGO EN UNA SOLA EXHIBICION" noCertificado="00001000000303175369"
+                  certificado="MIIEQjCCAyqgAwIBAgIUMDAwMDEwMDAwMDAzMDMxNzUzNjkwDQYJKoZIhvcNAQEFBQAwggGKMTgwNgYDVQQDDC9BLkMuIGRlbCBTZXJ2aWNpbyBkZSBBZG1pbmlzdHJhY2nDs24gVHJpYnV0YXJpYTEvMC0GA1UECgwmU2VydmljaW8gZGUgQWRtaW5pc3RyYWNpw7NuIFRyaWJ1dGFyaWExODA2BgNVBAsML0FkbWluaXN0cmFjacOzbiBkZSBTZWd1cmlkYWQgZGUgbGEgSW5mb3JtYWNpw7NuMR8wHQYJKoZIhvcNAQkBFhBhY29kc0BzYXQuZ29iLm14MSYwJAYDVQQJDB1Bdi4gSGlkYWxnbyA3NywgQ29sLiBHdWVycmVybzEOMAwGA1UEEQwFMDYzMDAxCzAJBgNVBAYTAk1YMRkwFwYDVQQIDBBEaXN0cml0byBGZWRlcmFsMRQwEgYDVQQHDAtDdWF1aHTDqW1vYzEVMBMGA1UELRMMU0FUOTcwNzAxTk4zMTUwMwYJKoZIhvcNAQkCDCZSZXNwb25zYWJsZTogQ2xhdWRpYSBDb3ZhcnJ1YmlhcyBPY2hvYTAeFw0xNDAzMDQxNzAyMjBaFw0xODAzMDQxNzAyMjBaMIGOMRAwDgYDVQQDEwdNR0RDIFNDMRAwDgYDVQQpEwdNR0RDIFNDMRAwDgYDVQQKEwdNR0RDIFNDMSUwIwYDVQQtExxNR0QwNzAzMTZFUjIgLyBBQU1BNjEwNTIyUUYxMR4wHAYDVQQFExUgLyBBQU1BNjEwNTIySERGTk5MMDExDzANBgNVBAsTBk5PTUlOQTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAmAaugFtLnsWJVvpb2Gb9KZBvOB5EI017kKHmQBk/ona68AQ1akuy/LXApUUAyRsULGQsT2eObsy1Jaf1MQsSkPFEjprLpze5G1MeV+ByELbI1b1kDqr7rvmw0UkpKq72eeipzmAsmlgR17ooCwkYGIkAWPTiyxfkzCE2ksxm1L0CAwEAAaMdMBswDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBsAwDQYJKoZIhvcNAQEFBQADggEBAFkxZItsi0X09dSTygiVkaUGdXTvZr4AaWvvw72gMo4swRYQderimkQoOy6KSLt2CyLXWJ6A2wj2S0gUNNKC8dkhOmHGuLoH6mit0owYCj8J2n+Oxtzm29ss+sjUifJ0Xsly5ys/CtntpeRPwxGrjb2OtUAcKA9SA2C5ukjbyb20FPE3AhSbWTfCTj/VCtg92BZL4p6iJUlvdjrv2soQc+DPUY4mk1R1zrzHSjgQUH41PiwsxREMbBxIqCvDcNAqAp/KUpXToq3Y1PfS53EiKz8kEl/qkgHRaisbfWSXfTvbKOqgsXWzQ8ZNC/lEtgSjnALH12Guf8JjQCo/GdzXKWQ="
+                  condicionesDePago="EFECTOS FISCALES AL PAGO" subTotal="20645.16" descuento="5267.10"
+                  motivoDescuento="Deducciones nomina" TipoCambio="1.00" Moneda="MXN" total="15378.06"
+                  tipoDeComprobante="egreso" metodoDePago="transferencia" LugarExpedicion="JALISCO Jalisco">
+    <cfdi:Emisor rfc="MGD070316ER2" nombre="MGDC SC">
+        <cfdi:DomicilioFiscal calle="CAMINO AL ITESO" noExterior="8699" colonia="EL MANTE" localidad="JALISCO"
+                              municipio="TLAQUEPAQUE" estado="Jalisco" pais="MX" codigoPostal="45609"/>
+        <cfdi:ExpedidoEn calle="CAMINO AL ITESO" noExterior="8699" colonia="EL MANTE" localidad="JALISCO"
+                         municipio="TLAQUEPAQUE" estado="Jalisco" pais="MX" codigoPostal="45609"/>
+        <cfdi:RegimenFiscal Regimen="REGIMEN GENERAL DE LEY PERSONAS MORALES"/>
+    </cfdi:Emisor>
+    <cfdi:Receptor rfc="PECA840107FX1" nombre="PEREZ CONTRERAS ALEJANDRO">
+        <cfdi:Domicilio calle="XXXXX" municipio="XXXXX" estado="XXXXX" pais="MX" codigoPostal="00000"/>
+    </cfdi:Receptor>
+    <cfdi:Conceptos>
+        <cfdi:Concepto cantidad="1.00" unidad="Servicio" descripcion="Pago Nomina" valorUnitario="20645.16"
+                       importe="20645.16"/>
+    </cfdi:Conceptos>
+    <cfdi:Impuestos/>
+    <cfdi:Complemento>
+        <tfd:TimbreFiscalDigital xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital" version="1.0"
+                                 UUID="b4be8b43-b0e4-4c01-87b2-9aeaf4a23f9a" FechaTimbrado="2015-01-29T10:34:20"
+                                 selloCFD="Hjgj3E5j9nlsM4ND2xiKbisOdaLQFIxy53MV+HCttPO8CK6HJv0bCjd+bacYn9I0o92frT11iG53wwLaSYGFwXgtprwKg1rXwH8I7DDqjakI3rtXuwcFDwz0f6ID2a7UQNmlax0fRNdCZfLg9giMrvwokTRM7v5HmlNXcrXgux8="
+                                 noCertificadoSAT="00001000000301251152"
+                                 selloSAT="bWHUi8kUy1V4u6udl/4/zaNdrrSuUTKbYwW9Osz3WSwWYyEXUCtQ9jAiua21eS2IX7FadaXsR73yJYpCMxbPJxw446WUuv3q0MjI2pHM8AmvL75MyvNxubVFzeH3EJTuhBKHHASERYrTrVabeVYcsxKoEA1zTGy3622ZCrkiR6I="
+                                 xsi:schemaLocation="http://www.sat.gob.mx/TimbreFiscalDigital http://www.sat.gob.mx/TimbreFiscalDigital/TimbreFiscalDigital.xsd"/>
+        <nomina:Nomina xmlns:nomina="http://www.sat.gob.mx/nomina" Version="1.1" RegistroPatronal="Z2913105107"
+                       NumEmpleado="908216" CURP="PECA840107HJCRNL08" TipoRegimen="2" NumSeguridadSocial="55998403368"
+                       FechaPago="2015-01-29" FechaInicialPago="2015-01-16" FechaFinalPago="2015-01-31"
+                       NumDiasPagados="16" TipoContrato="Indeterminado" TipoJornada="Diurna"
+                       PeriodicidadPago="Quincenal" RiesgoPuesto="1">
+            <nomina:Percepciones TotalGravado="20645.16" TotalExento="0.00">
+                <nomina:Percepcion TipoPercepcion="001" Clave="001" Concepto="Sueldo" ImporteGravado="20645.16"
+                                   ImporteExento="0.00"/>
+                <nomina:Percepcion TipoPercepcion="017" Clave="017" Concepto="Subsidio al empleo" ImporteGravado="0.00"
+                                   ImporteExento="0.00"/>
+            </nomina:Percepciones>
+            <nomina:Deducciones TotalGravado="5267.10" TotalExento="0.00">
+                <nomina:Deduccion TipoDeduccion="001" Clave="001" Concepto="Seguro Social" ImporteGravado="622.75"
+                                  ImporteExento="0.00"/>
+                <nomina:Deduccion TipoDeduccion="002" Clave="002" Concepto="ISR" ImporteGravado="4378.23"
+                                  ImporteExento="0.00"/>
+                <nomina:Deduccion TipoDeduccion="010" Clave="010" Concepto="Infonavit" ImporteGravado="0.00"
+                                  ImporteExento="0.00"/>
+                <nomina:Deduccion TipoDeduccion="007" Clave="007" Concepto="Pension Alimenticia" ImporteGravado="0.00"
+                                  ImporteExento="0.00"/>
+                <nomina:Deduccion TipoDeduccion="011" Clave="011" Concepto="Infonacot" ImporteGravado="266.12"
+                                  ImporteExento="0.00"/>
+            </nomina:Deducciones>
+        </nomina:Nomina>
+    </cfdi:Complemento>
+</cfdi:Comprobante>

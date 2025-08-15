@@ -13,7 +13,8 @@ public class CfdiUtils {
 
     private static final String JAXB_CONTEXT_PATH = Stream
             .of(ObjectFactory.class,
-                    mx.gob.sat.cfdi.complementos.tfd.v10.ObjectFactory.class)
+                    mx.gob.sat.cfdi.complementos.tfd.v10.ObjectFactory.class,
+                    mx.gob.sat.cfdi.complementos.nomina.v11.ObjectFactory.class)
             .map(Class::getPackageName)
             .collect(Collectors.joining(":"));
 
