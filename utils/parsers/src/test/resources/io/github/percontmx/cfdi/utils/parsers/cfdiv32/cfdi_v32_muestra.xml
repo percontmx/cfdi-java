@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3" version="3.2" serie="A" folio="12345"
+                  fecha="2023-10-01T12:00:00"
+                  sello="" formaDePago="01" noCertificado="00001000000403258789" certificado="" subTotal="1000.00"
+                  descuento="0.00" Moneda="MXN" total="1000.00" tipoDeComprobante="ingreso" metodoDePago="5"
+                  LugarExpedicion="45079">
+    <cfdi:Emisor rfc="AAA010101AAA" nombre="Empresa Ejemplo S.A. de C.V.">
+        <cfdi:RegimenFiscal Regimen="45"/>
+    </cfdi:Emisor>
+    <cfdi:Receptor rfc="BBB020202BBB" nombre="Cliente Ejemplo S.A. de C.V."/>
+    <cfdi:Conceptos>
+        <cfdi:Concepto cantidad="1" unidad="17" noIdentificacion="10101504" descripcion="Servicio de Consultoría"
+                       valorUnitario="1000.00" importe="1000.00"/>
+    </cfdi:Conceptos>
+    <cfdi:Impuestos totalImpuestosTrasladados="160.00">
+        <cfdi:Traslados>
+            <cfdi:Traslado impuesto="IVA" tasa="0.160000" importe="160.00"/>
+        </cfdi:Traslados>
+    </cfdi:Impuestos>
+</cfdi:Comprobante>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3"
+                  xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital"
+                  version="3.2"
+                  fecha="2024-06-01T12:00:00"
+                  sello="SELLOFAKEBASE64"
+                  formaDePago="Pago en una sola exhibición"
+                  noCertificado="00001000000403258748"
+                  certificado="CERTIFICADOB64"
+                  subTotal="1000.00"
+                  total="1160.00"
+                  tipoDeComprobante="ingreso"
+                  metodoDePago="transferencia"
+                  LugarExpedicion="CDMX">
+    <cfdi:Emisor rfc="AAA010101AAA" nombre="Empresa Ejemplo">
+        <cfdi:DomicilioFiscal calle="Calle Falsa" municipio="Benito Juarez" estado="CDMX" pais="México"
+                              codigoPostal="01234"/>
+        <cfdi:RegimenFiscal Regimen="Régimen General"/>
+    </cfdi:Emisor>
+    <cfdi:Receptor rfc="BBB010101BBB" nombre="Cliente Ejemplo">
+        <cfdi:Domicilio calle="Calle Real" pais="México"/>
+    </cfdi:Receptor>
+    <cfdi:Conceptos>
+        <cfdi:Concepto cantidad="1" unidad="pieza" descripcion="Producto de prueba" valorUnitario="1000.00"
+                       importe="1000.00"/>
+    </cfdi:Conceptos>
+    <cfdi:Impuestos totalImpuestosTrasladados="160.00">
+        <cfdi:Traslados>
+            <cfdi:Traslado impuesto="IVA" tasa="0.16" importe="160.00"/>
+        </cfdi:Traslados>
+    </cfdi:Impuestos>
+    <cfdi:Complemento>
+        <tfd:TimbreFiscalDigital
+                version="1.0"
+                UUID="123e4567-e89b-12d3-a456-426655440000"
+                FechaTimbrado="2024-06-01T12:05:00"
+                selloCFD="SELLOCFDFAKEBASE64"
+                noCertificadoSAT="00001000000403258748"
+                selloSAT="SELLOSATFAKEBASE64"/>
+    </cfdi:Complemento>
+</cfdi:Comprobante>
