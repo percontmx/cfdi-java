@@ -1,22 +1,17 @@
 package io.github.percontmx.cfdi.utils.parsers;
 
+import io.github.percontmx.cfdi.utils.parsers.detectors.*;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
-import mx.gob.sat.cfdi.v32.ObjectFactory;
 import org.w3c.dom.Document;
 
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathFactory;
 import java.util.Objects;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class CfdiUtils {
-
-    private static final String JAXB_CONTEXT_PATH = Stream
-            .of(ObjectFactory.class,
-                    mx.gob.sat.cfdi.complementos.tfd.v10.ObjectFactory.class,
-                    mx.gob.sat.cfdi.complementos.nomina.v11.ObjectFactory.class)
-            .map(Class::getPackageName)
-            .collect(Collectors.joining(":"));
+public final class CfdiUtils {
 
     private CfdiUtils() {
         // Constructor privado para evitar instanciación.
@@ -24,7 +19,17 @@ public class CfdiUtils {
 
     @SuppressWarnings("unchecked")
     public static <T> T extract(Document document) throws JAXBException {
-        JAXBContext jaxbContext = JAXBContext.newInstance(JAXB_CONTEXT_PATH);
+        XPath xpath = XPathFactory.newInstance().newXPath();
+        xpath.setNamespaceContext(new CfdiUtilsNamespaceContext());
+        String jaxbContextPath = Stream.of(new Cfdiv32Detector(xpath),
+                        new Cfdiv33Detector(xpath),
+                        new TimbreFiscalv10Detector(xpath),
+                        new Nominav11Detector(xpath))
+                .filter(detector ->
+                        detector.matches(document))
+                .map(ContextDetector::getPackage)
+                .collect(Collectors.joining(":"));
+        JAXBContext jaxbContext = JAXBContext.newInstance(jaxbContextPath);
         Object unmarshalled = jaxbContext.createUnmarshaller().unmarshal(document);
         return Objects.nonNull(unmarshalled) ? (T) unmarshalled : null;
     }
