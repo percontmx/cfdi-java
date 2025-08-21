@@ -18,7 +18,7 @@
             <bindings node="//xs:attribute[@name='NumDiasPagados']">
                 <property name="diasPagados">
                     <baseType>
-                        <xjc:javaType name="double"
+                        <xjc:javaType name="java.lang.Double"
                                       adapter="io.github.percontmx.cfdi.utils.jaxb.adapters.DoubleXMLAdapter" />
                     </baseType>
                 </property>
