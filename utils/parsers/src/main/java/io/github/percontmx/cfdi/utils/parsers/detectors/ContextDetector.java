@@ -8,10 +8,4 @@ public interface ContextDetector {
 
     String getPackage();
 
-    /*
-    boolean matches(Document document);
-
-    String getPackage();
-
-    */
 }

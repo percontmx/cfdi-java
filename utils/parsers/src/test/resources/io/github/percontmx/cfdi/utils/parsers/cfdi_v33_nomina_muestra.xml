@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfdi:Comprobante xmlns:cfdi="http://www.sat.gob.mx/cfd/3"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns:nomina12="http://www.sat.gob.mx/nomina12"
+                  xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 http://www.sat.gob.mx/sitio_internet/cfd/3/cfdv33.xsd
+                                      http://www.sat.gob.mx/nomina12 http://www.sat.gob.mx/sitio_internet/cfd/nomina/nomina12.xsd"
+                  Version="3.3"
+                  Serie="A"
+                  Folio="12345"
+                  Fecha="2024-06-01T12:00:00"
+                  Sello="ABC123SelloDummy"
+                  NoCertificado="00001000000403258748"
+                  Certificado="ABC123CertificadoDummy"
+                  SubTotal="1000.00"
+                  Moneda="MXN"
+                  Total="1000.00"
+                  TipoDeComprobante="N"
+                  LugarExpedicion="01000">
+    <cfdi:Emisor Rfc="AAA010101AAA" Nombre="Empresa Dummy" RegimenFiscal="601"/>
+    <cfdi:Receptor Rfc="XAXX010101000" Nombre="Empleado Dummy" UsoCFDI="P01"/>
+    <cfdi:Conceptos>
+        <cfdi:Concepto ClaveProdServ="84111505"
+                       Cantidad="1"
+                       ClaveUnidad="ACT"
+                       Unidad="ACT"
+                       Descripcion="Pago de nómina"
+                       ValorUnitario="1000.00"
+                       Importe="1000.00"/>
+    </cfdi:Conceptos>
+    <cfdi:Complemento>
+        <nomina12:Nomina Version="1.2"
+                         TipoNomina="O"
+                         FechaPago="2024-06-01"
+                         FechaInicialPago="2024-05-16"
+                         FechaFinalPago="2024-05-31"
+                         NumDiasPagados="15"
+                         TotalPercepciones="1000.00"
+                         TotalDeducciones="0.00"
+                         TotalOtrosPagos="0.00">
+            <nomina12:Emisor RegistroPatronal="A1234567890123456789"/>
+            <nomina12:Receptor Curp="XEXX010101HNEXXXA4"
+                               TipoContrato="01"
+                               TipoRegimen="02"
+                               NumEmpleado="123"
+                               PeriodicidadPago="04"
+                               ClaveEntFed="DF"/>
+            <nomina12:Percepciones TotalGravado="1000.00" TotalExento="0.00">
+                <nomina12:Percepcion TipoPercepcion="001"
+                                     Clave="001"
+                                     Concepto="Sueldo"
+                                     ImporteGravado="1000.00"
+                                     ImporteExento="0.00"/>
+            </nomina12:Percepciones>
+        </nomina12:Nomina>
+    </cfdi:Complemento>
+</cfdi:Comprobante>

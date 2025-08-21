@@ -24,7 +24,8 @@ public final class CfdiUtils {
         String jaxbContextPath = Stream.of(new Cfdiv32Detector(xpath),
                         new Cfdiv33Detector(xpath),
                         new TimbreFiscalv10Detector(xpath),
-                        new Nominav11Detector(xpath))
+                        new Nominav11Detector(xpath),
+                        new Nominav12Detector(xpath))
                 .filter(detector ->
                         detector.matches(document))
                 .map(ContextDetector::getPackage)

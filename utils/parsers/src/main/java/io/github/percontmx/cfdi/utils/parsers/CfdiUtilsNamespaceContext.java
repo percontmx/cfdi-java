@@ -9,7 +9,8 @@ class CfdiUtilsNamespaceContext implements NamespaceContext {
     private static final Map<String, String> NAMESPACES_MAPS = Map.ofEntries(
             Map.entry("cfdi", "http://www.sat.gob.mx/cfd/3"),
             Map.entry("tfd", "http://www.sat.gob.mx/TimbreFiscalDigital"),
-            Map.entry("nomina", "http://www.sat.gob.mx/nomina")
+            Map.entry("nomina", "http://www.sat.gob.mx/nomina"),
+            Map.entry("nomina12", "http://www.sat.gob.mx/nomina12")
     );
 
     @Override
