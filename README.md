@@ -60,6 +60,11 @@ Después, agrega las dependencias que necesites en la sección de `dependencies`
       <groupId>io.github.percontmx.cfdi</groupId>
       <artifactId>tfd-v1_1</artifactId>
    </dependency>
+   
+   <dependency>
+      <groupId>io.github.percontmx.cfdi</groupId>
+      <artifactId>retenciones-v1</artifactId>
+   </dependency>
 </dependencies>
 ```
 
