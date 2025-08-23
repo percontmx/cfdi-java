@@ -23,13 +23,5 @@ public class Cfdiv33Detector extends AbstractXpathContextDetector<ObjectFactory>
     protected String getValue() {
         return CFDI_V33_VERSION;
     }
-    /*@Override
-    public boolean matches(Document document) {
-        return false;
-    }
 
-    @Override
-    public String getPackage() {
-        return ObjectFactory.class.getPackageName();
-    }*/
 }

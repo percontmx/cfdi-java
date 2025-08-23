@@ -10,7 +10,8 @@ class CfdiUtilsNamespaceContext implements NamespaceContext {
             Map.entry("cfdi", "http://www.sat.gob.mx/cfd/3"),
             Map.entry("tfd", "http://www.sat.gob.mx/TimbreFiscalDigital"),
             Map.entry("nomina", "http://www.sat.gob.mx/nomina"),
-            Map.entry("nomina12", "http://www.sat.gob.mx/nomina12")
+            Map.entry("nomina12", "http://www.sat.gob.mx/nomina12"),
+            Map.entry("retenciones", "http://www.sat.gob.mx/esquemas/retencionpago/1")
     );
 
     @Override

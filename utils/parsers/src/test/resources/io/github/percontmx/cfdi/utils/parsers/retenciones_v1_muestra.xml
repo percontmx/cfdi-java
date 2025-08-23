@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<retenciones:Retenciones xmlns:retenciones="http://www.sat.gob.mx/esquemas/retencionpago/1"
+                         Cert="asfaesa" CveRetenc="02" FechaExp="2022-05-06T00:00:00+00:00"
+                         NumCert="asfeaccaseasdfaeagfa"
+                         Sello="ele" Version="1.0">
+    <retenciones:Emisor RFCEmisor="PEPE010101AAA" />
+    <retenciones:Receptor Nacionalidad="Nacional">
+        <retenciones:Nacional RFCRecep="PACO010101AAA" CURPR="PACO010101HJCRNL08" />
+    </retenciones:Receptor>
+    <retenciones:Periodo MesIni="01" MesFin="02" Ejerc="2024"/>
+    <retenciones:Totales montoTotOperacion="5" montoTotGrav="5" montoTotExent="5" montoTotRet="5">
+        <retenciones:ImpRetenidos montoRet="8" TipoPagoRet="Pago definitivo" />
+    </retenciones:Totales>
+</retenciones:Retenciones>

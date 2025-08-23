@@ -1,6 +1,7 @@
 package io.github.percontmx.cfdi.utils.parsers;
 
 import io.github.percontmx.cfdi.utils.parsers.detectors.*;
+import io.github.percontmx.cfdi.utils.parsers.detectors.ContextDetector;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import org.w3c.dom.Document;
@@ -26,7 +27,8 @@ public final class CfdiUtils {
                         new TimbreFiscalv10Detector(xpath),
                         new TimbreFiscalv11Detector(xpath),
                         new Nominav11Detector(xpath),
-                        new Nominav12Detector(xpath))
+                        new Nominav12Detector(xpath),
+                        new Retencionesv1Detector(xpath))
                 .filter(detector ->
                         detector.matches(document))
                 .map(ContextDetector::getPackage)

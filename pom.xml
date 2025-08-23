@@ -34,6 +34,8 @@
             <id>alexpercont</id>
             <name>Alex Percont</name>
             <email>alexpercont@gmail.com</email>
+            <organization>Soluciones Percont</organization>
+            <organizationUrl>https://github.com/percontmx</organizationUrl>
         </developer>
     </developers>
 
