@@ -43,14 +43,14 @@
 
             <dependency>
                 <groupId>io.github.percontmx.cfdi</groupId>
-                <artifactId>complementos-nomina-v11</artifactId>
-                <version>2.0.1-SNAPSHOT</version>
+                <artifactId>complemento-nomina-v11</artifactId>
+                <version>2.1.0-SNAPSHOT</version>
             </dependency>
 
             <dependency>
                 <groupId>io.github.percontmx.cfdi</groupId>
-                <artifactId>complementos-nomina-v12</artifactId>
-                <version>2.0.1-SNAPSHOT</version>
+                <artifactId>complemento-nomina-v12</artifactId>
+                <version>2.1.0-SNAPSHOT</version>
             </dependency>
 
             <dependency>
