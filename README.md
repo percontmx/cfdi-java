@@ -5,7 +5,7 @@
 ![Maven Central](https://img.shields.io/maven-central/v/io.github.percontmx.cfdi/cfdi-java.svg)
 ![GitHub License](https://img.shields.io/github/license/percontmx/cfdi-java)
 
-Clases Java para dar soporte a Comprobante Fiscal Digital por Interne (CFDI)
+Clases Java para dar soporte al Comprobante Fiscal Digital por Internet (CFDI),
 de acuerdo a las especificaciones del Servicio de Administración Tributaria
 (SAT) de México.
 
