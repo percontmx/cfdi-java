@@ -32,6 +32,7 @@ CfdiUtilsCfdiv32Test extends AbstractCfdiUtilsTest {
         Comprobante comprobante = CfdiUtils.extract(document);
         Assertions.assertNotNull(comprobante);
         verificarComplemento(comprobante.getComplemento(), TimbreFiscalDigital.class);
+
     }
 
     @Test

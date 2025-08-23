@@ -26,9 +26,8 @@ public abstract class AbstractCfdiUtilsTest {
         return documentBuilder;
     }
 
-    protected void verificarComplemento(Complemento complemento, Class<?> tipoComplemento) {
-        Assertions.assertNotNull(complemento);
-        List<Object> complementos = complemento.getAny();
+    protected void verificarComplemento(List<Object> complementos, Class<?> tipoComplemento) {
+        Assertions.assertNotNull(complementos);
         Assertions.assertFalse(complementos.isEmpty());
         Assertions.assertTrue(
                 () -> complementos.stream().anyMatch(tipoComplemento::isInstance));
