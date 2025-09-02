@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bindings version="3.0"
+          xmlns="https://jakarta.ee/xml/ns/jaxb">
+
+    <globalBindings typesafeEnumMaxMembers="99999" />
+
+    <bindings schemaLocation="../xsd/cfdv40.xsd">
+        <schemaBindings>
+            <package name="mx.gob.sat.cfdi.v40" />
+        </schemaBindings>
+
+    </bindings>
+</bindings>

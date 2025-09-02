@@ -40,6 +40,11 @@ Después, agrega las dependencias que necesites en la sección de `dependencies`
       <groupId>io.github.percontmx.cfdi</groupId>
       <artifactId>cfdi-v33</artifactId>
    </dependency>
+   
+   <dependency>
+      <groupId>io.github.percontmx.cfdi</groupId>
+      <artifactId>cfdi-v40</artifactId>
+   </dependency>
 
    <dependency>
       <groupId>io.github.percontmx.cfdi</groupId>
@@ -72,6 +77,7 @@ Después, agrega las dependencias que necesites en la sección de `dependencies`
 
 * [CFDI v3.2](cfdi/v32)
 * [CFDI v3.3](cfdi/v33)
+* [CFDI v4.0](cfdi/v40)
 * [Complemento de nómina v1.1](complementos/nomina-v11)
 * [Complemento de nómina v1.2](complementos/nomina-v12)
 * [Timbre fiscal digital v1.0](complementos/timbre-fiscal-v10)
