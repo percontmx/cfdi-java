@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <bindings xmlns="https://jakarta.ee/xml/ns/jaxb" version="3.0">
 
+    <globalBindings fixedAttributeAsConstantProperty="true" generateIsSetMethod="true">
+    </globalBindings>
+
     <bindings schemaLocation="../xsd/retencionpagov1.xsd">
         <schemaBindings>
             <package name="mx.gob.sat.cfdi.retenciones.v1" />

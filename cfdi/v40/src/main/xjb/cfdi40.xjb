@@ -2,7 +2,8 @@
 <bindings version="3.0"
           xmlns="https://jakarta.ee/xml/ns/jaxb">
 
-    <globalBindings typesafeEnumMaxMembers="99999" />
+    <globalBindings typesafeEnumMaxMembers="99999" generateIsSetMethod="true">
+    </globalBindings>
 
     <bindings schemaLocation="../xsd/cfdv40.xsd">
         <schemaBindings>

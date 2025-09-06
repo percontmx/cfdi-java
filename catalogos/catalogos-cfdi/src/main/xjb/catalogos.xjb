@@ -2,6 +2,8 @@
 <bindings xmlns="https://jakarta.ee/xml/ns/jaxb"
           version="3.0"
           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <globalBindings generateIsSetMethod="true">
+    </globalBindings>
 
     <bindings schemaLocation="../xsd/catCFDI.xsd">
         <schemaBindings>
