@@ -2,6 +2,8 @@
 <bindings version="2.1"
         xmlns="http://java.sun.com/xml/ns/jaxb">
 
+    <globalBindings generateIsSetMethod="true"/>
+
     <bindings schemaLocation="../xsd/CatPlataformasTecnologicas.xsd">
         <schemaBindings>
             <package name="mx.gob.sat.catálogos.plataformas" />

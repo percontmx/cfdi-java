@@ -3,7 +3,8 @@
         xmlns="https://jakarta.ee/xml/ns/jaxb"
         xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-       <!-- xmlns:inheritance="http://jaxb2-commons.dev.java.net/basic/inheritance" -->
+    <globalBindings fixedAttributeAsConstantProperty="true" generateIsSetMethod="true">
+    </globalBindings>
 
     <bindings schemaLocation="../xsd/catNomina.xsd">
         <schemaBindings>

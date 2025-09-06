@@ -3,6 +3,9 @@
         xmlns="https://jakarta.ee/xml/ns/jaxb"
         xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+    <globalBindings fixedAttributeAsConstantProperty="true" generateIsSetMethod="true">
+    </globalBindings>
+
     <bindings schemaLocation="../xsd/catRetenciones.xsd">
         <schemaBindings>
             <package name="mx.gob.sat.cfdi.catalogos.retenciones" />
