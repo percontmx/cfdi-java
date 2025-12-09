@@ -141,6 +141,7 @@
                         <schemaDirectory>src/main/xsd</schemaDirectory>
                         <bindingDirectory>src/main/xjb</bindingDirectory>
                         <useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
+                        <strict>false</strict>
                         <args>
                             <arg>-XelementWrapper</arg>
                         </args>
