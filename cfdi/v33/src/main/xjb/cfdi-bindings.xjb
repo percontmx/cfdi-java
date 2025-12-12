@@ -57,10 +57,6 @@
             </property>
         </bindings>
 
-        <bindings node="//xs:attribute[@name='Version']">
-            <property name="version" />
-        </bindings>
-
         <bindings node="//xs:element[@name='Concepto']//xs:element[@name='Impuestos']/xs:complexType">
             <class name="ConceptoImpuestos" />
         </bindings>

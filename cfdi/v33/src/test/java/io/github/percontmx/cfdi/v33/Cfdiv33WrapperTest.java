@@ -23,6 +23,6 @@ public class Cfdiv33WrapperTest {
         Assertions.assertInstanceOf(mx.gob.sat.cfdi.v33.Comprobante.class, unmarshalled);
 
         Cfdiv33Wrapper cfdiWrapper = new Cfdiv33Wrapper((Comprobante) unmarshalled);
-        Assertions.assertEquals(Comprobante.version, cfdiWrapper.getVersion());
+        Assertions.assertEquals(Comprobante.VERSION, cfdiWrapper.getVersion());
     }
 }

@@ -13,7 +13,7 @@ public class Cfdiv33Wrapper extends AbstractCfdiWrapper<Comprobante> {
 
     @Override
     public String getVersion() {
-        return Comprobante.version;
+        return Comprobante.VERSION;
     }
 
     @Override
