@@ -10,10 +10,10 @@ import org.junit.jupiter.api.Test;
 
 import java.net.URL;
 
-public class Cfdiv33WrapperTest {
+class Cfdiv33WrapperTest {
 
     @Test
-    public void wrapperTest() throws JAXBException {
+    void wrapperTest() throws JAXBException {
         URL urlXml = getClass().getClassLoader().getResource("sample_cfdi_v33.xml");
         Assertions.assertNotNull(urlXml);
 
