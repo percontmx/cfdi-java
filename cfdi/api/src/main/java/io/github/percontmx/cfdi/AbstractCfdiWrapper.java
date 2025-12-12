@@ -7,7 +7,4 @@ public abstract class AbstractCfdiWrapper<T extends AbstractCfdi> implements Cfd
     protected AbstractCfdiWrapper(T comprobante) {
         this.comprobante = comprobante;
     }
-
-
-
 }

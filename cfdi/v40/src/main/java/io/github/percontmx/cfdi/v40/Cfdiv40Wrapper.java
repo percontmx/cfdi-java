@@ -1,13 +1,13 @@
-package io.github.percontmx.cfdi.v32;
+package io.github.percontmx.cfdi.v40;
 
 import io.github.percontmx.cfdi.AbstractCfdiWrapper;
-import mx.gob.sat.cfdi.v32.Comprobante;
+import mx.gob.sat.cfdi.v40.Comprobante;
 
 import java.math.BigDecimal;
 
-public class Cfdiv32Wrapper extends AbstractCfdiWrapper<Comprobante> {
+public class Cfdiv40Wrapper extends AbstractCfdiWrapper<Comprobante> {
 
-    public Cfdiv32Wrapper(Comprobante comprobante) {
+    protected Cfdiv40Wrapper(Comprobante comprobante) {
         super(comprobante);
     }
 

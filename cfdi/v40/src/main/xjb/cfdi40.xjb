@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <bindings version="3.0"
-          xmlns="https://jakarta.ee/xml/ns/jaxb">
+          xmlns="https://jakarta.ee/xml/ns/jaxb"
+          xmlns:xs="http://www.w3.org/2001/XMLSchema"
+          xmlns:inheritance="urn:jaxb.jvnet.org:plugin:inheritance">
 
-    <globalBindings typesafeEnumMaxMembers="99999" generateIsSetMethod="true">
+    <globalBindings generateIsSetMethod="true"
+                    fixedAttributeAsConstantProperty="true"
+                    typesafeEnumMaxMembers="99999">
     </globalBindings>
 
     <bindings schemaLocation="../xsd/cfdv40.xsd">
         <schemaBindings>
             <package name="mx.gob.sat.cfdi.v40" />
         </schemaBindings>
+
+        <bindings node="//xs:element[@name='Comprobante']">
+            <class name="Comprobante" />
+            <inheritance:extends>io.github.percontmx.cfdi.AbstractCfdi</inheritance:extends>
+        </bindings>
 
     </bindings>
 </bindings>
