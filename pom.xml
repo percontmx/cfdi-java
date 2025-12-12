@@ -4,7 +4,7 @@
 
     <groupId>io.github.percontmx.cfdi</groupId>
     <artifactId>cfdi-java</artifactId>
-    <version>2.1.1-SNAPSHOT-SNAPSHOT</version>
+    <version>2.1.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Percont CFDI</name>
@@ -21,6 +21,7 @@
         <module>complementos/nomina-v12</module>
         <module>complementos/timbre-fiscal-v10</module>
         <module>complementos/timbre-fiscal-v11</module>
+        <module>cfdi/api</module>
         <module>cfdi/v32</module>
         <module>cfdi/v33</module>
         <module>cfdi/v40</module>
@@ -85,6 +86,12 @@
             </dependency>
 
             <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-impl</artifactId>
+                <version>4.0.5</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.junit</groupId>
                 <artifactId>junit-bom</artifactId>
                 <version>5.13.4</version>
@@ -144,6 +151,7 @@
                         <strict>false</strict>
                         <args>
                             <arg>-XelementWrapper</arg>
+                            <arg>-Xinheritance</arg>
                         </args>
                         <plugins>
                             <plugin>

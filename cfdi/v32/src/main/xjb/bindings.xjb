@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <bindings xmlns="https://jakarta.ee/xml/ns/jaxb" version="3.0"
           xmlns:xs="http://www.w3.org/2001/XMLSchema"
-          xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+          xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+          xmlns:inheritance="urn:jaxb.jvnet.org:plugin:inheritance">
 
     <globalBindings fixedAttributeAsConstantProperty="true" localScoping="toplevel" generateIsSetMethod="true">
         <xjc:javaType name="java.time.LocalDate" xmlType="xs:date"
@@ -14,6 +15,11 @@
         <schemaBindings>
             <package name="mx.gob.sat.cfdi.v32" />
         </schemaBindings>
+
+        <bindings node="//xs:element[@name='Comprobante']">
+            <class name="Comprobante" />
+            <inheritance:extends>io.github.percontmx.cfdi.AbstractCfdi</inheritance:extends>
+        </bindings>
 
         <bindings node="//xs:complexType[@name='t_InformacionAduanera']">
             <class name="InformaciónAduanera" />

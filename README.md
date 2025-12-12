@@ -4,6 +4,7 @@
 ![GitHub Latest Release](https://img.shields.io/github/v/release/percontmx/cfdi-java)
 ![Maven Central](https://img.shields.io/maven-central/v/io.github.percontmx.cfdi/cfdi-java.svg)
 ![GitHub License](https://img.shields.io/github/license/percontmx/cfdi-java)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=percontmx_cfdi-java&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=percontmx_cfdi-java)
 
 Clases Java para dar soporte al Comprobante Fiscal Digital por Internet (CFDI),
 de acuerdo a las especificaciones del Servicio de Administración Tributaria
