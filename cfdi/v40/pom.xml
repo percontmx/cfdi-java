@@ -32,7 +32,7 @@
         <dependency>
             <groupId>io.github.percontmx.cfdi</groupId>
             <artifactId>cfdi-api</artifactId>
-            <version>2.1.0-SNAPSHOT</version>
+            <version>2.1.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
