@@ -21,7 +21,7 @@ Importa el paquete `bom` en la sección de `dependencyManagement` de tu
       <dependency>
           <groupId>io.github.percontmx.cfdi</groupId>
           <artifactId>bom</artifactId>
-          <version>2.0.1</version>
+          <version>2.1.0</version>
           <type>pom</type>
           <scope>import</scope>
       </dependency>
