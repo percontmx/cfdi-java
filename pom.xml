@@ -143,7 +143,7 @@
                 <plugin>
                     <groupId>org.jvnet.jaxb</groupId>
                     <artifactId>jaxb-maven-plugin</artifactId>
-                    <version>4.0.9</version>
+                    <version>4.0.12</version>
                     <configuration>
                         <schemaDirectory>src/main/xsd</schemaDirectory>
                         <bindingDirectory>src/main/xjb</bindingDirectory>
@@ -157,7 +157,7 @@
                             <plugin>
                                 <groupId>org.jvnet.jaxb</groupId>
                                 <artifactId>jaxb-plugins</artifactId>
-                                <version>4.0.9</version>
+                                <version>4.0.12</version>
                             </plugin>
                         </plugins>
                     </configuration>
