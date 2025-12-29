@@ -4,7 +4,7 @@
 
     <groupId>io.github.percontmx.cfdi</groupId>
     <artifactId>cfdi-java</artifactId>
-    <version>2.1.1-SNAPSHOT</version>
+    <version>2.2.0</version>
     <packaging>pom</packaging>
 
     <name>Percont CFDI</name>
@@ -63,7 +63,7 @@
     <scm>
         <connection>scm:git:https://github.com/percontmx/cfdi-java.git</connection>
         <url>https://github.com/percontmx/cfdi-java</url>
-      <tag>HEAD</tag>
+      <tag>2.2.0</tag>
   </scm>
 
     <issueManagement>
