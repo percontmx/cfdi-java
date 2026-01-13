@@ -7,7 +7,8 @@ import java.math.BigDecimal;
 
 public class Cfdiv40Wrapper extends AbstractCfdiWrapper<Comprobante> {
 
-    protected Cfdiv40Wrapper(Comprobante comprobante) {
+
+    public Cfdiv40Wrapper(Comprobante comprobante) {
         super(comprobante);
     }
 
