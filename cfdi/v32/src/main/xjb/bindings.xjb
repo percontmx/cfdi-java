@@ -19,6 +19,11 @@
         <bindings node="//xs:element[@name='Comprobante']">
             <class name="Comprobante" />
             <inheritance:extends>io.github.percontmx.cfdi.AbstractCfdi</inheritance:extends>
+            <bindings node="//xs:element[@name='Comprobante']/xs:complexType/xs:attribute[@name='fecha']">
+                <property name="fechaEmision">
+                    <javadoc>Fecha y hora locales en las que este comprobante fiscal fue emitido.</javadoc>
+                </property>
+            </bindings>
         </bindings>
 
         <bindings node="//xs:complexType[@name='t_InformacionAduanera']">
@@ -40,7 +45,6 @@
         <bindings node="//xs:element[@name='Retencion']/xs:complexType">
             <class name="Retención" />
         </bindings>
-
     </bindings>
 
 </bindings>

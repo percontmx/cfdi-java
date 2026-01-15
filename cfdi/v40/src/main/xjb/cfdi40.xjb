@@ -2,11 +2,14 @@
 <bindings version="3.0"
           xmlns="https://jakarta.ee/xml/ns/jaxb"
           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+          xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
           xmlns:inheritance="urn:jaxb.jvnet.org:plugin:inheritance">
 
     <globalBindings generateIsSetMethod="true"
                     fixedAttributeAsConstantProperty="true"
                     typesafeEnumMaxMembers="99999">
+        <xjc:javaType name="java.time.LocalDateTime" xmlType="xs:dateTime"
+                      adapter="io.github.threetenjaxb.core.LocalDateTimeXmlAdapter" />
     </globalBindings>
 
     <bindings schemaLocation="../xsd/cfdv40.xsd">
@@ -17,6 +20,11 @@
         <bindings node="//xs:element[@name='Comprobante']">
             <class name="Comprobante" />
             <inheritance:extends>io.github.percontmx.cfdi.AbstractCfdi</inheritance:extends>
+            <bindings node="//xs:attribute[@name='Fecha']">
+                <property name="fechaEmision">
+                    <javadoc>Fecha y hora locales en las que este comprobante fiscal fue emitido.</javadoc>
+                </property>
+            </bindings>
         </bindings>
 
     </bindings>

@@ -4,6 +4,7 @@ import io.github.percontmx.cfdi.AbstractCfdiWrapper;
 import mx.gob.sat.cfdi.v32.Comprobante;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 public class Cfdiv32Wrapper extends AbstractCfdiWrapper<Comprobante> {
 
