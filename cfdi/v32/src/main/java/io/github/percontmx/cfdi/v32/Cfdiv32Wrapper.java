@@ -4,7 +4,7 @@ import io.github.percontmx.cfdi.AbstractCfdiWrapper;
 import mx.gob.sat.cfdi.v32.Comprobante;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.util.List;
 
 public class Cfdiv32Wrapper extends AbstractCfdiWrapper<Comprobante> {
 
@@ -20,5 +20,10 @@ public class Cfdiv32Wrapper extends AbstractCfdiWrapper<Comprobante> {
     @Override
     public BigDecimal getTotal() {
         return this.comprobante.getTotal();
+    }
+
+    @Override
+    public List<Object> getComplementos() {
+        return this.comprobante.getComplemento();
     }
 }

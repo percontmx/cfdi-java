@@ -27,5 +27,9 @@
             </bindings>
         </bindings>
 
+        <bindings node="//xs:element[@name='Complemento']">
+            <property name="complementos" />
+        </bindings>
+
     </bindings>
 </bindings>

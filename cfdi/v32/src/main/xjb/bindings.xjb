@@ -24,6 +24,10 @@
                     <javadoc>Fecha y hora locales en las que este comprobante fiscal fue emitido.</javadoc>
                 </property>
             </bindings>
+
+            <bindings node="//xs:element[@name='Complemento']/xs:complexType">
+                <property name="complementos" />
+            </bindings>
         </bindings>
 
         <bindings node="//xs:complexType[@name='t_InformacionAduanera']">
