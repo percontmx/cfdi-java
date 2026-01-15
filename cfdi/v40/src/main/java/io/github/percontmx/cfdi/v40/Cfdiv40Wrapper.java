@@ -1,10 +1,12 @@
 package io.github.percontmx.cfdi.v40;
 
 import io.github.percontmx.cfdi.AbstractCfdiWrapper;
+import mx.gob.sat.cfdi.complementos.tfd.v11.TimbreFiscalDigital;
 import mx.gob.sat.cfdi.v40.Comprobante;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Optional;
 
 public class Cfdiv40Wrapper extends AbstractCfdiWrapper<Comprobante> {
 
@@ -26,5 +28,20 @@ public class Cfdiv40Wrapper extends AbstractCfdiWrapper<Comprobante> {
     @Override
     public List<Object> getComplementos() {
         return this.comprobante.getComplementos();
+    }
+
+    private Optional<TimbreFiscalDigital> getOptionalTimbre() {
+        return this.getComplementos().stream()
+                .filter(obj -> obj instanceof TimbreFiscalDigital)
+                .map(obj -> (TimbreFiscalDigital) obj)
+                .findFirst();
+    }
+
+    public TimbreFiscalDigital getTimbre() {
+        return this.getOptionalTimbre().orElse(null);
+    }
+
+    public boolean hasTimbre() {
+        return this.getOptionalTimbre().isPresent();
     }
 }
