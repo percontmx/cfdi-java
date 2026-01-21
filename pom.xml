@@ -150,7 +150,6 @@
                         <useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
                         <strict>false</strict>
                         <args>
-                            <arg>-XelementWrapper</arg>
                             <arg>-Xinheritance</arg>
                         </args>
                         <plugins>

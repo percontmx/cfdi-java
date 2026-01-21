@@ -7,6 +7,7 @@ import mx.gob.sat.cfdi.v32.Comprobante;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 public class Cfdiv32Wrapper extends AbstractCfdiWrapper<Comprobante> {
 
@@ -26,7 +27,8 @@ public class Cfdiv32Wrapper extends AbstractCfdiWrapper<Comprobante> {
 
     @Override
     public List<Object> getComplementos() {
-        return this.comprobante.getComplemento();
+        return this.comprobante.getComplemento() != null ?
+        this.comprobante.getComplemento().getAny() : List.of();
     }
 
     private Optional<TimbreFiscalDigital> getOptionalTimbre() {
@@ -36,12 +38,15 @@ public class Cfdiv32Wrapper extends AbstractCfdiWrapper<Comprobante> {
                 .findFirst();
     }
 
-    public TimbreFiscalDigital getTimbre() {
-        return this.getOptionalTimbre().orElse(null);
-    }
-
     @Override
     public boolean hasTimbre() {
         return this.getOptionalTimbre().isPresent();
+    }
+
+    @Override
+    public UUID getTimbreUuid() {
+        return this.getOptionalTimbre()
+                .map(TimbreFiscalDigital::getUuid)
+                .orElse(null);
     }
 }

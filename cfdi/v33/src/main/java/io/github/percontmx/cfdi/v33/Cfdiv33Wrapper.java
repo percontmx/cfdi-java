@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class Cfdiv33Wrapper extends AbstractCfdiWrapper<Comprobante> {
@@ -29,10 +30,10 @@ public class Cfdiv33Wrapper extends AbstractCfdiWrapper<Comprobante> {
 
     @Override
     public List<Object> getComplementos() {
-        return this.comprobante.getComplemento().stream()
-                .map(Complemento::getAny)
-                .flatMap(Collection::stream)
-                .collect(Collectors.toList());
+        return this.comprobante.isSetComplemento() ?
+                this.comprobante.getComplemento().stream()
+                        .flatMap(e -> e.getAny().stream())
+                        .collect(Collectors.toList()) : List.of();
     }
 
     private Optional<TimbreFiscalDigital> getOptionalTimbre() {
@@ -42,11 +43,13 @@ public class Cfdiv33Wrapper extends AbstractCfdiWrapper<Comprobante> {
                 .findFirst();
     }
 
-    public TimbreFiscalDigital getTimbre() {
-        return this.getOptionalTimbre().orElse(null);
-    }
-
     public boolean hasTimbre() {
         return this.getOptionalTimbre().isPresent();
+    }
+
+    public UUID getTimbreUuid() {
+        return this.getOptionalTimbre()
+                .map(TimbreFiscalDigital::getUuid)
+                .orElse(null);
     }
 }
