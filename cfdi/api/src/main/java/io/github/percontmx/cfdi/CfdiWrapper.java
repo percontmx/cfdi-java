@@ -8,4 +8,5 @@ public interface CfdiWrapper<T extends AbstractCfdi> extends Cfdi {
     List<Object> getComplementos();
     boolean hasTimbre();
     UUID getTimbreUuid();
+    boolean isNomina();
 }

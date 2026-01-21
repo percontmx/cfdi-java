@@ -1,6 +1,7 @@
 package io.github.percontmx.cfdi.v40;
 
 import io.github.percontmx.cfdi.AbstractCfdiWrapper;
+import mx.gob.sat.cfdi.catalogos.TipoDeComprobante;
 import mx.gob.sat.cfdi.complementos.tfd.v11.TimbreFiscalDigital;
 import mx.gob.sat.cfdi.v40.Comprobante;
 
@@ -49,5 +50,11 @@ public class Cfdiv40Wrapper extends AbstractCfdiWrapper<Comprobante> {
         return this.getOptionalTimbre()
                 .map(TimbreFiscalDigital::getUuid)
                 .orElse(null);
+    }
+
+    @Override
+    public boolean isNomina() {
+        return this.comprobante.getTipoDeComprobante() == TipoDeComprobante.NÓMINA
+                && hasComplementoNomina();
     }
 }

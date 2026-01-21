@@ -9,6 +9,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+import static mx.gob.sat.cfdi.v32.TipoDeComprobante.EGRESO;
+
 public class Cfdiv32Wrapper extends AbstractCfdiWrapper<Comprobante> {
 
     public Cfdiv32Wrapper(Comprobante comprobante) {
@@ -48,5 +50,11 @@ public class Cfdiv32Wrapper extends AbstractCfdiWrapper<Comprobante> {
         return this.getOptionalTimbre()
                 .map(TimbreFiscalDigital::getUuid)
                 .orElse(null);
+    }
+
+    @Override
+    public boolean isNomina() {
+        return EGRESO == this.comprobante.getTipoDeComprobante() &&
+                hasComplementoNomina();
     }
 }

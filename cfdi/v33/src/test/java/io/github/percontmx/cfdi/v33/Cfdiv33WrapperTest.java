@@ -25,4 +25,20 @@ class Cfdiv33WrapperTest {
         Cfdiv33Wrapper cfdiWrapper = new Cfdiv33Wrapper((Comprobante) unmarshalled);
         Assertions.assertEquals(Comprobante.VERSION, cfdiWrapper.getVersion());
     }
+
+    @Test
+    void wrapperTes2t() throws JAXBException {
+        URL urlXml = getClass().getClassLoader().getResource("sample_cfdi_v33_nomina11.xml");
+        Assertions.assertNotNull(urlXml);
+
+        JAXBContext jaxbContext = JAXBContext.newInstance(ObjectFactory.class,
+                mx.gob.sat.cfdi.complementos.nomina.v11.ObjectFactory.class);
+        Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+        Object unmarshalled = unmarshaller.unmarshal(urlXml);
+        Assertions.assertInstanceOf(mx.gob.sat.cfdi.v33.Comprobante.class, unmarshalled);
+
+        Cfdiv33Wrapper cfdiWrapper = new Cfdiv33Wrapper((Comprobante) unmarshalled);
+        Assertions.assertEquals(Comprobante.VERSION, cfdiWrapper.getVersion());
+        Assertions.assertTrue(cfdiWrapper.isNomina());
+    }
 }

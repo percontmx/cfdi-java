@@ -49,6 +49,22 @@
         <bindings node="//xs:element[@name='Retencion']/xs:complexType">
             <class name="Retención" />
         </bindings>
+
+        <!--  <xs:attribute name="tipoDeComprobante" use="required">
+                <xs:annotation>
+                    <xs:documentation>Atributo requerido para expresar el efecto del comprobante fiscal para el contribuyente emisor.</xs:documentation>
+                </xs:annotation>
+                <xs:simpleType>
+                    <xs:restriction base="xs:string"> >>>-->
+        <bindings node="//xs:attribute[@name='tipoDeComprobante']/xs:simpleType">
+            <typesafeEnumClass name="TipoDeComprobante">
+                <!-- <typesafeEnumMember name="INGRESO" value="I"/>
+                <typesafeEnumMember name="EGRESO" value="E"/>
+                <typesafeEnumMember name="TRASLADO" value="T"/>
+                <typesafeEnumMember name="NÓMINA" value="N"/>
+                <typesafeEnumMember name="PAGO" value="P"/> -->
+            </typesafeEnumClass>
+        </bindings>
     </bindings>
 
 </bindings>
