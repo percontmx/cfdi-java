@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>cfdi</artifactId>
+    <artifactId>cfdi-wrappers</artifactId>
     <version>2.2.1-SNAPSHOT</version>
-    <name>Percont CFDI [CFDI]</name>
+    <name>Percont CFDI [CFDI Wrappers]</name>
     <packaging>pom</packaging>
     <parent>
         <groupId>io.github.percontmx.cfdi</groupId>
@@ -14,8 +14,10 @@
     </parent>
 
     <modules>
-        <module>api</module>
-        <module>v32</module>
+        <module>wrapper-api</module>
+        <module>wrapper-v32</module>
+        <!-- module>wrapper-v33</module>
+        <module>wrapper-v40</module -->
     </modules>
 
 </project>

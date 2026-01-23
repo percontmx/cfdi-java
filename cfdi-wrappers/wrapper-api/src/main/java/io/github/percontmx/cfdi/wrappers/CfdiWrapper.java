@@ -1,4 +1,7 @@
-package io.github.percontmx.cfdi;
+package io.github.percontmx.cfdi.wrappers;
+
+import io.github.percontmx.cfdi.AbstractCfdi;
+import io.github.percontmx.cfdi.Cfdi;
 
 import java.util.List;
 import java.util.UUID;

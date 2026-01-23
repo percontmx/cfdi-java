@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cfd:Comprobante xmlns:cfd="http://www.sat.gob.mx/cfd/3"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital"
+                 xsi:schemaLocation="http://www.sat.gob.mx/cfd/3  ../../../../../cfdi/v32/src/main/xsd/cfdiv32.xsd
+http://www.sat.gob.mx/TimbreFiscalDigital ../../../../../complementos/timbre-fiscal-v10/src/main/xsd/TimbreFiscalDigital.xsd"
+                 version="3.2"
+                 fecha="2025-12-11T12:00:00"
+                 LugarExpedicion="Guadalajara, Jalisco"
+                 total="150.00"
+                 metodoDePago="Efectivo"
+                 subTotal="150.00"
+                 tipoDeComprobante="ingreso"
+                 formaDePago="Pago en una sola exhibición"
+                 sello="VGhpcyBzaW11bGFkb3JzIHNlbGxvIGJhc2U2NA=="
+                 noCertificado="1234567890ABCDEFGHIJ"
+                 certificado="3292384JKADSDFIPQ3S">
+    <cfd:Emisor rfc="EMP030303O48">
+        <cfd:RegimenFiscal Regimen="Persona física"/>
+    </cfd:Emisor>
+
+    <cfd:Receptor rfc="XXXX010101A11"/>
+
+    <cfd:Conceptos>
+        <cfd:Concepto cantidad="1" unidad="1" descripcion="Uno" valorUnitario="1" importe="150"/>
+    </cfd:Conceptos>
+
+    <cfd:Impuestos/>
+    <cfd:Complemento>
+        <tfd:TimbreFiscalDigital UUID="123e4567-e89b-12d3-a456-426614174000"
+                                 FechaTimbrado="2025-12-11T12:30:00"
+                                 version="1.0"
+                                 selloSAT="ASFAEA14564EHF"
+                                 noCertificadoSAT="00001000000403201412"
+                                 selloCFD="BASDFAEFAEFAEFAE"/>
+    </cfd:Complemento>
+</cfd:Comprobante>

@@ -2,7 +2,7 @@
 <cfd:Comprobante xmlns:cfd="http://www.sat.gob.mx/cfd/3"
                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                  xmlns:tfd="http://www.sat.gob.mx/TimbreFiscalDigital"
-                 xsi:schemaLocation="http://www.sat.gob.mx/cfd/3  ../../main/xsd/cfdiv32.xsd
+                 xsi:schemaLocation="http://www.sat.gob.mx/cfd/3  ../../../../../cfdi/v32/src/main/xsd/cfdiv32.xsd
 http://www.sat.gob.mx/TimbreFiscalDigital ../../../../../complementos/timbre-fiscal-v10/src/main/xsd/TimbreFiscalDigital.xsd"
                  version="3.2"
                  fecha="2025-12-11T12:00:00"
@@ -10,7 +10,7 @@ http://www.sat.gob.mx/TimbreFiscalDigital ../../../../../complementos/timbre-fis
                  total="150.00"
                  metodoDePago="Efectivo"
                  subTotal="150.00"
-                 tipoDeComprobante="ingreso"
+                 tipoDeComprobante="egreso"
                  formaDePago="Pago en una sola exhibición"
                  sello="VGhpcyBzaW11bGFkb3JzIHNlbGxvIGJhc2U2NA=="
                  noCertificado="1234567890ABCDEFGHIJ"
@@ -27,6 +27,10 @@ http://www.sat.gob.mx/TimbreFiscalDigital ../../../../../complementos/timbre-fis
 
     <cfd:Impuestos/>
     <cfd:Complemento>
+        <n:Nomina xmlns:n="http://www.sat.gob.mx/nomina12"
+                  xsi:schemaLocation="http://www.sat.gob.mx/nomina12 ../../../../../complementos/nomina-v12/src/main/xsd/nomina12.xsd"
+                  Version="1.2" TipoNomina="O"
+                  FechaFinalPago="2025-01-05" FechaInicialPago="2025-01-01" FechaPago="2025-01-01" NumDiasPagados="2"/>
         <tfd:TimbreFiscalDigital UUID="123e4567-e89b-12d3-a456-426614174000"
                                  FechaTimbrado="2025-12-11T12:30:00"
                                  version="1.0"
