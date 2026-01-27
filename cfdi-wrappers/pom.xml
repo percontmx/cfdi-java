@@ -17,7 +17,7 @@
         <module>wrapper-api</module>
         <module>wrapper-v32</module>
         <module>wrapper-v33</module>
-        <!-- module>wrapper-v40</module -->
+        <module>wrapper-v40</module>
     </modules>
 
 </project>
