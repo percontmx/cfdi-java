@@ -81,4 +81,18 @@
         </bindings>
     </bindings>
 
+    <!-- Bindings necesarios para evitar la generación de enums en los catálogos -->
+    <bindings schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/catCFDI.xsd">
+        <bindings node="//xs:simpleType[@name='c_CodigoPostal']">
+            <typesafeEnumClass map="false"/>
+        </bindings>
+        <bindings node="//xs:simpleType[@name='c_ClaveProdServ']">
+            <typesafeEnumClass map="false"/>
+        </bindings>
+        <bindings node="//xs:simpleType[@name='c_ClaveUnidad']">
+            <typesafeEnumClass map="false"/>
+        </bindings>
+
+    </bindings>
+
 </bindings>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Comprobante xmlns="http://www.sat.gob.mx/cfd/3"
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-             xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 ../../main/xsd/cfdi33.xsd"
+             xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 ../../../../../cfdi/v33/src/main/xsd/cfdi33.xsd"
              Version="3.3"
              Serie="A"
              Folio="100"

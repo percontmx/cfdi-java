@@ -7,9 +7,9 @@
 
     <parent>
         <groupId>io.github.percontmx.cfdi</groupId>
-        <artifactId>cfdi-java</artifactId>
+        <artifactId>cfdi</artifactId>
         <version>2.2.1-SNAPSHOT</version>
-        <relativePath>../../pom.xml</relativePath>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <dependencies>
@@ -31,11 +31,6 @@
         <dependency>
             <groupId>io.github.percontmx.cfdi</groupId>
             <artifactId>cfdi-api</artifactId>
-            <version>2.2.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>io.github.percontmx.cfdi</groupId>
-            <artifactId>tfd-v1_1</artifactId>
             <version>2.2.1-SNAPSHOT</version>
         </dependency>
         <dependency>

@@ -1,4 +1,4 @@
-package io.github.percontmx.cfdi.v33;
+package io.github.percontmx.cfdi.v33.wrappers;
 
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;

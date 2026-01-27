@@ -16,6 +16,7 @@
     <modules>
         <module>api</module>
         <module>v32</module>
+        <module>v33</module>
     </modules>
 
 </project>

@@ -1,6 +1,6 @@
-package io.github.percontmx.cfdi.v33;
+package io.github.percontmx.cfdi.v33.wrappers;
 
-import io.github.percontmx.cfdi.AbstractCfdiWrapper;
+import io.github.percontmx.cfdi.wrappers.AbstractCfdiWrapper;
 import mx.gob.sat.cfdi.catalogos.TipoDeComprobante;
 import mx.gob.sat.cfdi.complementos.tfd.v11.TimbreFiscalDigital;
 import mx.gob.sat.cfdi.v33.Comprobante;
@@ -56,5 +56,11 @@ public class Cfdiv33Wrapper extends AbstractCfdiWrapper<Comprobante> {
     public boolean isNomina() {
         return TipoDeComprobante.NÓMINA == this.comprobante.getTipoDeComprobante() &&
                 this.hasComplementoNomina();
+    }
+
+    private boolean hasComplementoNomina() {
+        return this.getComplementos().stream()
+                .anyMatch(c -> c instanceof mx.gob.sat.cfdi.complementos.nomina.v11.Nomina ||
+                        c instanceof mx.gob.sat.cfdi.complementos.nomina.v12.Nomina);
     }
 }
