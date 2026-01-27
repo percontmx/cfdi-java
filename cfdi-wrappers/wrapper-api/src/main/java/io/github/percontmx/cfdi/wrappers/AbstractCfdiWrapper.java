@@ -22,4 +22,9 @@ public abstract class AbstractCfdiWrapper<T extends AbstractCfdi> implements Cfd
     public BigDecimal getTotal() {
         return this.comprobante.getTotal();
     }
+
+    @Override
+    public T getComprobante() {
+        return comprobante;
+    }
 }

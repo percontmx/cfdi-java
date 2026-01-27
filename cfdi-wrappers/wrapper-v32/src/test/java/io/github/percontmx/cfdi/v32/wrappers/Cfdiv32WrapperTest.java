@@ -1,6 +1,5 @@
-package io.github.percontmx.cfdi.v32;
+package io.github.percontmx.cfdi.v32.wrappers;
 
-import io.github.percontmx.cfdi.v32.wrappers.Cfdiv32Wrapper;
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.JAXBException;
 import jakarta.xml.bind.Unmarshaller;
@@ -14,7 +13,7 @@ class Cfdiv32WrapperTest {
 
     private final Unmarshaller unmarshaller;
 
-    private final static String JAXB_CONTEXT_PATH = "mx.gob.sat.cfdi.v32:" +
+    private static final String JAXB_CONTEXT_PATH = "mx.gob.sat.cfdi.v32:" +
             "mx.gob.sat.cfdi.complementos.tfd.v10:" +
             "mx.gob.sat.cfdi.complementos.nomina.v11:" +
             "mx.gob.sat.cfdi.complementos.nomina.v12";

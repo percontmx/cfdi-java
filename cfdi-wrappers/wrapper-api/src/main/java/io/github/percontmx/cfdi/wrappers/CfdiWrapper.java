@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.UUID;
 
 public interface CfdiWrapper<T extends AbstractCfdi> extends Cfdi {
+    T getComprobante();
     String getVersion();
     List<Object> getComplementos();
     boolean hasTimbre();
