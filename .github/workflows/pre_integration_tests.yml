@@ -39,4 +39,4 @@ jobs:
       - name: Publicar reporte de cobertura de código.
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: ./mvnw sonar:sonar -P coverage -Dsonar.organization=percontmx -Dsonar.projectKey=percontmx_cfdi-java -Dsonar.host.url=https://sonarcloud.io
+        run: ./mvnw sonar:sonar -P coverage -Dsonar.projectKey=percontmx_cfdi-java

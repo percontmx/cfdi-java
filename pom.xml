@@ -267,6 +267,9 @@
                     </plugin>
                 </plugins>
             </build>
+            <properties>
+                <sonar.organization>percontmx</sonar.organization>
+            </properties>
         </profile>
     </profiles>
 </project>
