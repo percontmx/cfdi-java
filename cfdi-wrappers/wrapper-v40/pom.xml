@@ -4,43 +4,43 @@
     <parent>
         <groupId>io.github.percontmx.cfdi</groupId>
         <artifactId>cfdi-wrappers</artifactId>
-        <version>2.3.0</version>
+        <version>2.3.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>cfdi-wrappers-v40</artifactId>
-    <version>2.3.0</version>
+    <version>2.3.1-SNAPSHOT</version>
     <name>Percont CFDI [CFDI Wrappers] - Comprobante fiscal digital v4.0 Wrapper</name>
 
     <dependencies>
         <dependency>
             <groupId>io.github.percontmx.cfdi</groupId>
             <artifactId>cfdi-wrappers-api</artifactId>
-            <version>2.3.0</version>
+            <version>2.3.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <groupId>io.github.percontmx.cfdi</groupId>
             <artifactId>cfdi-v40</artifactId>
-            <version>2.3.0</version>
+            <version>2.3.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <groupId>io.github.percontmx.cfdi</groupId>
             <artifactId>tfd-v1_1</artifactId>
-            <version>2.3.0</version>
+            <version>2.3.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <groupId>io.github.percontmx.cfdi</groupId>
             <artifactId>complemento-nomina-v11</artifactId>
-            <version>2.3.0</version>
+            <version>2.3.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <groupId>io.github.percontmx.cfdi</groupId>
             <artifactId>complemento-nomina-v12</artifactId>
-            <version>2.3.0</version>
+            <version>2.3.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
