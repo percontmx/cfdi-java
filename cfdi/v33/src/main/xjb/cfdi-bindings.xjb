@@ -20,12 +20,11 @@
         <bindings node="//xs:element[@name='Comprobante']">
             <class name="Comprobante" />
             <inheritance:extends>io.github.percontmx.cfdi.AbstractCfdi</inheritance:extends>
-        </bindings>
-
-        <bindings node="//xs:attribute[@name='Fecha']">
-            <property name="fechaDeExpedicion">
-                <javadoc>Fecha y hora locales en las que este comprobante fiscal fue expedido.</javadoc>
-            </property>
+            <bindings node="//xs:attribute[@name='Fecha']">
+                <property name="fechaEmision">
+                    <javadoc>Fecha y hora locales en las que este comprobante fiscal fue emitido.</javadoc>
+                </property>
+            </bindings>
         </bindings>
 
         <bindings node="//xs:attribute[@name='FormaPago']">
@@ -80,6 +79,20 @@
         <bindings node="//xs:element[@name='Parte']//xs:element[@name='InformacionAduanera']/xs:complexType">
             <class name="InformacionAduaneraParte" />
         </bindings>
+    </bindings>
+
+    <!-- Bindings necesarios para evitar la generación de enums en los catálogos -->
+    <bindings schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/catCFDI.xsd">
+        <bindings node="//xs:simpleType[@name='c_CodigoPostal']">
+            <typesafeEnumClass map="false"/>
+        </bindings>
+        <bindings node="//xs:simpleType[@name='c_ClaveProdServ']">
+            <typesafeEnumClass map="false"/>
+        </bindings>
+        <bindings node="//xs:simpleType[@name='c_ClaveUnidad']">
+            <typesafeEnumClass map="false"/>
+        </bindings>
+
     </bindings>
 
 </bindings>

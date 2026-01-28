@@ -21,10 +21,8 @@
         <module>complementos/nomina-v12</module>
         <module>complementos/timbre-fiscal-v10</module>
         <module>complementos/timbre-fiscal-v11</module>
-        <module>cfdi/api</module>
-        <module>cfdi/v32</module>
-        <module>cfdi/v33</module>
-        <module>cfdi/v40</module>
+        <module>cfdi</module>
+        <module>cfdi-wrappers</module>
         <module>retenciones/v1</module>
         <module>bom</module>
     </modules>
@@ -150,7 +148,6 @@
                         <useDependenciesAsEpisodes>true</useDependenciesAsEpisodes>
                         <strict>false</strict>
                         <args>
-                            <arg>-XelementWrapper</arg>
                             <arg>-Xinheritance</arg>
                         </args>
                         <plugins>

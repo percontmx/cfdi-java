@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Comprobante xmlns="http://www.sat.gob.mx/cfd/3"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.sat.gob.mx/cfd/3 ../../../../../cfdi/v33/src/main/xsd/cfdi33.xsd"
+             Version="3.3"
+             Serie="A"
+             Folio="100"
+             Fecha="2025-12-11T12:00:00"
+             Sello="VGhpcyBzaW11bGFkb3JzIHNlbGxvIGJhc2U2NA=="
+             FormaPago="01"
+             NoCertificado="00001000000403258748"
+             Certificado="QkFTRTY0Q0VSVElGSUNBVEVERVBUMTk="
+             SubTotal="1000.00"
+             Descuento="0.00"
+             Moneda="MXN"
+             Total="1160.00"
+             TipoDeComprobante="N"
+             MetodoPago="PUE"
+             LugarExpedicion="06100">
+
+    <Emisor Rfc="AAA010101AAA" Nombre="Empresa Ejemplo S.A. de C.V." RegimenFiscal="601"/>
+
+    <Receptor Rfc="XAXX010101000" Nombre="Cliente Ejemplo S.A. de C.V." UsoCFDI="G03"/>
+
+    <Conceptos>
+        <Concepto ClaveProdServ="01010101" NoIdentificacion="SERV-001" Cantidad="1.000000" ClaveUnidad="ACT"
+                  Unidad="Servicio" Descripcion="Consultoría técnica" ValorUnitario="1000.00" Importe="1000.00"/>
+    </Conceptos>
+
+    <Impuestos TotalImpuestosTrasladados="160.00">
+        <Traslados>
+            <Traslado Impuesto="002" TipoFactor="Tasa" TasaOCuota="0.160000" Importe="160.00"/>
+        </Traslados>
+    </Impuestos>
+
+    <Complemento>
+        <TimbreFiscalDigitalDummy>
+            <UUID>11111111-2222-3333-4444-555555555555</UUID>
+            <FechaTimbrado>2025-12-11T12:30:00</FechaTimbrado>
+            <RfcProvCertif>AAA010101AAA</RfcProvCertif>
+            <SelloCFD>dW5pcXVlc2VsbG9kZQ==</SelloCFD>
+            <NoCertificadoSAT>00001000000403258748</NoCertificadoSAT>
+        </TimbreFiscalDigitalDummy>
+        <n:Nomina xmlns:n="http://www.sat.gob.mx/nomina"
+                  xsi:schemaLocation="http://www.sat.gob.mx/nomina ../../../../nomina-v11/src/main/xsd/nomina11.xsd"
+                  Version="1.1" CURP="ABCD890123HDFRRL09" FechaPago="2025-12-11" FechaInicialPago="2025-12-01"
+                  FechaFinalPago="2025-12-15" NumDiasPagados="15.00" NumEmpleado="123456" PeriodicidadPago="04"
+                  TipoRegimen="605"/>
+
+    </Complemento>
+
+    <Addenda>
+        <Notas>Factura de prueba — sólo ejemplo</Notas>
+    </Addenda>
+
+</Comprobante>

@@ -1,38 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>cfdi-v33</artifactId>
-    <version>2.2.1-SNAPSHOT</version>
-    <name>Percont CFDI [CFDI] - Comprobante fiscal digital v3.3</name>
-
     <parent>
         <groupId>io.github.percontmx.cfdi</groupId>
-        <artifactId>cfdi</artifactId>
+        <artifactId>cfdi-wrappers</artifactId>
         <version>2.2.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
+    <artifactId>cfdi-wrappers-v33</artifactId>
+    <version>2.2.1-SNAPSHOT</version>
+    <name>Percont CFDI [CFDI Wrappers] - Comprobante fiscal digital v3.3 Wrapper</name>
+
     <dependencies>
         <dependency>
             <groupId>io.github.percontmx.cfdi</groupId>
-            <artifactId>utils-adaptadores-jaxb</artifactId>
+            <artifactId>cfdi-wrappers-api</artifactId>
             <version>2.2.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>io.github.percontmx.cfdi</groupId>
-            <artifactId>utils-tipos-cfdi</artifactId>
+            <artifactId>cfdi-v33</artifactId>
             <version>2.2.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>io.github.percontmx.cfdi</groupId>
-            <artifactId>catalogos-cfdi</artifactId>
+            <artifactId>tfd-v1_1</artifactId>
             <version>2.2.1-SNAPSHOT</version>
         </dependency>
+
         <dependency>
             <groupId>io.github.percontmx.cfdi</groupId>
-            <artifactId>cfdi-api</artifactId>
+            <artifactId>complemento-nomina-v11</artifactId>
             <version>2.2.1-SNAPSHOT</version>
         </dependency>
+
+        <dependency>
+            <groupId>io.github.percontmx.cfdi</groupId>
+            <artifactId>complemento-nomina-v12</artifactId>
+            <version>2.2.1-SNAPSHOT</version>
+        </dependency>
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
@@ -44,18 +52,4 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.jvnet.jaxb</groupId>
-                <artifactId>jaxb-maven-plugin</artifactId>
-                <configuration>
-                    <catalog>../../catalog.xml</catalog>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>
-
-
