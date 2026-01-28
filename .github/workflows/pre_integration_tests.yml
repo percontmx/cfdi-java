@@ -34,4 +34,7 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
 
       - name: Verificación.
-        run: ./mvnw -B verify
+        run: ./mvnw -B verify -P coverage
+
+      - name: Publicar reporte de cobertura de código.
+        run: ./mvnw sonar:sonar -P coverage
