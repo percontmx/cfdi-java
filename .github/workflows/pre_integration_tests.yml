@@ -37,4 +37,4 @@ jobs:
         run: ./mvnw -B verify -P coverage
 
       - name: Publicar reporte de cobertura de código.
-        run: ./mvnw sonar:sonar -P coverage -Dsonar.organization=percontmx
+        run: ./mvnw sonar:sonar -P coverage
