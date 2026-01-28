@@ -21,7 +21,7 @@ Importa el paquete `bom` en la sección de `dependencyManagement` de tu
       <dependency>
           <groupId>io.github.percontmx.cfdi</groupId>
           <artifactId>bom</artifactId>
-          <version>2.1.0</version>
+          <version>2.3.0</version>
           <type>pom</type>
           <scope>import</scope>
       </dependency>
@@ -71,14 +71,28 @@ Después, agrega las dependencias que necesites en la sección de `dependencies`
       <groupId>io.github.percontmx.cfdi</groupId>
       <artifactId>retenciones-v1</artifactId>
    </dependency>
+   
+   <!-- Nuevos paquetes agregados en la versión 2.3.0 -->
+   <dependency>
+        <groupId>io.github.percontmx.cfdi</groupId>
+        <artifactId>cfdi-wrappers-v32</artifactId>
+   </dependency>
+   <dependency>
+        <groupId>io.github.percontmx.cfdi</groupId>
+        <artifactId>cfdi-wrappers-v33</artifactId>
+   </dependency>
+   <dependency>
+        <groupId>io.github.percontmx.cfdi</groupId>
+        <artifactId>cfdi-wrappers-v40</artifactId>
+   </dependency>
 </dependencies>
 ```
 
 ## Paquetes disponibles.
 
-* [CFDI v3.2](cfdi/v32)
-* [CFDI v3.3](cfdi/v33)
-* [CFDI v4.0](cfdi/v40)
+* [CFDI v3.2](cfdi/v32)/[CFDI v3.2 Wrapper](cfdi-wrappers/wrapper-v32)
+* [CFDI v3.3](cfdi/v33)/[CFDI v3.3 Wrapper](cfdi-wrappers/wrapper-v33)
+* [CFDI v4.0](cfdi/v40)/[CFDI v4.0 Wrapper](cfdi-wrappers/wrapper-v40)
 * [Complemento de nómina v1.1](complementos/nomina-v11)
 * [Complemento de nómina v1.2](complementos/nomina-v12)
 * [Timbre fiscal digital v1.0](complementos/timbre-fiscal-v10)
