@@ -34,4 +34,9 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
 
       - name: Verificación.
-        run: ./mvnw -B verify
+        run: ./mvnw -B verify -P coverage
+
+      - name: Publicar reporte de cobertura de código.
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: ./mvnw sonar:sonar -P coverage -Dsonar.projectKey=percontmx_cfdi-java
