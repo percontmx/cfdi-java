@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <bindings version="3.0"
-        xmlns="https://jakarta.ee/xml/ns/jaxb"
-        xmlns:xs="http://www.w3.org/2001/XMLSchema">
+          xmlns="https://jakarta.ee/xml/ns/jaxb"
+          xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
     <globalBindings fixedAttributeAsConstantProperty="true" generateIsSetMethod="true">
     </globalBindings>
 
     <bindings schemaLocation="../xsd/catNomina.xsd">
         <schemaBindings>
-            <package name="mx.gob.sat.cfdi.catalogos.nomina" />
+            <package name="mx.gob.sat.cfdi.catalogos.nomina"/>
         </schemaBindings>
 
         <bindings node="//xs:simpleType[@name='c_OrigenRecurso']">
@@ -199,7 +199,8 @@
 
                 <typesafeEnumMember name="REINTEGRO_ISR_ANTERIOR" value="005">
                     <javadoc>Reintegro de ISR retenido en exceso de ejercicio anterior (siempre que no haya sido
-                        enterado al SAT).</javadoc>
+                        enterado al SAT).
+                    </javadoc>
                 </typesafeEnumMember>
 
                 <typesafeEnumMember name="ALIMENTOS" value="006">
@@ -212,7 +213,8 @@
 
                 <typesafeEnumMember name="SUBSIDIO" value="008">
                     <javadoc>Subsidio efectivamente entregado que no correspondía (Aplica sólo cuando haya ajuste al
-                        cierre de mes en relación con el Apéndice 7 de la guía de llenado de nómina).</javadoc>
+                        cierre de mes en relación con el Apéndice 7 de la guía de llenado de nómina).
+                    </javadoc>
                 </typesafeEnumMember>
 
                 <typesafeEnumMember name="REEMBOLSO_VIVIENDA" value="009">
@@ -221,7 +223,8 @@
 
                 <typesafeEnumMember name="OTRO" value="999">
                     <javadoc>Pagos distintos a los listados y que no deben considerarse como ingreso por sueldos,
-                        salarios o ingresos asimilados.</javadoc>
+                        salarios o ingresos asimilados.
+                    </javadoc>
                 </typesafeEnumMember>
             </typesafeEnumClass>
         </bindings>
@@ -303,6 +306,227 @@
                 </typesafeEnumMember>
             </typesafeEnumClass>
         </bindings>
+
+        <bindings node="//xs:simpleType[@name='c_TipoDeduccion']">
+            <typesafeEnumClass name="TipoDeduccion">
+                <typesafeEnumMember name="TD_001" value="001">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_002" value="002">
+                    <javadoc>ISR</javadoc>
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_003" value="003">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_004" value="004">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_005" value="005">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_006" value="006">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_007" value="007">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_008" value="008">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_009" value="009">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_010" value="010">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_011" value="011">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_012" value="012">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_013" value="013">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_014" value="014">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_015" value="015">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_016" value="016">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_017" value="017">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_018" value="018">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_019" value="019">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_020" value="020">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_021" value="021">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_022" value="022">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_023" value="023">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_024" value="024">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_025" value="025">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_026" value="026">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_027" value="027">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_028" value="028">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_029" value="029">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_030" value="030">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_031" value="031">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_032" value="032">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_033" value="033">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_034" value="034">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_035" value="035">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_036" value="036">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_037" value="037">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_038" value="038">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_039" value="039">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_040" value="040">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_041" value="041">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_042" value="042">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_043" value="043">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_044" value="044">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_045" value="045">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_046" value="046">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_047" value="047">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_048" value="048">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_049" value="049">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_050" value="050">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_051" value="051">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_052" value="052">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_053" value="053">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_054" value="054">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_055" value="055">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_056" value="056">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_057" value="057">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_058" value="058">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_059" value="059">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_060" value="060">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_061" value="061">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_062" value="062">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_063" value="063">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_064" value="064">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_065" value="065">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_066" value="066">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_067" value="067">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_068" value="068">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_069" value="069">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_070" value="070">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_071" value="071">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_072" value="072">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_073" value="073">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_074" value="074">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_075" value="075">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_076" value="076">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_077" value="077">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_078" value="078">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_079" value="079">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_080" value="080">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_081" value="081">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_082" value="082">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_083" value="083">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_084" value="084">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_085" value="085">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_086" value="086">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_087" value="087">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_088" value="088">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_089" value="089">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_090" value="090">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_091" value="091">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_092" value="092">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_093" value="093">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_094" value="094">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_095" value="095">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_096" value="096">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_097" value="097">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_098" value="098">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_099" value="099">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_100" value="100">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_101" value="101">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_102" value="102">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_103" value="103">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_104" value="104">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_105" value="105">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_106" value="106">
+                </typesafeEnumMember>
+                <typesafeEnumMember name="TD_107" value="107">
+                </typesafeEnumMember>
+            </typesafeEnumClass>
+        </bindings>
+
     </bindings>
 
 </bindings>

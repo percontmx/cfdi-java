@@ -15,7 +15,15 @@
         </schemaBindings>
 
         <bindings node="//xs:element[@name='Nomina']/xs:complexType">
-            <inheritance:extends>io.github.percontmx.cfdi.complementos.nomina.AbstractComplementoNomina</inheritance:extends>
+
+            <bindings node="//xs:attribute[@name='TipoDeduccion']">
+                <property name="tipoDeduccion">
+                    <baseType>
+                        <xjc:javaType name="mx.gob.sat.cfdi.catalogos.nomina.TipoDeduccion"
+                                      adapter="io.github.percontmx.cfdi.complementos.nomina.v11.TipoDeduccionAdapter"/>
+                    </baseType>
+                </property>
+            </bindings>
         </bindings>
 
     </bindings>

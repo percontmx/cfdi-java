@@ -26,8 +26,20 @@
 
         <dependency>
             <groupId>io.github.percontmx.cfdi</groupId>
+            <artifactId>catalogos-nomina</artifactId>
+            <version>2.3.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.percontmx.cfdi</groupId>
             <artifactId>complemento-nomina-api</artifactId>
             <version>2.3.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
