@@ -15,6 +15,9 @@
         </schemaBindings>
 
         <bindings node="//xs:element[@name='Nomina']/xs:complexType">
+            <bindings node="//xs:element[@name='Deduccion']/xs:complexType">
+                <inheritance:implements>io.github.percontmx.cfdi.complementos.nomina.Deduccion</inheritance:implements>
+            </bindings>
 
             <bindings node="//xs:attribute[@name='NumDiasPagados']">
                 <property name="diasPagados">
