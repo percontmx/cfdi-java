@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.percontmx.cfdi</groupId>
@@ -25,6 +26,7 @@
         <module>cfdi-wrappers</module>
         <module>retenciones/v1</module>
         <module>bom</module>
+        <module>coverage</module>
     </modules>
 
     <developers>
@@ -61,8 +63,8 @@
     <scm>
         <connection>scm:git:https://github.com/percontmx/cfdi-java.git</connection>
         <url>https://github.com/percontmx/cfdi-java</url>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
 
     <issueManagement>
         <system>GitHub</system>
@@ -120,7 +122,8 @@
                 <configuration>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                     <releaseProfiles>release</releaseProfiles>
-                    <scmDevelopmentCommitComment>Configuración siguiente versión de desarrollo.</scmDevelopmentCommitComment>
+                    <scmDevelopmentCommitComment>Configuración siguiente versión de desarrollo.
+                    </scmDevelopmentCommitComment>
                     <scmReleaseCommitComment>Preparar versión @{releaseLabel} para liberación.</scmReleaseCommitComment>
                     <tagNameFormat>@{project.version}</tagNameFormat>
                 </configuration>
@@ -226,6 +229,53 @@
                     </plugin>
                 </plugins>
             </build>
+        </profile>
+        <profile>
+            <id>coverage</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <version>0.8.14</version>
+                        <configuration>
+                            <formats>
+                                <format>XML</format>
+                            </formats>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>prepare-agent</id>
+                                <goals>
+                                    <goal>prepare-agent</goal>
+                                </goals>
+                            </execution>
+                            <execution>
+                                <id>report</id>
+                                <goals>
+                                    <goal>report</goal>
+                                </goals>
+                                <configuration>
+                                    <formats>
+                                        <format>XML</format>
+                                    </formats>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.sonarsource.scanner.maven</groupId>
+                        <artifactId>sonar-maven-plugin</artifactId>
+                        <version>5.5.0.6356</version>
+                    </plugin>
+                </plugins>
+            </build>
+            <properties>
+                <sonar.organization>percontmx</sonar.organization>
+                <sonar.coverage.jacoco.xmlReportPaths>
+                    ${maven.multiModuleProjectDirectory}/coverage/target/site/jacoco-aggregate/jacoco.xml
+                </sonar.coverage.jacoco.xmlReportPaths>
+            </properties>
         </profile>
     </profiles>
 </project>
