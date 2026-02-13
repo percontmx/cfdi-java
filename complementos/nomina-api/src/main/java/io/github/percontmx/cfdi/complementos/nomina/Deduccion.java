@@ -6,3 +6,5 @@ public interface Deduccion {
 
     TipoDeduccion getTipoDeduccion();
 }
+
+

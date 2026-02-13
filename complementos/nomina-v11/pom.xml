@@ -50,6 +50,10 @@
                 <artifactId>jaxb-maven-plugin</artifactId>
                 <configuration>
                     <catalog>../../catalog.xml</catalog>
+                    <args>
+                        <arg>-XelementWrapper</arg>
+                        <arg>-Xinheritance</arg>
+                    </args>
                 </configuration>
             </plugin>
         </plugins>
