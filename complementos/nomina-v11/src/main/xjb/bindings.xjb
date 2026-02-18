@@ -41,6 +41,10 @@
                 </property>
             </bindings>
         </bindings>
+
+        <bindings node="//xs:element[@name='Deduccion']//xs:attribute[@name='ImporteGravado']">
+            <property name="importe" />
+        </bindings>
     </bindings>
 
 </bindings>
