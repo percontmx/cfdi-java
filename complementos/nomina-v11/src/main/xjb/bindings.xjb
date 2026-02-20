@@ -23,7 +23,7 @@
         </bindings>
 
         <bindings node="//xs:element[@name='Deducciones']/xs:complexType">
-            <inheritance:implements>io.github.percontmx.cfdi.complementos.nomina.ContenedorDeducciones</inheritance:implements>
+            <inheritance:extends>io.github.percontmx.cfdi.complementos.nomina.AbstractContenedorDeducciones</inheritance:extends>
         </bindings>
 
         <bindings node="//xs:element[@name='Deduccion']">

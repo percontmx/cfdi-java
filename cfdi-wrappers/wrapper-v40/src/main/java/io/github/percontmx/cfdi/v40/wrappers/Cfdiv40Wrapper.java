@@ -11,7 +11,8 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-public class Cfdiv40Wrapper extends AbstractCfdiWrapper<Comprobante> {
+public class
+Cfdiv40Wrapper extends AbstractCfdiWrapper<Comprobante> {
 
 
     public Cfdiv40Wrapper(Comprobante comprobante) {
@@ -57,11 +58,5 @@ public class Cfdiv40Wrapper extends AbstractCfdiWrapper<Comprobante> {
     public boolean isNomina() {
         return this.comprobante.getTipoDeComprobante() == TipoDeComprobante.NÓMINA
                 && hasComplementoNomina();
-    }
-
-    private boolean hasComplementoNomina() {
-        return this.getComplementos().stream()
-                .anyMatch(c -> c instanceof mx.gob.sat.cfdi.complementos.nomina.v11.Nomina ||
-                               c instanceof mx.gob.sat.cfdi.complementos.nomina.v12.Nomina);
     }
 }
