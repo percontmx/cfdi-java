@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <bindings xmlns="https://jakarta.ee/xml/ns/jaxb" version="3.0"
           xmlns:xs="http://www.w3.org/2001/XMLSchema"
-          xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+          xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+          xmlns:inheritance="urn:jaxb.jvnet.org:plugin:inheritance">
 
     <globalBindings fixedAttributeAsConstantProperty="true" localScoping="toplevel" generateIsSetMethod="true">
         <xjc:javaType name="java.time.LocalDate" xmlType="xs:date"
@@ -14,6 +15,7 @@
         </schemaBindings>
 
         <bindings node="//xs:element[@name='Nomina']/xs:complexType">
+            <inheritance:extends>io.github.percontmx.cfdi.complementos.nomina.AbstractComplementoNomina</inheritance:extends>
 
             <bindings node="//xs:attribute[@name='NumDiasPagados']">
                 <property name="diasPagados">
