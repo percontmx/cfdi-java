@@ -47,10 +47,4 @@ public final class Cfdiv32Wrapper extends AbstractCfdiWrapper<Comprobante> {
         return TipoDeComprobante.EGRESO == this.comprobante.getTipoDeComprobante() &&
                 hasComplementoNomina();
     }
-
-    private boolean hasComplementoNomina() {
-        return this.getComplementos().stream()
-                .anyMatch(c -> c instanceof mx.gob.sat.cfdi.complementos.nomina.v11.Nomina ||
-                               c instanceof mx.gob.sat.cfdi.complementos.nomina.v12.Nomina);
-    }
 }

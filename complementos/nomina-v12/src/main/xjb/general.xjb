@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <bindings xmlns="https://jakarta.ee/xml/ns/jaxb" version="3.0"
           xmlns:xs="http://www.w3.org/2001/XMLSchema"
-          xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+          xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+          xmlns:inheritance="urn:jaxb.jvnet.org:plugin:inheritance">
 
     <globalBindings fixedAttributeAsConstantProperty="true" localScoping="toplevel" generateIsSetMethod="true">
         <xjc:javaType name="java.time.LocalDate" xmlType="xs:date"
@@ -13,7 +14,56 @@
             <package name="mx.gob.sat.cfdi.complementos.nomina.v12" />
         </schemaBindings>
 
+        <!-- <bindings node="//xs:element[@name='Nomina']/xs:complexType">
+            <inheritance:extends>io.github.percontmx.cfdi.complementos.nomina.AbstractComplementoNomina</inheritance:extends>
+        </bindings>
+
+        <bindings node="//xs:element[@name='Deducciones']">
+            <property name="contenedorDeducciones" />
+        </bindings>
+
+        <bindings node="//xs:element[@name='Deducciones']/xs:complexType">
+            <inheritance:implements>io.github.percontmx.cfdi.complementos.nomina.ContenedorDeducciones</inheritance:implements>
+        </bindings>
+
+        <bindings node="//xs:element[@name='Deduccion']">
+            <property name="deducciones" />
+        </bindings>
+
+        <bindings node="//xs:element[@name='Deduccion']/xs:complexType">
+            <inheritance:implements>io.github.percontmx.cfdi.complementos.nomina.Deduccion</inheritance:implements>
+            <bindings node="//xs:attribute[@name='TipoDeduccion']">
+                <property name="tipoDeduccion">
+                    <baseType>
+                        <xjc:javaType name="mx.gob.sat.cfdi.catalogos.nomina.TipoDeduccion"
+                                      adapter="io.github.percontmx.cfdi.complementos.nomina.v11.TipoDeduccionAdapter"/>
+                    </baseType>
+                </property>
+            </bindings>
+        </bindings> -->
+
         <bindings node="//xs:element[@name='Nomina']/xs:complexType">
+            <inheritance:extends>io.github.percontmx.cfdi.complementos.nomina.AbstractComplementoNomina</inheritance:extends>
+
+            <bindings node="//xs:element[@name='Deducciones']">
+                <property name="contenedorDeducciones" />
+            </bindings>
+
+            <bindings node="//xs:element[@name='Deduccion']/xs:complexType">
+                <inheritance:implements>io.github.percontmx.cfdi.complementos.nomina.Deduccion</inheritance:implements>
+            </bindings>
+
+            <bindings node="//xs:element[@name='Deducciones']/xs:complexType">
+                <inheritance:extends>io.github.percontmx.cfdi.complementos.nomina.AbstractContenedorDeducciones</inheritance:extends>
+            </bindings>
+
+            <bindings node="//xs:element[@name='Deduccion']">
+                <property name="deducciones" />
+            </bindings>
+
+            <bindings node="//xs:element[@name='Deduccion']/xs:complexType">
+                <inheritance:implements>io.github.percontmx.cfdi.complementos.nomina.Deduccion</inheritance:implements>
+            </bindings>
 
             <bindings node="//xs:attribute[@name='NumDiasPagados']">
                 <property name="diasPagados">

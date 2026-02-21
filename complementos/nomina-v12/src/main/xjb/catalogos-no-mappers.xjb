@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bindings version="3.0"
+          xmlns="https://jakarta.ee/xml/ns/jaxb"
+          xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <bindings schemaLocation="http://www.sat.gob.mx/sitio_internet/cfd/catalogos/catCFDI.xsd">
+        <bindings node="//xs:simpleType[@name='c_Estado']">
+            <typesafeEnumClass map="false"/>
+        </bindings>
+    </bindings>
+</bindings>
