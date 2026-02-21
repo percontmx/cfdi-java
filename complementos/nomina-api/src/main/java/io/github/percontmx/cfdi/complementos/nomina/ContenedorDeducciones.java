@@ -6,5 +6,5 @@ import java.util.List;
 public interface ContenedorDeducciones {
     List<? extends Deduccion> getDeducciones();
 
-    BigDecimal getTotalImpuestosRetenidos();
+    BigDecimal getIsrRetenido();
 }
