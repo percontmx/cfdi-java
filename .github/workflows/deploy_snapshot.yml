@@ -31,7 +31,8 @@ jobs:
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
 
       - name: Desplegar snapshot.
-        run: ./mvnw -B deploy
+        run: ./mvnw -B deploy sonar:sonar -P coverage -Dsonar.projectKey=percontmx_cfdi-java
         env:
           MAVEN_CENTRAL_USER: ${{ secrets.MVN_USERNAME }}
           MAVEN_CENTRAL_PASSWORD: ${{ secrets.MVN_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
